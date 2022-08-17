@@ -18,7 +18,6 @@ module.exports = {
     }
   },
   // create extra file for netlify
-  generate: { fallback: true },
   /*
   ** Headers of the page
   */

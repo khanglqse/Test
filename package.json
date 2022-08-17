@@ -1,8 +1,8 @@
 {
-  "name": "nuxt-example",
+  "name": "mass-recruitment-landing",
   "version": "1.0.0",
-  "description": "An example project built using Nuxt",
-  "author": "BenShelton <bensheltonjones@gmail.com>",
+  "description": "Mass Recruitment",
+  "author": "khanglqse@gmail.com",
   "private": true,
   "scripts": {
     "dev": "nuxt",
