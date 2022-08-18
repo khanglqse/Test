@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-24">
+  <!-- <div class="pt-24">
     <div
       class="
         container
@@ -10,7 +10,6 @@
         items-center
       "
     >
-      <!--Left Col-->
       <div
         class="
           flex flex-col
@@ -52,12 +51,12 @@
           Go to Job Page
         </nuxt-link>
       </div>
-      <!--Right Col-->
       <div class="w-full md:w-3/5 py-6 text-center">
         <img class="w-full md:w-4/5 z-50" src="~/assets/img/hero.png" />
       </div>
     </div>
-  </div>
+  </div> -->
+  <div></div>
 </template>
 
 <script>
