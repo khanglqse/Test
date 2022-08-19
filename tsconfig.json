@@ -30,7 +30,7 @@
     "include": [
         "**/*.ts",
         "**/*.tsx",
-        "**/*.vue",
+        "**/*.vue", "model/paging-model.js",
     ],
     "exclude": [
         "node_modules"

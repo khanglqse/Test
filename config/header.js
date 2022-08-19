@@ -1,4 +1,4 @@
-export const baseUrl = 'http://localhost:5000/api/';
+export const baseUrl = process.env.ENDPOINT_PROD;
 
 export const config = {
     headers: {

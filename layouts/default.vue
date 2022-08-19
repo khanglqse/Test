@@ -4,7 +4,6 @@
     <div class="flex shrink-0 grow basis-auto mx-auto">
       <nuxt />
     </div>
-    <Content />
     <Footer />
   </div>
 </template>
@@ -12,13 +11,11 @@
 <script>
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import Content from '@/components/Content';
 
 export default {
   components: {
     Header,
     Footer,
-    Content,
   }
 }
 </script>
@@ -29,9 +26,9 @@ export default {
 @import '~/assets/css/campain/bootstrap.css';
 @import '~/assets/css/campain/font-awesome.css';
 @import '~/assets/css/campain/fonts.css';
-@import '~/assets/css/campain/reset.css';
-@import '~/assets/css/campain/owl.carousel.css';
-@import '~/assets/css/campain/owl.theme.default.css';
+/* @import '~/assets/css/campain/reset.css'; */
+/* @import '~/assets/css/campain/owl.carousel.css';
+@import '~/assets/css/campain/owl.theme.default.css'; */
 @import '~/assets/css/campain/flaticon.css';
 @import '~/assets/css/campain/responsive.css';
 
