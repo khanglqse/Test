@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Home></Home>
     <nuxt-link
       to="/job/home"
       class="
@@ -22,10 +23,11 @@
 </template>
 
 <script>
+import Home from "@/pages/job/home.vue";
 
 export default {
   components: {
-    
+    Home,
   },
   name: "IndexPage",
   data() {
