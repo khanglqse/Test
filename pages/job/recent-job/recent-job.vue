@@ -133,7 +133,7 @@
 import Vue from "vue";
 import CampaignService from "@/services/campaignService";
 import { PagingModel } from "@/model/paging-model";
-import { mapActions, mapGetters, mapState } from "vuex";
+import { mapActions, mapGetters, mapMutations, mapState } from "vuex";
 
 export default {
   setup() {},
@@ -181,7 +181,12 @@ export default {
     },
   },
   computed: {
-    // ...mapState(["filter"]),
+    ...mapState(["filter"]),
+  },
+  watch: {
+    '$store.state.filter.filterItem'(value) {
+      console.log(value)
+    }
   },
   created() {
     this.getListCampaign();

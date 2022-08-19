@@ -13,5 +13,5 @@ export const actions = {
 }
 
 export const mutations = {
-    getFilter: (state, data) => state.filterItem = data
+    getFilter: (state, data) => state.filterItem = {...data}
 }
