@@ -5,7 +5,7 @@
         <div class="jp_hiring_content_main_wrapper">
           <div class="jp_hiring_content_wrapper">
             <img
-              :src="'/_nuxt/assets/css/images/content/' + item.img"
+              :src="'~/assets/css/images/content/' + item.img"
               alt="hiring_img"
             />
             <!-- <img

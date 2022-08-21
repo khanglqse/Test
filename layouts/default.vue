@@ -21,7 +21,7 @@ export default {
 </script>
 
 <style>
-@import '~/assets/css/campain/animate.css';
+/* @import '~/assets/css/campain/animate.css'; */
 @import '~/assets/css/campain/style.css';
 @import '~/assets/css/campain/bootstrap.css';
 @import '~/assets/css/campain/font-awesome.css';

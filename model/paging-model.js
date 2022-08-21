@@ -1,6 +1,6 @@
 export class PagingModel {
     items = [];
-    pageIndex = 0;
+    pageIndex = 1;
     totalPage = 0;
     totalCount = 0;
     hasPreviousPage = false;

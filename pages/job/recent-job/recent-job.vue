@@ -46,7 +46,7 @@
                     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
                       <div class="jp_job_post_side_img">
                         <img
-                          :src="'/_nuxt/assets/css/images/content/' + item.img"
+                          src="~/assets/css/images/content/job_post_img1.jpg"
                           alt="post_img"
                         />
                       </div>
@@ -154,7 +154,7 @@ export default {
   methods: {
     async getListCampaign() {
       try {
-        const { result } = CampaignService.getListCampaign(
+        const result = await CampaignService.getListCampaign(
           this.paging.pageIndex,
           this.paging.pageSize
         );

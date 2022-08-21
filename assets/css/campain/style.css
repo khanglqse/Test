@@ -1391,7 +1391,7 @@ ul{
 .video_nav_img ul{
 	display:inline-block;  
 	position: relative;
-    top: 8px;
+    /* top: 8px; */
     z-index: 1000;
 }
 .video_nav_img li{
