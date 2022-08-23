@@ -130,15 +130,15 @@
 </template>
 
 <script>
-import TrandingJob from "@/pages/job/tranding-job/tranding-job.vue";
-import TopHirring from "@/pages/job/top-hiring/top-hiring.vue";
-import RecentJob from "@/pages/job/recent-job/recent-job.vue";
-import Candidate from "@/pages/job/candidate/candidate.vue";
-import JobSpotlight from "@/pages/job/job-spotlight/job-spotlight.vue";
-import JobByCategory from "@/pages/job/job-by-category/job-by-category.vue";
-import CareerAdvice from "@/pages/job/career-advice/career-advice.vue";
-import JobReport from "@/pages/job/job-report/job-report.vue";
-import BestDeal from "@/pages/job/best-deal/best-deal.vue";
+import TrandingJob from "@/components/landing-page/tranding-job/tranding-job.vue";
+import TopHirring from "@/components/landing-page/top-hiring/top-hiring.vue";
+import RecentJob from "@/components/landing-page/recent-job/recent-job.vue";
+import Candidate from "@/components/landing-page/candidate/candidate.vue";
+import JobSpotlight from "@/components/landing-page/job-spotlight/job-spotlight.vue";
+import JobByCategory from "@/components/landing-page/job-by-category/job-by-category.vue";
+import CareerAdvice from "@/components/landing-page/career-advice/career-advice.vue";
+import JobReport from "@/components/landing-page/job-report/job-report.vue";
+import BestDeal from "@/components/landing-page/best-deal/best-deal.vue";
 
 export default {
   setup() {},

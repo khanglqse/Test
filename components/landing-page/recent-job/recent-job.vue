@@ -97,10 +97,12 @@
             <h4>No item found!</h4>
           </div>
         </div>
-        <div class="video_nav_img_wrapper flex justify-between items-center">
+        <div
+          class="video_nav_img_wrapper flex justify-between items-center"
+          v-if="paging.items"
+        >
           <a
             class="button secondary url ~/assets/css/images/_nav"
-            v-if="paging.items"
             @click="paging.hasNextPreviousPage && actionPaging('prev')"
             >PREV</a
           >
@@ -119,7 +121,6 @@
 
           <a
             class="button secondary url ~/assets/css/images/_nav"
-            v-if="paging.items"
             @click="paging.hasNextPage && actionPaging('next')"
             >NEXT</a
           >
@@ -130,10 +131,11 @@
 </template>
 
 <script>
-import Vue from "vue";
 import CampaignService from "@/services/campaignService";
 import { PagingModel } from "@/model/paging-model";
+import toast from "@/mixins/toast";
 import { mapActions, mapGetters, mapMutations, mapState } from "vuex";
+import ButtonName from "@/constant/button-name";
 
 export default {
   setup() {},
@@ -184,9 +186,9 @@ export default {
     ...mapState(["filter"]),
   },
   watch: {
-    '$store.state.filter.filterItem'(value) {
-      console.log(value)
-    }
+    "$store.state.filter.filterItem"(value) {
+      console.log(value);
+    },
   },
   created() {
     this.getListCampaign();
