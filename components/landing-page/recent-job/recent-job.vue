@@ -153,6 +153,7 @@ export default {
       paging: this.pagingModel,
     };
   },
+  mixins: [toast],
   methods: {
     async getListCampaign() {
       try {
@@ -160,9 +161,13 @@ export default {
           this.paging.pageIndex,
           this.paging.pageSize
         );
-        this.paging = result || {};
+        if (result.isError) {
+          this.showToastMessage(ButtonName.TOAST_ERROR, result.errorMessage);
+        } else {
+          this.paging = result || {};
+        }
       } catch (error) {
-        console.log(error);
+        this.showToastMessage(ButtonName.TOAST_ERROR, error?.message);
       }
     },
 
