@@ -42,7 +42,7 @@ export default {
     classList() {
       let classList = ''
       if (this.isStickable) {
-        classList = this.isSticky ? 'text-gray-800' : 'text-white'
+        classList = this.isSticky ? 'text-gray-800' : ''
       } else {
         classList = 'text-orange-600'
       }

@@ -1,7 +1,8 @@
 module.exports = {
   components: true,
   modules: [
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/toast',
   ],
   axios: {
     baseUrl: process.env.ENDPOINT_URL || 'http://localhost:5000/'
@@ -59,6 +60,14 @@ module.exports = {
       plugins: {
         tailwindcss: {},
         autoprefixer: {},
+        'cssnano': {
+          preset: [
+            "default",
+            {
+              "calc": false
+            }
+          ]
+        }
       },
     },
     /*
@@ -74,5 +83,17 @@ module.exports = {
     //     })
     //   }
     // }
+    toast: {
+      position: 'top-center',
+      register: [ // Register custom toasts
+        {
+          name: 'my-error',
+          message: 'Oops...Something went wrong',
+          options: {
+            type: 'error'
+          }
+        }
+      ]
+    }
   }
 }
