@@ -35,7 +35,7 @@
       </li>
       <li>
         <i class="fa fa-plus-circle"></i>
-        <a href="#">View All Categories</a>
+        <a href="#">{{ $t("button.viewAll") }} {{ $t("button.category") }}</a>
       </li>
     </ul>
   </div>

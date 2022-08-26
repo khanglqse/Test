@@ -23,7 +23,9 @@
             <ul>
               <li>
                 <a href="#"
-                  ><i class="fa fa-plus-circle"></i> &nbsp;ADD RESUME</a
+                  ><i class="fa fa-plus-circle"></i> &nbsp;{{
+                    $t("button.addResume")
+                  }}</a
                 >
               </li>
             </ul>

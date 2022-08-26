@@ -37,7 +37,8 @@ module.exports = {
     '~/plugins/vue-notifications',
     '~/plugins/axios.js',
     '~/plugins/smooth-scroll.js',
-    '~/plugins/material-icon.js'
+    '~/plugins/material-icon.js',
+    '~/plugins/i18n.js',
   ],
   /*
   ** Customize the progress bar color

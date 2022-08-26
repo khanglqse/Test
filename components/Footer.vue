@@ -16,10 +16,10 @@
           <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
             <div class="jp_newsletter_field">
               <i class="fa fa-envelope-o"></i
-              ><input type="text" placeholder="Enter Your Email" /><button
+              ><input type="text" placeholder="Nhập Email của bạn" /><button
                 type="submit"
               >
-                Submit
+                {{ $t("button.submit") }}
               </button>
             </div>
           </div>
@@ -34,11 +34,12 @@
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="jp_footer_logo_wrapper">
               <div class="jp_footer_logo">
-                <a href="#"
-                  ><img
+                <a href="#">
+                  <!-- <img
                     src="~/assets/css/images/content/resume_logo.png"
                     alt="footer_logo"
-                /></a>
+                /> -->
+                </a>
               </div>
             </div>
           </div>
@@ -46,7 +47,7 @@
             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
               <div class="jp_footer_first_cont_wrapper">
                 <div class="jp_footer_first_cont">
-                  <h2>Who We Are</h2>
+                  <h2>{{ $t("jobFilter.whoWeAre") }}</h2>
                   <p>
                     This is Photoshop's version of Lom Ipsum. Proin gravida nibh
                     vel velit auctor aliquet. Aenean sollicitudin, lorem quis
@@ -57,7 +58,7 @@
                   <ul>
                     <li>
                       <i class="fa fa-plus-circle"></i>
-                      <a href="#">READ MORE</a>
+                      <a href="#">{{ $t("button.readMore") }}</a>
                     </li>
                   </ul>
                 </div>
@@ -68,48 +69,48 @@
                 class="jp_footer_candidate_wrapper jp_footer_candidate_wrapper2"
               >
                 <div class="jp_footer_candidate">
-                  <h2>For candidate</h2>
+                  <h2>{{ $t("jobFilter.forCandidate") }}</h2>
                   <ul>
                     <li>
                       <a href="#"
                         ><i class="fa fa-caret-right" aria-hidden="true"></i>
-                        Add a Resume</a
+                        {{ $t("menu.addAResume") }}</a
                       >
                     </li>
                     <li>
                       <a href="#"
                         ><i class="fa fa-caret-right" aria-hidden="true"></i>
-                        candidate Dashboard</a
+                        {{ $t("menu.candidateDashboard") }}</a
                       >
                     </li>
                     <li>
                       <a href="#"
                         ><i class="fa fa-caret-right" aria-hidden="true"></i>
-                        Past Applications</a
+                        {{ $t("menu.pastApplications") }}</a
                       >
                     </li>
                     <li>
                       <a href="#"
                         ><i class="fa fa-caret-right" aria-hidden="true"></i>
-                        Job Alerts</a
+                        {{ $t("menu.jobAlerts") }}</a
                       >
                     </li>
                     <li>
                       <a href="#"
                         ><i class="fa fa-caret-right" aria-hidden="true"></i>
-                        Bookmarks</a
+                        {{ $t("menu.bookmarks") }}</a
                       >
                     </li>
                     <li>
                       <a href="#"
-                        ><i class="fa fa-caret-right" aria-hidden="true"></i> My
-                        Account</a
+                        ><i class="fa fa-caret-right" aria-hidden="true"></i
+                        >{{ $t("menu.myAccount") }}</a
                       >
                     </li>
                     <li>
                       <a href="#"
                         ><i class="fa fa-caret-right" aria-hidden="true"></i>
-                        Your Jobs</a
+                        {{ $t("menu.yourJobs") }}</a
                       >
                     </li>
                   </ul>
@@ -121,48 +122,48 @@
                 class="jp_footer_candidate_wrapper jp_footer_candidate_wrapper3"
               >
                 <div class="jp_footer_candidate">
-                  <h2>For Employers</h2>
+                  <h2>{{ $t("jobFilter.forEmployers") }}</h2>
                   <ul>
                     <li>
                       <a href="#"
                         ><i class="fa fa-caret-right" aria-hidden="true"></i>
-                        Browse candidates</a
+                        {{ $t("menu.browseCandidates") }}</a
                       >
                     </li>
                     <li>
                       <a href="#"
                         ><i class="fa fa-caret-right" aria-hidden="true"></i>
-                        Employer Dashboard</a
+                        {{ $t("menu.employerDashboard") }}</a
                       >
                     </li>
                     <li>
                       <a href="#"
                         ><i class="fa fa-caret-right" aria-hidden="true"></i>
-                        Add Job</a
+                        {{ $t("menu.addJob") }}</a
                       >
                     </li>
                     <li>
                       <a href="#"
                         ><i class="fa fa-caret-right" aria-hidden="true"></i>
-                        Job Page</a
+                        {{ $t("menu.jobPage") }}</a
                       >
                     </li>
                     <li>
                       <a href="#"
                         ><i class="fa fa-caret-right" aria-hidden="true"></i>
-                        Job Packages</a
+                        {{ $t("menu.jobPackages") }}</a
                       >
                     </li>
                     <li>
                       <a href="#"
                         ><i class="fa fa-caret-right" aria-hidden="true"></i>
-                        Work Process</a
+                        {{ $t("menu.workProcess") }}</a
                       >
                     </li>
                     <li>
                       <a href="#"
-                        ><i class="fa fa-caret-right" aria-hidden="true"></i> My
-                        Account</a
+                        ><i class="fa fa-caret-right" aria-hidden="true"></i
+                        >{{ $t("menu.myAccount") }}</a
                       >
                     </li>
                   </ul>
@@ -174,42 +175,42 @@
                 class="jp_footer_candidate_wrapper jp_footer_candidate_wrapper4"
               >
                 <div class="jp_footer_candidate">
-                  <h2>Information</h2>
+                  <h2>{{ $t("jobFilter.information") }}</h2>
                   <ul>
                     <li>
                       <a href="#"
                         ><i class="fa fa-caret-right" aria-hidden="true"></i>
-                        About Us</a
+                        {{ $t("menu.aboutUs") }}</a
                       >
                     </li>
                     <li>
                       <a href="#"
                         ><i class="fa fa-caret-right" aria-hidden="true"></i>
-                        Terms & Conditions</a
+                        {{ $t("menu.terms&Conditions") }}</a
                       >
                     </li>
                     <li>
                       <a href="#"
                         ><i class="fa fa-caret-right" aria-hidden="true"></i>
-                        Privacy Policy</a
+                        {{ $t("menu.privacyPolicy") }}</a
                       >
                     </li>
                     <li>
                       <a href="#"
                         ><i class="fa fa-caret-right" aria-hidden="true"></i>
-                        Careers with Us</a
+                        {{ $t("menu.careersWithUs") }}</a
                       >
                     </li>
                     <li>
                       <a href="#"
                         ><i class="fa fa-caret-right" aria-hidden="true"></i>
-                        Sitemap</a
+                        {{ $t("menu.sitemap") }}</a
                       >
                     </li>
                     <li>
                       <a href="#"
                         ><i class="fa fa-caret-right" aria-hidden="true"></i>
-                        Contact Us</a
+                        {{ $t("menu.contactUs") }}</a
                       >
                     </li>
                     <li>

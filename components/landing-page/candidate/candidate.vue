@@ -2,16 +2,22 @@
   <div class="jp_register_section_main_wrapper">
     <div class="jp_regis_left_side_box_wrapper">
       <div class="jp_regis_left_side_box">
-        <img src="~/assets/css/images/content/regis_icon.png" alt="icon" class="inline" />
-        <h4>I’m an EMPLOYER</h4>
+        <img
+          src="~/assets/css/images/content/regis_icon.png"
+          alt="icon"
+          class="inline"
+        />
+        <h4>{{ $t("userInfo.employer") }}</h4>
         <p>
-          Signed in companies are able to post new<br />
-          job offers, searching for candidate...
+          Các công ty đã đăng nhập có thể đăng bài mới<br />
+          mời làm việc, tìm kiếm ứng viên ...
         </p>
         <ul>
           <li>
             <a href="#"
-              ><i class="fa fa-plus-circle"></i> &nbsp;REGISTER AS COMPANY</a
+              ><i class="fa fa-plus-circle"></i> &nbsp;{{
+                $t("button.registerAsCompany")
+              }}</a
             >
           </li>
         </ul>
@@ -20,16 +26,22 @@
     <div class="jp_regis_right_side_box_wrapper">
       <div class="jp_regis_right_img_overlay"></div>
       <div class="jp_regis_right_side_box">
-        <img src="~/assets/css/images/content/regis_icon2.png" alt="icon" class="inline" />
-        <h4>I’m an candidate</h4>
+        <img
+          src="~/assets/css/images/content/regis_icon2.png"
+          alt="icon"
+          class="inline"
+        />
+        <h4>{{ $t("userInfo.candidate") }}</h4>
         <p>
-          Signed in companies are able to post new<br />
-          job offers, searching for candidate...
+          Các công ty đã đăng nhập có thể đăng bài mới<br />
+          mời làm việc, tìm kiếm ứng viên ...
         </p>
         <ul>
           <li>
             <a href="#"
-              ><i class="fa fa-plus-circle"></i> &nbsp;REGISTER AS COMPANY</a
+              ><i class="fa fa-plus-circle"></i> &nbsp;{{
+                $t("button.registerAsCompany")
+              }}</a
             >
           </li>
         </ul>

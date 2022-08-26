@@ -13,7 +13,7 @@
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="jp_hiring_slider_main_wrapper">
                   <div class="jp_hiring_heading_wrapper">
-                    <h2>Top Hiring Companies</h2>
+                    <h2>{{ $t("topHiringCompanies") }}</h2>
                   </div>
 
                   <TopHirring></TopHirring>
@@ -35,18 +35,20 @@
                   <div class="jp_add_resume_wrapper">
                     <div class="jp_add_resume_img_overlay"></div>
                     <div class="jp_add_resume_cont">
-                      <img
+                      <!-- <img
                         src="~/assets/css/images/content/resume_logo.png"
                         alt="logo"
-                      />
+                      /> -->
                       <h4>
-                        Get Best Matched Jobs On your Email. Add Resume NOW!
+                        Nhận công việc phù hợp nhất trên email của bạn. Thêm
+                        Tiếp tục NGAY BÂY GIỜ!
                       </h4>
                       <ul>
                         <li>
                           <a href="#"
-                            ><i class="fa fa-plus-circle"></i> &nbsp;ADD
-                            RESUME</a
+                            ><i class="fa fa-plus-circle"></i> &nbsp;{{
+                              $t("button.addResume")
+                            }}</a
                           >
                         </li>
                       </ul>
@@ -56,7 +58,7 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <div class="jp_spotlight_main_wrapper">
                     <div class="spotlight_header_wrapper">
-                      <h4>Job Spotlight</h4>
+                      <h4>{{ $t("jobSpotlight") }}</h4>
                     </div>
                     <JobSpotlight></JobSpotlight>
                   </div>
@@ -64,7 +66,7 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <div class="jp_rightside_job_categories_wrapper">
                     <div class="jp_rightside_job_categories_heading">
-                      <h4>Jobs by Category</h4>
+                      <h4>{{ $t("JobsByCategory") }}</h4>
                     </div>
                     <JobByCategory></JobByCategory>
                   </div>
@@ -72,7 +74,7 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <div class="jp_rightside_career_wrapper">
                     <div class="jp_rightside_career_heading">
-                      <h4>Career Advice</h4>
+                      <h4>{{ $t("careerAdvice") }}</h4>
                     </div>
                     <CareerAdvice></CareerAdvice>
                   </div>
@@ -80,7 +82,7 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <div class="jp_rightside_job_categories_wrapper">
                     <div class="jp_rightside_job_categories_heading">
-                      <h4>Jobs by Category</h4>
+                      <h4>{{ $t("JobsByCategory") }}</h4>
                     </div>
                     <div class="jp_rightside_job_categories_content">
                       <ul>
@@ -106,7 +108,10 @@
                         </li>
                         <li>
                           <i class="fa fa-plus-circle"></i>
-                          <a href="#">View All Categories</a>
+                          <a href="#"
+                            >{{ $t("button.viewAll") }}
+                            {{ $t("button.category") }}</a
+                          >
                         </li>
                       </ul>
                     </div>

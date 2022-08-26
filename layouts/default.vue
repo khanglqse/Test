@@ -21,12 +21,12 @@ export default {
 </script>
 
 <style>
-/* @import '~/assets/css/campain/animate.css'; */
+@import '~/assets/css/campain/animate.css';
 @import '~/assets/css/campain/style.css';
 @import '~/assets/css/campain/bootstrap.css';
 @import '~/assets/css/campain/font-awesome.css';
 @import '~/assets/css/campain/fonts.css';
-/* @import '~/assets/css/campain/reset.css'; */
+@import '~/assets/css/campain/reset.css';
 /* @import '~/assets/css/campain/owl.carousel.css';
 @import '~/assets/css/campain/owl.theme.default.css'; */
 @import '~/assets/css/campain/flaticon.css';
