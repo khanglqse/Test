@@ -16,7 +16,7 @@
             <p>{{ item.city }}</p>
             <ul>
               <li>
-                <a href="#">{{ item.open }}</a>
+                <a href="#">{{ item.open }} {{$t('button.opening')}}</a>
               </li>
             </ul>
           </div>
@@ -36,25 +36,25 @@ export default {
           img: "hiring_img1.png",
           title: "Akshay INC.",
           city: "(NewYork)",
-          open: "4 Opening",
+          open: "4 ",
         },
         {
           img: "hiring_img2.png",
           title: "Akshay INC.",
           city: "(NewYork)",
-          open: "4 Opening",
+          open: "4 ",
         },
         {
           img: "hiring_img3.png",
           title: "Akshay INC.",
           city: "(NewYork)",
-          open: "4 Opening",
+          open: "4 ",
         },
         {
           img: "hiring_img4.png",
           title: "Akshay INC.",
           city: "(NewYork)",
-          open: "4 Opening",
+          open: "4 ",
         },
       ],
     };

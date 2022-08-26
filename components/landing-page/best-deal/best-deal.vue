@@ -4,7 +4,7 @@
       <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
         <div class="jp_best_deal_slider_main_wrapper">
           <div class="jp_best_deal_heading_wrapper">
-            <h2>Offering the best Deals</h2>
+            <h2>{{ $t("offeringBestDeals") }}</h2>
           </div>
           <div class="jp_best_deal_slider_wrapper">
             <div class="carousel theme">
@@ -16,7 +16,9 @@
                         <i class="flaticon-magnifying-glass"></i>
                       </div>
                       <div class="jp_best_deal_cont_sec">
-                        <h4><a href="#">Search a Jobs</a></h4>
+                        <h4>
+                          <a href="#">{{ $t("button.searchAJob") }}</a>
+                        </h4>
                         <p>
                           Proin gravida nibh vel velit auctr akshay Aenean
                           sollicitudin...
@@ -35,7 +37,9 @@
                         <i class="flaticon-users"></i>
                       </div>
                       <div class="jp_best_deal_cont_sec">
-                        <h4><a href="#">Apply a Good Job</a></h4>
+                        <h4>
+                          <a href="#">{{ $t("button.applyAGoodJob") }}</a>
+                        </h4>
                         <p>
                           Proin gravida nibh vel velit auctr akshay Aenean
                           sollicitudin...
@@ -54,7 +58,9 @@
                         <i class="flaticon-shield"></i>
                       </div>
                       <div class="jp_best_deal_cont_sec">
-                        <h4><a href="#">Job Security</a></h4>
+                        <h4>
+                          <a href="#">{{ $t("button.jobSecurity") }}</a>
+                        </h4>
                         <p>
                           Proin gravida nibh vel velit auctr akshay Aenean
                           sollicitudin...
@@ -73,7 +79,9 @@
                         <i class="flaticon-notification"></i>
                       </div>
                       <div class="jp_best_deal_cont_sec">
-                        <h4><a href="#">Job Notifications</a></h4>
+                        <h4>
+                          <a href="#">{{ $t("button.jobNotifications") }}</a>
+                        </h4>
                         <p>
                           Proin gravida nibh vel velit auctr akshay Aenean
                           sollicitudin...
@@ -90,7 +98,7 @@
       <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
         <div class="jp_rightside_career_wrapper jp_best_deal_right_sec_wrapper">
           <div class="jp_rightside_career_heading">
-            <h4>Recent Resumes</h4>
+            <h4>{{ $t("recentResumes") }}</h4>
           </div>
           <div class="jp_rightside_career_main_content">
             <div
@@ -142,7 +150,7 @@
               </div>
             </div>
             <div class="jp_rightside_career_btn">
-              <a href="#"><i class="fa fa-plus-circle"></i> View All</a>
+              <a href="#"><i class="fa fa-plus-circle"></i> {{ $t("button.viewAll") }}</a>
             </div>
           </div>
         </div>

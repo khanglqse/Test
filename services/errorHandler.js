@@ -10,7 +10,7 @@ class ErrorHandler {
         //     return error;
         // }
         return {
-            status: error.status || 500,
+            status: error?.status || 500,
             errorMessage: error || MessageConstant.INVALID_REQUEST,
             isError: true
         };

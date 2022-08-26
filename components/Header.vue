@@ -6,24 +6,25 @@
         <div class="row">
           <div
             class="
-              col-lg-2 col-md-2 col-sm-12 col-xs-12
+              col-lg-1 col-md-2 col-sm-12 col-xs-12
               hidden-xs hidden-sm
               full_width
             "
           >
             <div class="gc_header_wrapper">
               <div class="gc_logo">
-                <a href="index-2.html"
-                  ><img
+                <a href="index-2.html">
+                  <!-- <img
                     src="~/assets/css/images/header/logo.png"
                     alt="Logo"
                     title="Job Pro"
                     class="img-responsive"
-                /></a>
+                /> -->
+                </a>
               </div>
             </div>
           </div>
-          <div class="col-lg-7 col-md-8 col-sm-12 col-xs-12 center_responsive">
+          <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 center_responsive">
             <div class="header-area hidden-menu-bar stick" id="sticker">
               <!-- mainmenu start -->
               <div class="mainmenu">
@@ -63,7 +64,9 @@
                 <ul class="float_left">
                   <li class="has-mega gc_main_navigation">
                     <a href="#" class="gc_main_navigation">
-                      Home&nbsp;<i class="fa fa-angle-down"></i
+                      {{ $t("menuHeader.home") }}&nbsp;<i
+                        class="fa fa-angle-down"
+                      ></i
                     ></a>
                     <!-- mega menu start -->
                     <ul>
@@ -77,7 +80,9 @@
                   </li>
                   <li class="has-mega gc_main_navigation">
                     <a href="#" class="gc_main_navigation">
-                      Job&nbsp;<i class="fa fa-angle-down"></i
+                      {{ $t("menuHeader.job") }}&nbsp;<i
+                        class="fa fa-angle-down"
+                      ></i
                     ></a>
                     <!-- mega menu start -->
                     <ul>
@@ -94,7 +99,9 @@
                   </li>
                   <li class="parent gc_main_navigation">
                     <a href="#" class="gc_main_navigation"
-                      >candidates &nbsp;<i class="fa fa-angle-down"></i
+                      >{{ $t("menuHeader.candidates") }} &nbsp;<i
+                        class="fa fa-angle-down"
+                      ></i
                     ></a>
                     <!-- sub menu start -->
                     <ul>
@@ -115,7 +122,9 @@
                   </li>
                   <li class="has-mega gc_main_navigation">
                     <a href="#" class="gc_main_navigation">
-                      Pages&nbsp;<i class="fa fa-angle-down"></i
+                      {{ $t("menuHeader.page") }}&nbsp;<i
+                        class="fa fa-angle-down"
+                      ></i
                     ></a>
                     <!-- mega menu start -->
                     <ul>
@@ -152,9 +161,9 @@
                     </ul>
                   </li>
                   <li class="gc_main_navigation parent">
-                    <a href="contact.html" class="gc_main_navigation"
-                      >Contact</a
-                    >
+                    <a href="contact.html" class="gc_main_navigation">{{
+                      $t("menuHeader.contact")
+                    }}</a>
                   </li>
                 </ul>
               </div>
@@ -175,7 +184,11 @@
                     </div>
                     <div class="col-xs-6 col-sm-6">
                       <div class="cd-dropdown-wrapper">
-                        <a class="house_toggle" href="#0">
+                        <a
+                          class="house_toggle"
+                          href="#0"
+                          @click="showMenuMobile()"
+                        >
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -228,7 +241,7 @@
                             </g>
                           </svg>
                         </a>
-                        <nav class="cd-dropdown">
+                        <nav class="cd-dropdown" :class="classShowMenuMobile">
                           <h2>
                             <a href="#">Job<span>Pro</span></a>
                           </h2>
@@ -385,18 +398,21 @@
           <div
             class="col-lg-3 col-md-4 col-sm-12 col-xs-12 hidden-sm hidden-xs"
           >
-            <div class="jp_navi_right_btn_wrapper">
+            <div class="jp_navi_right_btn_wrapper flex justify-center">
               <ul>
                 <li>
-                  <a href="register.html"
-                    ><i class="fa fa-user"></i>&nbsp; SIGN UP</a
+                  <a
+                    href="https://brave-hill-05c371b00.1.azurestaticapps.net/"
+                    target="_blank"
+                    ><i class="fa fa-user"></i>&nbsp;
+                    {{ $t("button.getStart") }}</a
                   >
                 </li>
-                <li>
+                <!-- <li>
                   <a href="login.html"
                     ><i class="fa fa-sign-in"></i>&nbsp; LOGIN</a
                   >
-                </li>
+                </li> -->
               </ul>
             </div>
           </div>
@@ -421,6 +437,7 @@ export default {
     return {
       scrollY: 0,
       isOpen: false,
+      classShowMenuMobile: "",
     };
   },
   computed: {
@@ -450,6 +467,12 @@ export default {
     },
     onToggleClick() {
       this.isOpen = !this.isOpen;
+    },
+
+    showMenuMobile() {
+      this.classShowMenuMobile = this.classShowMenuMobile
+        ? ""
+        : "dropdown-is-active";
     },
   },
   mounted() {

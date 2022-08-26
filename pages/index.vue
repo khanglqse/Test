@@ -1,7 +1,7 @@
 <template>
   <div>
     <Home></Home>
-    <nuxt-link
+    <!-- <nuxt-link
       to="/job/home"
       class="
         mx-auto
@@ -18,7 +18,7 @@
       "
     >
       Go to Job Page
-    </nuxt-link>
+    </nuxt-link> -->
   </div>
 </template>
 

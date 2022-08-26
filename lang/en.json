@@ -1,0 +1,84 @@
+{
+    "common": {
+        "select_lang": "Languages"
+    },
+    "button": {
+        "submit": "SUBMIT",
+        "search": "Search",
+        "getStart": "GET START",
+        "prev": "PREV",
+        "next": "NEXT",
+        "addResume": "ADD RESUME",
+        "opening": "Opening",
+        "registerAsCompany": "Register As Company",
+        "apply": "APPLY",
+        "searchAJob": "Search a Job",
+        "applyAGoodJob": "Apply a Good Job",
+        "jobSecurity": "Job Security",
+        "jobNotifications": "Job Notification",
+        "viewAll": "VIEW ALL ",
+        "category": "CATEGORY",
+        "readMore": "READ MORE",
+        "option:": "Lựa chọn"
+    },
+    "jobFilter": {
+        "title": "Browse Jobs",
+        "description": "Find Jobs, Employment & Career Opportunities",
+        "whoWeAre": "WHO WE ARE",
+        "forCandidate": "FOR CANDIDATE",
+        "forEmployers": "FOR EMPLOYERS",
+        "information": "INFORMATION"
+    },
+    "menuHeader": {
+        "home": "Home",
+        "job": "Job",
+        "candidates": "Cadidates",
+        "page": "Pages",
+        "contact": "Contact"
+    },
+    "trendingKeyWords": "Trending Keywords",
+    "trandingJobs": {
+        "tranding": "Tranding",
+        "jobs": " Jobs"
+    },
+    "topHiringCompanies": "TOP HIRING COMPANIES",
+    "rentJobs": "RECENT JOBS",
+    "featured": "FEATURED",
+    "remotely": "REMOTELY",
+    "parttime": "PART TIME",
+    "fulltime": "FULL TIME",
+    "jobSpotlight": "Job Spotlight",
+    "JobsByCategory": "Jobs by Category",
+    "careerAdvice": "Career Advice",
+    "keywords": "Keywords",
+    "members": "Members",
+    "resume": "Resume",
+    "company": "Company",
+    "recentResumes": "Recent Resumes",
+    "offeringBestDeals": "OFFERING THE BEST DEALS",
+    "userInfo": {
+        "employer": "I’M AN EMPLOYER",
+        "candidate": "I’M AN CANDIDATE"
+    },
+    "menu": {
+        "addAResume": "Add A Resume",
+        "candidateDashboard": "Candidate Dashboard",
+        "pastApplications": "Past Applications",
+        "jobAlerts": "Job Alerts",
+        "bookmarks": "Bookmarks",
+        "myAccount": "My Account",
+        "yourJobs": "Your Jobs",
+        "browseCandidates": "Browse Candidates",
+        "employerDashboard": "Employer Dashboard",
+        "addJob": "Add Job",
+        "jobPage": "Job Page",
+        "jobPackages": "Job Packages",
+        "workProcess": "Work Process",
+        "aboutUs": "About Us",
+        "terms&Conditions": "Terms & Conditions",
+        "privacyPolicy": "Privacy Policy",
+        "careersWithUs": "Careers With Us",
+        "sitemap": "Sitemap",
+        "contactUs": "ContactUs"
+    }
+}

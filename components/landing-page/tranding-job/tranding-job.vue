@@ -2,8 +2,8 @@
   <div class="container">
     <div class="jp_tittle_name_wrapper p-0">
       <div class="jp_tittle_name">
-        <h3>Tranding</h3>
-        <h4>Jobs</h4>
+        <h3>{{ $t("trandingJobs.tranding") }}</h3>
+        <h4>{{ $t("trandingJobs.jobs") }}</h4>
       </div>
     </div>
     <div class="jp_tittle_slider_wrapper">

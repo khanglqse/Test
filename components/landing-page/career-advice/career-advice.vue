@@ -37,7 +37,7 @@
       </div>
     </div>
     <div class="jp_rightside_career_btn">
-      <a href="#"><i class="fa fa-plus-circle"></i> View All</a>
+      <a href="#"><i class="fa fa-plus-circle"></i> {{ $t("button.viewAll") }}</a>
     </div>
   </div>
 </template>

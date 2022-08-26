@@ -1,0 +1,85 @@
+{
+    "common": {
+        "select_lang": "Ngôn ngữ"
+    },
+    "button": {
+        "submit": "Gửi",
+        "search": "Tìm kiếm",
+        "getStart": "BẮT ĐẦU",
+        "prev": "Trước",
+        "next": "Sau",
+        "addResume": "Thêm hồ sơ",
+        "opening": "Đang mở",
+        "registerAsCompany": "Đăng ký với quyền công ty",
+        "apply": "Áp dụng",
+        "searchAJob": "Tìm kiếm công việc",
+        "applyAGoodJob": "Nhận công việc tốt",
+        "jobSecurity": "Công việc an toàn",
+        "jobNotifications": "Thông báo công việc",
+        "viewAll": "XEM TẤT CẢ ",
+        "category": "THỂ LOẠI",
+        "readMore": "TÌM HIỂU THÊM",
+        "option:": "Lựa chọn"
+    },
+    "jobFilter": {
+        "title": "Công việc",
+        "description": "Tìm việc làm, Cơ hội việc làm & Nghề nghiệp",
+        "whoWeAre": "CHÚNG TÔI LÀ AI",
+        "forCandidate": "DÀNH CHO ỨNG VIÊN",
+        "forEmployers": "DÀNH CHO NGƯỜI LAO ĐỘNG",
+        "information": "THÔNG TIN"
+    },
+    "menuHeader": {
+        "home": "Trang chủ",
+        "job": "Công việc",
+        "candidates": "Ứng viên",
+        "page": "Trang",
+        "contact": "Liên hệ"
+    },
+    "trendingKeyWords": "Từ khóa thịnh hành",
+    "trandingJobs": {
+        "tranding": "Xu hướng",
+        "jobs": " công việc"
+    },
+    "topHiringCompanies": "CÔNG TY CỔ PHẦN HÀNG ĐẦU",
+    "rentJobs": "CÔNG VIỆC GẦN ĐÂY",
+    "featured": "ĐẶC SẮC",
+    "remotely": "TỪ XA",
+    "parttime": "BÁN THỜI GIAN",
+    "fulltime": "TOÀN THỜI GIAN",
+    "jobSpotlight": "Tiêu điểm công việc",
+    "JobsByCategory": "Công việc theo thể loại",
+    "careerAdvice": "Lời khuyên nghề nghiệp",
+    "keywords": "Từ khóa",
+    "jobAvailable": "Công việc có sẵn",
+    "members": "Thành viên",
+    "resume": "Hồ sơ",
+    "company": "Công ty",
+    "recentResumes": "Sơ yếu lý lịch gần đây",
+    "offeringBestDeals": "CUNG CẤP CÁC KHOẢN TỐT NHẤT",
+    "userInfo": {
+        "employer": "TÔI LÀ NHÀ TUYỂN DỤNG",
+        "candidate": "TÔI LÀ ỨNG VIÊN"
+    },
+    "menu": {
+        "addAResume": "Thêm Sơ yếu lý lịch",
+        "candidateDashboard": "Trang tổng quan ứng cử viên",
+        "pastApplications": "Ứng dụng trong quá khứ",
+        "jobAlerts": "Thông báo công việc",
+        "bookmarks": "Đánh dấu trang",
+        "myAccount": "Tài khoản của tôi",
+        "yourJobs": "Công việc của bạn",
+        "browseCandidates": "Duyệt các ứng cử viên",
+        "employerDashboard": "Tổng quan về nhà tuyển dụng",
+        "addJob": "Thêm công việc",
+        "jobPage": "Trang việc làm",
+        "jobPackages": "Gói công việc",
+        "workProcess": "Quy trình làm việc",
+        "aboutUs": "Về chúng tôi",
+        "terms&Conditions": "Điều khoản và điều kiện",
+        "privacyPolicy": "Chính sách bảo mật",
+        "careersWithUs": "Sự nghiệp với chúng tôi",
+        "sitemap": "Sơ đồ trang web",
+        "contactUs": "Liên hệ chúng tôi"
+    }
+}
