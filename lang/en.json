@@ -80,5 +80,24 @@
         "careersWithUs": "Careers With Us",
         "sitemap": "Sitemap",
         "contactUs": "ContactUs"
+    },
+    "campaign": {
+        "campaignDetail": "CAMPAIGN DETAIL",
+        "title": "Title",
+        "category": "Category",
+        "description": "Description",
+        "location": "Location",
+        "company": "Company"
+    },
+    "candidate": {
+        "detail": "CANDIDATE DETAIL",
+        "require": "Fields with * are mandetory",
+        "postCV": "Post your CV",
+        "submitCV": "Post a job"
+    },
+    "message": {
+        "someFieldRequire": "Some field is require",
+        "require": "This field is require!",
+        "emailNotCorrect": "Email is not correct format!"
     }
 }

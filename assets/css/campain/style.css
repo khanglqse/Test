@@ -3631,3 +3631,12 @@ ul{
 	background:#ffffff;
 	color:#000000;
 }
+
+.header-posting {
+	height: 500px;
+}
+
+.header-posting .jp_tittle_img_overlay {
+	padding-top: 150px;
+    padding-bottom: 100px;
+}

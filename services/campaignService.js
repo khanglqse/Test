@@ -8,4 +8,14 @@ export default class CampaignService {
         const result = ServiceRepository.getAPI(`${resource}?PageNumber=${pageNum}&PageSize=${pageSize}`);
         return result.then(response => response).catch(err => ErrorHandler.errorHandleRequest(err));
     }
+
+    static getGroupCategory(pageNum, pageSize) {
+        const result = ServiceRepository.getAPI(`${resource}/group-category?PageNumber=${pageNum}&PageSize=${pageSize}`);
+        return result.then(response => response).catch(err => ErrorHandler.errorHandleRequest(err));
+    }
+
+    static getDetailCampaign(campaignId) {
+        const result = ServiceRepository.getAPI(`${resource}/${campaignId}`);
+        return result.then(response => response).catch(err => ErrorHandler.errorHandleRequest(err));
+    }
 }

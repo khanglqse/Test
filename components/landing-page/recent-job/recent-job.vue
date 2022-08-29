@@ -78,7 +78,15 @@
                                   <a href="#">{{ $t("parttime") }}</a>
                                 </li>
                                 <li>
-                                  <a href="#">{{ $t("button.apply") }}</a>
+                                  <!-- <a href="#">{{ $t("button.apply") }}</a> -->
+                                  <nuxt-link
+                                    :to="{
+                                      path: '/job/campaign-detail#campaign-detail',
+                                      query: { campaign: item.id },
+                                    }"
+                                    tag="a"
+                                    >{{ $t("button.apply") }}</nuxt-link
+                                  >
                                 </li>
                               </ul>
                             </div>
@@ -87,7 +95,9 @@
                       </div>
                       <div class="jp_job_post_keyword_wrapper">
                         <ul>
-                          <li><i class="fa fa-tags"></i>Keywords :</li>
+                          <li>
+                            <i class="fa fa-tags"></i>{{ $t("keywords") }} :
+                          </li>
                           <li><a href="#">ui designer,</a></li>
                           <li><a href="#">developer,</a></li>
                           <li><a href="#">senior</a></li>
@@ -121,7 +131,11 @@
             <ul>
               <li v-for="(pageNum, index) in paging.totalPages" :key="pageNum">
                 <a
-                  :class="paging.pageIndex === index + 1 ? 'button-active' : 'button-non-active'"
+                  :class="
+                    paging.pageIndex === index + 1
+                      ? 'button-active'
+                      : 'button-non-active'
+                  "
                   class="button secondary url ~/assets/css/images/_nav"
                   @click="getCurrentPage(index + 1)"
                   >{{ index + 1 }}</a
@@ -172,7 +186,7 @@ export default {
           this.paging.pageIndex,
           this.paging.pageSize || 4
         );
-        if (result.isError) {
+        if (!result.success) {
           this.showToastMessage(ButtonName.TOAST_ERROR, result.errorMessage);
           this.paging = new PagingModel();
         } else {

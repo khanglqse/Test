@@ -6,7 +6,7 @@
         <div class="row">
           <div
             class="
-              col-lg-1 col-md-2 col-sm-12 col-xs-12
+              col-lg-2 col-md-2 col-sm-12 col-xs-12
               hidden-xs hidden-sm
               full_width
             "
@@ -70,12 +70,21 @@
                     ></a>
                     <!-- mega menu start -->
                     <ul>
-                      <li class="parent"><a href="index-2.html">Home1</a></li>
-                      <li class="parent"><a href="index_II.html">Home2</a></li>
+                      <li class="parent">
+                        <!-- <a href="index-2.html">Home1</a> -->
+                        <nuxt-link
+                          to="/job/home"
+                          tag="a"
+                          >
+                            Trang chủ
+                          </nuxt-link
+                        >
+                      </li>
+                      <!-- <li class="parent"><a href="index_II.html">Home2</a></li>
                       <li class="parent"><a href="index_map.html">Home3</a></li>
                       <li class="parent"><a href="index_iv.html">Home4</a></li>
                       <li class="parent"><a href="index_v.html">Home5</a></li>
-                      <li class="parent"><a href="index_vi.html">Home6</a></li>
+                      <li class="parent"><a href="index_vi.html">Home6</a></li> -->
                     </ul>
                   </li>
                   <li class="has-mega gc_main_navigation">
@@ -396,9 +405,9 @@
           </div>
           <!-- mobile menu area end -->
           <div
-            class="col-lg-3 col-md-4 col-sm-12 col-xs-12 hidden-sm hidden-xs"
+            class="col-lg-2 col-md-2 col-sm-12 col-xs-12 hidden-sm hidden-xs"
           >
-            <div class="jp_navi_right_btn_wrapper flex justify-center">
+            <div class="jp_navi_right_btn_wrapper">
               <ul>
                 <li>
                   <a
@@ -421,12 +430,15 @@
     </div>
 
     <FilterJob></FilterJob>
+
+    <!-- <HeaderPosting></HeaderPosting> -->
   </div>
 </template>
 
 <script>
 import Logo from "@/components/Logo";
 import FilterJob from "@/components/FilterJob";
+import HeaderPosting from "@/components/header-posting/header-posting";
 
 export default {
   components: {
