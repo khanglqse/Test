@@ -81,5 +81,25 @@
         "careersWithUs": "Sự nghiệp với chúng tôi",
         "sitemap": "Sơ đồ trang web",
         "contactUs": "Liên hệ chúng tôi"
+    },
+    "campaign": {
+        "campaignDetail": "CHI TIẾT CHIẾN DỊCH",
+        "title": "Tiêu đề",
+        "category": "Thể loại",
+        "description": "NỘI DUNG",
+        "location": "Vị trí",
+        "company": "Công ty"
+    },
+    "candidate": {
+        "detail": "Thông tin ứng viên",
+        "require": "Các trường có * là bắt buộc",
+        "postCV": "Tải lên CV của bạn",
+        "submitCV": "Gửi CV"
+    },
+    "message": {
+        "someFieldRequire": "Một số trường bắt buộc bị thiếu!",
+        "require": "Trường này là bắt buộc!",
+        "emailNotCorrect": "Email sai định dạng!",
+        "submitSuccess": "Gửi thành công"
     }
 }

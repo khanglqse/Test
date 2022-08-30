@@ -67,10 +67,19 @@
                 <div class="jp_form_btn_wrapper">
                   <ul>
                     <li>
-                      <a href="#" @click="filterWork(itemFilter)"
+                      <a href="/#recentJob" @click="filterWork(itemFilter)"
                         ><i class="fa fa-search"></i>
                         {{ $t("button.search") }}</a
                       >
+                      <!-- <nuxt-link
+                        :to="{
+                          path: '/',
+                        }"
+                        @click="filterWork(itemFilter)"
+                        tag="a"
+                        ><i class="fa fa-search"></i>
+                        {{ $t("button.search") }}</nuxt-link
+                      > -->
                     </li>
                   </ul>
                 </div>
@@ -105,15 +114,15 @@
             jp_job_cate_left_border
             jp_job_cate_left_border_bottom
           "
-          v-for="item in pagingCategory.items"
+          v-for="item in pagingCategory.data"
           :key="item.id"
         >
           <div class="jp_top_jobs_category">
             <i class="fa fa-code"></i>
             <h3>
-              <a href="#">{{ item.title }}</a>
+              <a href="#">{{ item.categoryName || "---" }}</a>
             </h3>
-            <p>(240 {{ $t("trandingJobs.jobs") }})</p>
+            <p>({{ item.count || 0 }} {{ $t("trandingJobs.jobs") }})</p>
           </div>
         </div>
       </div>
@@ -123,10 +132,11 @@
 
 <script>
 import { mapActions, mapState } from "vuex";
-import { PagingModel } from "@/model/paging-model";
+import { CampaignGroupCategory } from "@/model/campaign-model";
+import { FilterModel } from "@/model/filter-model";
 import toast from "@/mixins/toast";
 import ButtonName from "@/constant/button-name";
-import CategoryService from "@/services/categoryService";
+import CampaignService from "@/services/campaignService";
 
 export default {
   setup() {},
@@ -134,19 +144,22 @@ export default {
     pagingModel: {
       type: Object,
       default: () => {
-        const page = new PagingModel();
+        const page = new CampaignGroupCategory();
         return page;
+      },
+    },
+    filterModel: {
+      type: Object,
+      default: () => {
+        const filter = new FilterModel();
+        return filter;
       },
     },
   },
   mixins: [toast],
   data() {
     return {
-      itemFilter: {
-        keyword: "",
-        location: 0,
-        experience: 0,
-      },
+      itemFilter: this.filterModel,
       location: [
         {
           id: 1,
@@ -168,13 +181,13 @@ export default {
   methods: {
     async getListCategory() {
       try {
-        const result = await CategoryService.getListCategory(
+        const result = await CampaignService.getGroupCategory(
           this.pagingCategory.pageNum,
           6
         );
         if (result.isError) {
           this.showToastMessage(ButtonName.TOAST_ERROR, result.errorMessage);
-          this.pagingCategory = new PagingModel();
+          this.pagingCategory = new CampaignGroupCategory();
         } else {
           this.pagingCategory = result || {};
         }

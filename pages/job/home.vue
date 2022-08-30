@@ -45,11 +45,9 @@
                       </h4>
                       <ul>
                         <li>
-                          <a href="#"
-                            ><i class="fa fa-plus-circle"></i> &nbsp;{{
+                          <nuxt-link to="/job/campaign-posting#campaign-posting" tag="a"><i class="fa fa-plus-circle"></i> &nbsp;{{
                               $t("button.addResume")
-                            }}</a
-                          >
+                            }}</nuxt-link>
                         </li>
                       </ul>
                     </div>
@@ -131,6 +129,25 @@
     <div class="jp_best_deals_main_wrapper">
       <BestDeal></BestDeal>
     </div>
+
+    <!-- <nuxt-link
+      to="/job/campaign-detail"
+      class="
+        mx-auto
+        lg:mx-0
+        hover:underline
+        bg-white
+        text-gray-800
+        font-bold
+        rounded-full
+        my-6
+        py-4
+        px-8
+        shadow-lg
+      "
+    >
+      Go to Job Page
+    </nuxt-link> -->
   </div>
 </template>
 

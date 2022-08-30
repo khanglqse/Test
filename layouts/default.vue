@@ -1,7 +1,8 @@
 <template>
   <div class="leading-normal tracking-normal gradient flex flex-col min-h-screen">
     <Header />
-    <div class="flex shrink-0 grow basis-auto mx-auto">
+    <div>
+      <!-- class="flex shrink-0 grow basis-auto mx-auto" -->
       <nuxt />
     </div>
     <Footer />
@@ -27,11 +28,11 @@ export default {
 @import '~/assets/css/campain/font-awesome.css';
 @import '~/assets/css/campain/fonts.css';
 @import '~/assets/css/campain/reset.css';
-/* @import '~/assets/css/campain/owl.carousel.css';
-@import '~/assets/css/campain/owl.theme.default.css'; */
+@import '~/assets/css/campain/owl.carousel.css';
+@import '~/assets/css/campain/owl.theme.default.css';
 @import '~/assets/css/campain/flaticon.css';
 @import '~/assets/css/campain/responsive.css';
-
+@import '~/assets/css/campain/custom-header.css';
 /* html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;

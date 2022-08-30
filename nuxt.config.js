@@ -1,5 +1,6 @@
 module.exports = {
   components: true,
+  loading: '@/components/Loading.vue',
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/toast',
@@ -43,7 +44,7 @@ module.exports = {
   /*
   ** Customize the progress bar color
   */
-  loading: { color: '#3B8070' },
+  // loading: { color: '#3B8070' },
   /*
   ** Build configuration
   */

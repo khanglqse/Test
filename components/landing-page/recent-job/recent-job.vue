@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="cc_featured_product_main_wrapper">
+    <div class="cc_featured_product_main_wrapper" id="recentJob">
       <div class="jp_hiring_heading_wrapper jp_job_post_heading_wrapper">
         <h2>{{ $t("rentJobs") }}</h2>
       </div>
@@ -30,7 +30,7 @@
     <div class="tab-content">
       <div role="tabpanel" class="tab-pane fade in active" id="best">
         <div class="ss_featured_products">
-          <div class="carousel theme" v-if="paging.items">
+          <div class="carousel theme" v-if="paging.items.length">
             <div class="state-outer">
               <div class="state state-transform-1">
                 <div class="state-item">
@@ -49,13 +49,13 @@
                           <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
                             <div class="jp_job_post_side_img">
                               <img
-                                src="~/assets/css/images/content/job_post_img1.jpg"
+                                :src="item.imageUrl"
                                 alt="post_img"
                               />
                             </div>
                             <div class="jp_job_post_right_cont">
                               <h4>{{ item.title }}</h4>
-                              <p>{{ item.category }}</p>
+                              <p>{{ item.categoryName }}</p>
                               <ul>
                                 <li>
                                   <i class="fa fa-cc-paypal"></i>&nbsp;
@@ -78,7 +78,15 @@
                                   <a href="#">{{ $t("parttime") }}</a>
                                 </li>
                                 <li>
-                                  <a href="#">{{ $t("button.apply") }}</a>
+                                  <!-- <a href="#">{{ $t("button.apply") }}</a> -->
+                                  <nuxt-link
+                                    :to="{
+                                      path: '/job/campaign-detail#campaign-detail',
+                                      query: { campaign: item.id },
+                                    }"
+                                    tag="a"
+                                    >{{ $t("button.apply") }}</nuxt-link
+                                  >
                                 </li>
                               </ul>
                             </div>
@@ -87,7 +95,9 @@
                       </div>
                       <div class="jp_job_post_keyword_wrapper">
                         <ul>
-                          <li><i class="fa fa-tags"></i>Keywords :</li>
+                          <li>
+                            <i class="fa fa-tags"></i>{{ $t("keywords") }} :
+                          </li>
                           <li><a href="#">ui designer,</a></li>
                           <li><a href="#">developer,</a></li>
                           <li><a href="#">senior</a></li>
@@ -109,7 +119,7 @@
         </div>
         <div
           class="video_nav_img_wrapper flex justify-between items-center"
-          v-if="paging.items"
+          v-if="paging.items.length"
         >
           <a
             class="button secondary url ~/assets/css/images/_nav"
@@ -121,7 +131,11 @@
             <ul>
               <li v-for="(pageNum, index) in paging.totalPages" :key="pageNum">
                 <a
-                  :class="paging.pageIndex === index + 1 ? 'button-active' : 'button-non-active'"
+                  :class="
+                    paging.pageIndex === index + 1
+                      ? 'button-active'
+                      : 'button-non-active'
+                  "
                   class="button secondary url ~/assets/css/images/_nav"
                   @click="getCurrentPage(index + 1)"
                   >{{ index + 1 }}</a
@@ -170,9 +184,10 @@ export default {
       try {
         const result = await CampaignService.getListCampaign(
           this.paging.pageIndex,
-          this.paging.pageSize || 4
+          this.paging.pageSize || 4,
+          this.paging.keyword
         );
-        if (result.isError) {
+        if (!result.success) {
           this.showToastMessage(ButtonName.TOAST_ERROR, result.errorMessage);
           this.paging = new PagingModel();
         } else {
@@ -204,7 +219,10 @@ export default {
   },
   watch: {
     "$store.state.filter.filterItem"(value) {
-      console.log(value);
+      this.paging = new PagingModel();
+
+      this.paging.keyword = value.keyword;
+      this.getListCampaign();
     },
   },
   created() {
