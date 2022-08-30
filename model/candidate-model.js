@@ -1,7 +1,8 @@
 export class CandidateModel {
-    fullName = "";
+    name = "";
     gender = 0;
     email = "";
-    phoneNumber = "";
-    birthDay = "";
+    phone = "";
+    birthday = "";
+    isMale = true
 }

@@ -7,6 +7,8 @@ export class PagingModel {
     hasNextPage = false;
     pageNum = 1;
     pageSize = 4;
+    keyword = "";
+    rating = 0;
 }
 
 class ItemModel {

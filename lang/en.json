@@ -98,6 +98,7 @@
     "message": {
         "someFieldRequire": "Some field is require",
         "require": "This field is require!",
-        "emailNotCorrect": "Email is not correct format!"
+        "emailNotCorrect": "Email is not correct format!",
+        "submitSuccess": "Submit successful"
     }
 }

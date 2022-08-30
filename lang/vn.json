@@ -99,6 +99,7 @@
     "message": {
         "someFieldRequire": "Một số trường bắt buộc bị thiếu!",
         "require": "Trường này là bắt buộc!",
-        "emailNotCorrect": "Email sai định dạng!"
+        "emailNotCorrect": "Email sai định dạng!",
+        "submitSuccess": "Gửi thành công"
     }
 }

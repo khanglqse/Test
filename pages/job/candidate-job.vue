@@ -12,9 +12,9 @@
               <input
                 type="text"
                 placeholder="Họ và Tên"
-                v-model="candidate.fullName"
+                v-model="candidate.name"
               />
-              <p v-if="formValid && !candidate.fullName" class="text-red-500">
+              <p v-if="formValid && !candidate.name" class="text-red-500">
                 {{ $t("message.require") }}
               </p>
             </div>
@@ -55,12 +55,9 @@
               <input
                 type="text"
                 placeholder="Số điện thoại"
-                v-model="candidate.phoneNumber"
+                v-model="candidate.phone"
               />
-              <p
-                v-if="formValid && !candidate.phoneNumber"
-                class="text-red-500"
-              >
+              <p v-if="formValid && !candidate.phone" class="text-red-500">
                 {{ $t("message.require") }}
               </p>
             </div>
@@ -69,7 +66,7 @@
               <input
                 type="text"
                 placeholder="Ngày tháng năm sinh"
-                v-model="candidate.birthDay"
+                v-model="candidate.birthday"
               />
             </div>
           </div>
@@ -188,13 +185,14 @@ export default {
         );
       } else {
         try {
-          const result = await CandidateService.submitCandidateService(
-            this.candidate
-          );
+          const result = await CandidateService.submitCandidate(this.candidate);
           if (result.success) {
             this.candidate = new CandidateModel();
           }
-          this.showToastMessage(messageResult[result.success], result.message);
+          this.showToastMessage(
+            messageResult[result.success],
+            this.$i18n.t("message.submitSuccess")
+          );
         } catch (error) {
           this.showToastMessage(ButtonName.TOAST_ERROR, error?.message);
         }
@@ -202,7 +200,7 @@ export default {
     },
 
     validationForm() {
-      return !this.candidate.fullName || !this.candidate.phoneNumber;
+      return !this.candidate.name || !this.candidate.phone;
     },
 
     validEmail() {

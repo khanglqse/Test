@@ -67,10 +67,19 @@
                 <div class="jp_form_btn_wrapper">
                   <ul>
                     <li>
-                      <a href="#" @click="filterWork(itemFilter)"
+                      <a href="/#recentJob" @click="filterWork(itemFilter)"
                         ><i class="fa fa-search"></i>
                         {{ $t("button.search") }}</a
                       >
+                      <!-- <nuxt-link
+                        :to="{
+                          path: '/',
+                        }"
+                        @click="filterWork(itemFilter)"
+                        tag="a"
+                        ><i class="fa fa-search"></i>
+                        {{ $t("button.search") }}</nuxt-link
+                      > -->
                     </li>
                   </ul>
                 </div>
@@ -124,6 +133,7 @@
 <script>
 import { mapActions, mapState } from "vuex";
 import { CampaignGroupCategory } from "@/model/campaign-model";
+import { FilterModel } from "@/model/filter-model";
 import toast from "@/mixins/toast";
 import ButtonName from "@/constant/button-name";
 import CampaignService from "@/services/campaignService";
@@ -138,15 +148,18 @@ export default {
         return page;
       },
     },
+    filterModel: {
+      type: Object,
+      default: () => {
+        const filter = new FilterModel();
+        return filter;
+      },
+    },
   },
   mixins: [toast],
   data() {
     return {
-      itemFilter: {
-        keyword: "",
-        location: 0,
-        experience: 0,
-      },
+      itemFilter: this.filterModel,
       location: [
         {
           id: 1,

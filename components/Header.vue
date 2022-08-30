@@ -73,7 +73,7 @@
                       <li class="parent">
                         <!-- <a href="index-2.html">Home1</a> -->
                         <nuxt-link
-                          to="/job/home"
+                          to="/"
                           tag="a"
                           >
                             Trang chủ

@@ -11,5 +11,8 @@ export class CategoryGroupModel {
 export class CampaignGroupCategory {
     success = false;
     data = [CategoryGroupModel];
-    message = ""
+    message = "";
+    pageNum = 1;
+    pageSize = 6;
+
 }

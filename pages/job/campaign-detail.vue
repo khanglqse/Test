@@ -5,8 +5,15 @@
         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
           <div class="jp_cp_left_side_wrapper">
             <div class="jp_cp_left_pro_wallpaper">
-              <img src="images/content/cp1.png" alt="profile_img" />
-              <h2>John Doe</h2>
+              {{ campaign.imageUrl }}
+              <img
+                :src="
+                  campaign.imageUrl ||
+                  '~/assets/css/images/content/career_img1.jpg'
+                "
+                alt="profile_img"
+              />
+              <!-- <h2>John Doe</h2>
               <p>UI/UX Designer in Dewas</p>
               <ul>
                 <li>
@@ -18,7 +25,7 @@
                 <li>
                   <a href="#"><i class="fa fa-youtube-play"></i></a>
                 </li>
-              </ul>
+              </ul> -->
             </div>
             <!-- <div class="jp_cp_rd_wrapper">
               <ul>
@@ -75,11 +82,7 @@
               <div class="jp_cp_accor_heading_wrapper">
                 <h2>{{ $t("campaign.description") }}</h2>
                 <p>
-                  Proin gravida nibh vel velit quet. Aenean sollicitudin, lorem
-                  quis bibendum auctor, nisi elit consequat ipsum, nec sagittis
-                  sem nibh id elit. Duis sed odio sit amet nibh vulpuate cursus
-                  a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus
-                  a odio tincidunt.
+                  {{ campaign.description }}
                 </p>
               </div>
             </div>
