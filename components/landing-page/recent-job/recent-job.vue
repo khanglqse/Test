@@ -40,73 +40,82 @@
                     v-for="(item, index) in paging.items"
                     :key="item.id"
                   >
-                    <div
-                      class="jp_job_post_main_wrapper_cont"
-                      :class="index > 0 ? 'jp_job_post_main_wrapper_cont2' : ''"
+                    <nuxt-link
+                      :to="{
+                        path: `/job/${item.id}#campaign-detail`,
+                        param: item.id,
+                      }"
+                      tag="a"
                     >
-                      <div class="jp_job_post_main_wrapper">
-                        <div class="row">
-                          <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                            <div class="jp_job_post_side_img">
-                              <img
-                                :src="item.imageUrl"
-                                alt="post_img"
-                              />
+                      <div
+                        class="jp_job_post_main_wrapper_cont"
+                        :class="
+                          index > 0 ? 'jp_job_post_main_wrapper_cont2' : ''
+                        "
+                      >
+                        <div class="jp_job_post_main_wrapper">
+                          <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                              <div class="jp_job_post_side_img">
+                                <img :src="item.imageUrl" alt="post_img" />
+                              </div>
+                              <div class="jp_job_post_right_cont">
+                                <h4>{{ item.title }}</h4>
+                                <p>{{ item.categoryName }}</p>
+                                <ul>
+                                  <li>
+                                    <i class="fa fa-cc-paypal"></i>&nbsp;
+                                    {{ item.description }}
+                                  </li>
+                                  <li>
+                                    <i class="fa fa-map-marker"></i>&nbsp;
+                                    {{ item.location }}
+                                  </li>
+                                </ul>
+                              </div>
                             </div>
-                            <div class="jp_job_post_right_cont">
-                              <h4>{{ item.title }}</h4>
-                              <p>{{ item.categoryName }}</p>
-                              <ul>
-                                <li>
-                                  <i class="fa fa-cc-paypal"></i>&nbsp;
-                                  {{ item.description }}
-                                </li>
-                                <li>
-                                  <i class="fa fa-map-marker"></i>&nbsp;
-                                  {{ item.location }}
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                            <div class="jp_job_post_right_btn_wrapper">
-                              <ul>
-                                <li>
-                                  <a href="#"><i class="fa fa-heart-o"></i></a>
-                                </li>
-                                <li>
-                                  <a href="#">{{ $t("parttime") }}</a>
-                                </li>
-                                <li>
-                                  <!-- <a href="#">{{ $t("button.apply") }}</a> -->
-                                  <nuxt-link
-                                    :to="{
-                                      path: '/job/campaign-detail#campaign-detail',
-                                      query: { campaign: item.id },
-                                    }"
-                                    tag="a"
-                                    >{{ $t("button.apply") }}</nuxt-link
-                                  >
-                                </li>
-                              </ul>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                              <div class="jp_job_post_right_btn_wrapper">
+                                <ul>
+                                  <li>
+                                    <a href="#"
+                                      ><i class="fa fa-heart-o"></i
+                                    ></a>
+                                  </li>
+                                  <li>
+                                    <a href="#">{{ $t("parttime") }}</a>
+                                  </li>
+                                  <li>
+                                    <!-- <a href="#">{{ $t("button.apply") }}</a> -->
+                                    <nuxt-link
+                                      :to="{
+                                        path: `/job/${item.id}#campaign-detail`,
+                                        param: item.id,
+                                      }"
+                                      tag="a"
+                                      >{{ $t("button.apply") }}</nuxt-link
+                                    >
+                                  </li>
+                                </ul>
+                              </div>
                             </div>
                           </div>
                         </div>
+                        <div class="jp_job_post_keyword_wrapper">
+                          <ul>
+                            <li>
+                              <i class="fa fa-tags"></i>{{ $t("keywords") }} :
+                            </li>
+                            <li><a href="#">ui designer,</a></li>
+                            <li><a href="#">developer,</a></li>
+                            <li><a href="#">senior</a></li>
+                            <li><a href="#">it company,</a></li>
+                            <li><a href="#">design,</a></li>
+                            <li><a href="#">call center</a></li>
+                          </ul>
+                        </div>
                       </div>
-                      <div class="jp_job_post_keyword_wrapper">
-                        <ul>
-                          <li>
-                            <i class="fa fa-tags"></i>{{ $t("keywords") }} :
-                          </li>
-                          <li><a href="#">ui designer,</a></li>
-                          <li><a href="#">developer,</a></li>
-                          <li><a href="#">senior</a></li>
-                          <li><a href="#">it company,</a></li>
-                          <li><a href="#">design,</a></li>
-                          <li><a href="#">call center</a></li>
-                        </ul>
-                      </div>
-                    </div>
+                    </nuxt-link>
                   </div>
                 </div>
               </div>

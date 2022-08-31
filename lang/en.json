@@ -12,6 +12,7 @@
         "opening": "Opening",
         "registerAsCompany": "Register As Company",
         "apply": "APPLY",
+        "applyNow": "APPLY NOW",
         "searchAJob": "Search a Job",
         "applyAGoodJob": "Apply a Good Job",
         "jobSecurity": "Job Security",
@@ -19,7 +20,8 @@
         "viewAll": "VIEW ALL ",
         "category": "CATEGORY",
         "readMore": "READ MORE",
-        "option:": "Lựa chọn"
+        "option:": "Option",
+        "close": "Close"
     },
     "jobFilter": {
         "title": "Browse Jobs",
@@ -56,6 +58,7 @@
     "company": "Company",
     "recentResumes": "Recent Resumes",
     "offeringBestDeals": "OFFERING THE BEST DEALS",
+    "jobOverview": "Job Overview",
     "userInfo": {
         "employer": "I’M AN EMPLOYER",
         "candidate": "I’M AN CANDIDATE"
@@ -87,7 +90,10 @@
         "category": "Category",
         "description": "Description",
         "location": "Location",
-        "company": "Company"
+        "company": "Company",
+        "responsiblities": "RESPONSIBILITIES",
+        "minimumQualification": "MINIMUM QUALIFICATIONS",
+        "howToApply": "HOW TO APPLY"
     },
     "candidate": {
         "detail": "CANDIDATE DETAIL",
@@ -100,5 +106,8 @@
         "require": "This field is require!",
         "emailNotCorrect": "Email is not correct format!",
         "submitSuccess": "Submit successful"
+    },
+    "titleDialog": {
+        "applyJob": "Apply Job"
     }
 }

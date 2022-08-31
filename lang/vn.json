@@ -12,6 +12,7 @@
         "opening": "Đang mở",
         "registerAsCompany": "Đăng ký với quyền công ty",
         "apply": "Áp dụng",
+        "applyNow": "ÁP DỤNG NGAY",
         "searchAJob": "Tìm kiếm công việc",
         "applyAGoodJob": "Nhận công việc tốt",
         "jobSecurity": "Công việc an toàn",
@@ -19,7 +20,8 @@
         "viewAll": "XEM TẤT CẢ ",
         "category": "THỂ LOẠI",
         "readMore": "TÌM HIỂU THÊM",
-        "option:": "Lựa chọn"
+        "option:": "Lựa chọn",
+        "close": "Đóng"
     },
     "jobFilter": {
         "title": "Công việc",
@@ -57,6 +59,7 @@
     "company": "Công ty",
     "recentResumes": "Sơ yếu lý lịch gần đây",
     "offeringBestDeals": "CUNG CẤP CÁC KHOẢN TỐT NHẤT",
+    "jobOverview": "Tổng quan về công việc",
     "userInfo": {
         "employer": "TÔI LÀ NHÀ TUYỂN DỤNG",
         "candidate": "TÔI LÀ ỨNG VIÊN"
@@ -88,7 +91,10 @@
         "category": "Thể loại",
         "description": "NỘI DUNG",
         "location": "Vị trí",
-        "company": "Công ty"
+        "company": "Công ty",
+        "responsiblities": "TRÁCH NHIỆM",
+        "minimumQualification": "YÊU CẦU TỐI THIỂU",
+        "howToApply": "LÀM SAO ĐỂ ĐĂNG KÍ"
     },
     "candidate": {
         "detail": "Thông tin ứng viên",
@@ -101,5 +107,8 @@
         "require": "Trường này là bắt buộc!",
         "emailNotCorrect": "Email sai định dạng!",
         "submitSuccess": "Gửi thành công"
+    },
+    "titleDialog": {
+        "applyJob": "Áp dụng công việc"
     }
 }
