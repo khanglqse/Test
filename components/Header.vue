@@ -183,11 +183,13 @@
                     <div class="col-xs-6 col-sm-6">
                       <div class="gc_logo">
                         <a href="index-2.html"
-                          ><img
+                          >
+                          <!-- <img
                             src="images/header/logo.png"
                             alt="Logo"
                             title="Grace Church"
-                        /></a>
+                        /> -->
+                      </a>
                       </div>
                     </div>
                     <div class="col-xs-6 col-sm-6">

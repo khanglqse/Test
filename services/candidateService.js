@@ -16,8 +16,6 @@ export default class CandidateService {
             payload: request,
         };
 
-        console.log(param);
-
         const result = ServiceRepository.multiApiUploadCV(param);
         return result.then(response => response).catch(err => ErrorHandler.errorHandleRequest(err));
     }

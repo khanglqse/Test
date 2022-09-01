@@ -572,7 +572,7 @@
                     </div>
                     <div class="jp_listing_list_icon_cont_wrapper">
                       <ul>
-                        <li>Date Posted:</li>
+                        <li>{{ $t("campaign.dateStart") }}:</li>
                         <li>{{ convertDate(campaign.startDate) || "---" }}</li>
                       </ul>
                     </div>
@@ -588,8 +588,24 @@
                     </div>
                     <div class="jp_listing_list_icon_cont_wrapper">
                       <ul>
-                        <li>Location:</li>
+                        <li>{{ $t("campaign.location") }}:</li>
                         <li>{{ campaign.location || "---" }}</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div
+                    class="
+                      jp_listing_overview_list_main_wrapper
+                      jp_listing_overview_list_main_wrapper2
+                    "
+                  >
+                    <div class="jp_listing_list_icon">
+                      <i class="fa fa-th-large"></i>
+                    </div>
+                    <div class="jp_listing_list_icon_cont_wrapper">
+                      <ul>
+                        <li>{{ $t("campaign.category") }}:</li>
+                        <li>{{ campaign.categoryName || '---' }}</li>
                       </ul>
                     </div>
                   </div>
@@ -648,22 +664,6 @@
                     "
                   >
                     <div class="jp_listing_list_icon">
-                      <i class="fa fa-th-large"></i>
-                    </div>
-                    <div class="jp_listing_list_icon_cont_wrapper">
-                      <ul>
-                        <li>Category:</li>
-                        <li>Developer</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div
-                    class="
-                      jp_listing_overview_list_main_wrapper
-                      jp_listing_overview_list_main_wrapper2
-                    "
-                  >
-                    <div class="jp_listing_list_icon">
                       <i class="fa fa-star"></i>
                     </div>
                     <div class="jp_listing_list_icon_cont_wrapper">
@@ -675,13 +675,7 @@
                   </div> -->
                   <div class="jp_listing_right_bar_btn_wrapper">
                     <div class="jp_listing_right_bar_btn">
-                      <ul>
-                        <!-- <li>
-                          <a href="#"
-                            ><i class="fa fa-plus-circle"></i> &nbsp;Apply With
-                            Facebook</a
-                          >
-                        </li> -->
+                      <ul style="margin-top: 0">
                         <li>
                           <a @click="showApplyDialog()"
                             ><i class="fa fa-plus-circle"></i> &nbsp;{{
@@ -689,6 +683,12 @@
                             }}!</a
                           >
                         </li>
+                        <!-- <li>
+                          <a href="#"
+                            ><i class="fa fa-plus-circle"></i> &nbsp;Apply With
+                            Facebook</a
+                          >
+                        </li> -->
                       </ul>
                     </div>
                   </div>
@@ -712,6 +712,11 @@ import toast from "@/mixins/toast";
 import validForm from "@/mixins/validForm";
 import ButtonName from "@/constant/button-name";
 import { mapState, mapActions, mapMutations } from "vuex";
+
+const TitleToast = {
+  true: ButtonName.TOAST_SUCCESS,
+  false: ButtonName.TOAST_ERROR,
+};
 
 export default {
   components: {
@@ -783,27 +788,18 @@ export default {
 
     actionDialog(event) {
       if (event.isSubmit) {
-        this.submitCandidateCV(event);
+        event.isForm == 1 ? this.submitByForm(event) : this.uploadCV(event);
       } else {
         this.dialog = new DialogModel();
         this.$refs.applyJob.onReset();
       }
     },
 
-    async submitCandidateCV(data) {
-      this.formValid = false;
-      this.emailValid = false;
-
-      const titleToast = {
-        true: ButtonName.TOAST_SUCCESS,
-        false: ButtonName.TOAST_ERROR,
-      };
-
+    async submitByForm(data) {
       let messageResult = "";
 
       try {
-        const serviceAPI = data.isForm === 1 ? CandidateService.submitCandidate(data) : CandidateService.uploadCVCandidate(data);
-        const result = await serviceAPI;
+        const result = await CandidateService.submitCandidate(data);
         if (result.success) {
           this.dialog = new DialogModel();
           this.$refs.applyJob.onReset();
@@ -811,7 +807,7 @@ export default {
           messageResult = this.$i18n.t("message.submitSuccess");
         }
         this.showToastMessage(
-          titleToast[result.success || !result.isError],
+          TitleToast[result.success || !result.isError],
           messageResult || result.errorMessage
         );
       } catch (error) {
@@ -819,12 +815,27 @@ export default {
       }
     },
 
-    validationForm(item) {
-      return !item.name || !item.phone;
-    },
+    async uploadCV(data) {
+      let messageResult = "";
 
-    validEmail(item) {
-      return !this.validationEmail(item.email);
+      try {
+        const result = await CandidateService.uploadCVCandidate(data);
+        if (
+          result.responseSubmitForm?.data?.success &&
+          result.responseUpload?.data?.success
+        ) {
+          this.dialog = new DialogModel();
+          this.$refs.applyJob.onReset();
+
+          messageResult = this.$i18n.t("message.submitSuccess");
+        }
+        this.showToastMessage(
+          TitleToast[result.success || !result.isError],
+          messageResult || result.errorMessage
+        );
+      } catch (error) {
+        this.showToastMessage(ButtonName.TOAST_ERROR, error?.message);
+      }
     },
   },
   created() {

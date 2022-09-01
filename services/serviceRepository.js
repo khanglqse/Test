@@ -85,9 +85,15 @@ class ServiceRepository {
         });
     }
 
+    /**
+     * Join multi api request repository
+     * @param {*} url 
+     * @param {*} param 
+     * @returns 
+     */
     static multiApiUploadCV(param) {
         const urlSubmitForm = axios.post(baseUrl + param.urlSubmitForm, param.payload, config);
-        const urlUploadForm = axios.post(baseUrl + param.urlUploadCV, param.file);
+        const urlUploadForm = axios.post(baseUrl + param.urlUploadCV, param.payload.file);
 
         return axios.all([urlSubmitForm, urlUploadForm]).then(axios.spread((...response) => {
             const responseSubmitForm = response[0];

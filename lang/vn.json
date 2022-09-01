@@ -94,12 +94,14 @@
         "company": "Công ty",
         "responsiblities": "TRÁCH NHIỆM",
         "minimumQualification": "YÊU CẦU TỐI THIỂU",
-        "howToApply": "LÀM SAO ĐỂ ĐĂNG KÍ"
+        "howToApply": "LÀM SAO ĐỂ ĐĂNG KÍ",
+        "dateStart": "Ngày đăng"
     },
     "candidate": {
         "detail": "Thông tin ứng viên",
         "require": "Các trường có * là bắt buộc",
         "postCV": "Tải lên CV của bạn",
+        "submitForm": "Gửi Đơn",
         "submitCV": "Gửi CV",
         "fileSize50": "Tệp quá giới hạn 50MB"
     },
@@ -107,7 +109,9 @@
         "someFieldRequire": "Một số trường bắt buộc bị thiếu!",
         "require": "Trường này là bắt buộc!",
         "emailNotCorrect": "Email sai định dạng!",
-        "submitSuccess": "Gửi thành công"
+        "submitSuccess": "Gửi thành công",
+        "uploadFile": "Bạn chưa tải lên CV!",
+        "phoneFormat": "Số điện thoại không đúng định dạng"
     },
     "titleDialog": {
         "applyJob": "Áp dụng công việc"

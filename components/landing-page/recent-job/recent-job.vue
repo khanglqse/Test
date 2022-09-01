@@ -39,80 +39,70 @@
                     v-for="(item, index) in paging.items"
                     :key="item.id"
                   >
-                  <!-- data-hash="zero" -->
-                    <nuxt-link
-                      :to="{
-                        path: `/job/${item.id}#campaign-detail`,
-                        param: item.id,
-                      }"
+                    <!-- data-hash="zero" -->
+                    <div
+                      @click="goToDetailPage(item)"
+                      class="jp_job_post_main_wrapper_cont"
+                      :class="index > 0 ? 'jp_job_post_main_wrapper_cont2' : ''"
                     >
-                      <div
-                        class="jp_job_post_main_wrapper_cont"
-                        :class="
-                          index > 0 ? 'jp_job_post_main_wrapper_cont2' : ''
-                        "
-                      >
-                        <div class="jp_job_post_main_wrapper">
-                          <div class="row">
-                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                              <div class="jp_job_post_side_img">
-                                <img :src="item.imageUrl" alt="post_img" />
-                              </div>
-                              <div class="jp_job_post_right_cont">
-                                <h4>{{ item.title }}</h4>
-                                <p>{{ item.categoryName }}</p>
-                                <ul>
-                                  <li>
-                                    <i class="fa fa-cc-paypal"></i>&nbsp;
-                                    {{ item.description }}
-                                  </li>
-                                  <li>
-                                    <i class="fa fa-map-marker"></i>&nbsp;
-                                    {{ item.location }}
-                                  </li>
-                                </ul>
-                              </div>
+                      <div class="jp_job_post_main_wrapper">
+                        <div class="row">
+                          <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                            <div class="jp_job_post_side_img">
+                              <img :src="item.imageUrl" alt="post_img" />
                             </div>
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                              <div class="jp_job_post_right_btn_wrapper">
-                                <ul>
-                                  <li>
-                                    <a href="#"
-                                      ><i class="fa fa-heart-o"></i
-                                    ></a>
-                                  </li>
-                                  <li>
-                                    <a href="#">{{ $t("parttime") }}</a>
-                                  </li>
-                                  <li>
-                                    <nuxt-link
-                                      :to="{
-                                        path: `/job/${item.id}#campaign-detail`,
-                                        param: item.id,
-                                      }"
-                                      >{{ $t("button.apply") }}</nuxt-link
-                                    >
-                                  </li>
-                                </ul>
-                              </div>
+                            <div class="jp_job_post_right_cont">
+                              <h4>{{ item.title }}</h4>
+                              <p>{{ item.categoryName }}</p>
+                              <ul>
+                                <li>
+                                  <i class="fa fa-cc-paypal"></i>&nbsp;
+                                  {{ item.description }}
+                                </li>
+                                <li>
+                                  <i class="fa fa-map-marker"></i>&nbsp;
+                                  {{ item.location }}
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <div class="jp_job_post_right_btn_wrapper">
+                              <ul>
+                                <li>
+                                  <a href="#"><i class="fa fa-heart-o"></i></a>
+                                </li>
+                                <li>
+                                  <a href="#">{{ $t("parttime") }}</a>
+                                </li>
+                                <li>
+                                  <nuxt-link
+                                    :to="{
+                                      path: `/job/${item.id}#campaign-detail`,
+                                      param: item.id,
+                                    }"
+                                    >{{ $t("button.apply") }}</nuxt-link
+                                  >
+                                </li>
+                              </ul>
                             </div>
                           </div>
                         </div>
-                        <div class="jp_job_post_keyword_wrapper">
-                          <ul>
-                            <li>
-                              <i class="fa fa-tags"></i>{{ $t("keywords") }} :
-                            </li>
-                            <li><a href="#">ui designer,</a></li>
-                            <li><a href="#">developer,</a></li>
-                            <li><a href="#">senior</a></li>
-                            <li><a href="#">it company,</a></li>
-                            <li><a href="#">design,</a></li>
-                            <li><a href="#">call center</a></li>
-                          </ul>
-                        </div>
                       </div>
-                    </nuxt-link>
+                      <div class="jp_job_post_keyword_wrapper">
+                        <ul>
+                          <li>
+                            <i class="fa fa-tags"></i>{{ $t("keywords") }} :
+                          </li>
+                          <li><a href="#">ui designer,</a></li>
+                          <li><a href="#">developer,</a></li>
+                          <li><a href="#">senior</a></li>
+                          <li><a href="#">it company,</a></li>
+                          <li><a href="#">design,</a></li>
+                          <li><a href="#">call center</a></li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -127,34 +117,35 @@
           class="video_nav_img_wrapper flex justify-between items-center"
           v-if="paging.items.length"
         >
-          <a
-            class="button secondary url ~/assets/css/images/_nav"
+          <button
+            class="btn btn-default"
             @click="paging.hasPreviousPage && actionPaging('prev')"
-            >{{ $t("button.prev") }}</a
           >
+            {{ $t("button.prev") }}
+          </button>
 
           <div class="video_nav_img">
             <ul>
               <li v-for="(pageNum, index) in paging.totalPages" :key="pageNum">
-                <a
+                <button
                   :class="
-                    paging.pageIndex === index + 1
-                      ? 'button-active'
-                      : 'button-non-active'
+                    paging.pageIndex === index + 1 ? 'btn-info' : 'btn-default'
                   "
-                  class="button secondary url ~/assets/css/images/_nav"
+                  class="btn"
                   @click="getCurrentPage(index + 1)"
-                  >{{ index + 1 }}</a
                 >
+                  {{ index + 1 }}
+                </button>
               </li>
             </ul>
           </div>
 
-          <a
-            class="button secondary url ~/assets/css/images/_nav"
+          <button
+            class="btn btn-default"
             @click="paging.hasNextPage && actionPaging('next')"
-            >{{ $t("button.next") }}</a
           >
+            {{ $t("button.next") }}
+          </button>
         </div>
       </div>
     </div>
@@ -219,6 +210,10 @@ export default {
 
       this.getListCampaign();
     },
+
+    goToDetailPage(item) {
+      this.$router.push({path: `/job/${item.id}#campaign-detail`});
+    }
   },
   computed: {
     ...mapState(["filter"]),

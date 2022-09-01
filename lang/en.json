@@ -93,20 +93,24 @@
         "company": "Company",
         "responsiblities": "RESPONSIBILITIES",
         "minimumQualification": "MINIMUM QUALIFICATIONS",
-        "howToApply": "HOW TO APPLY"
+        "howToApply": "HOW TO APPLY",
+        "dateStart": "Date Start"
     },
     "candidate": {
         "detail": "CANDIDATE DETAIL",
         "require": "Fields with * are mandetory",
         "postCV": "Post your CV",
-        "submitCV": "Post a job",
+        "submitForm": "Submit Form",
+        "submitCV": "Submit CV",
         "fileSize50": "Only upload file 50MB"
     },
     "message": {
         "someFieldRequire": "Some field is require",
         "require": "This field is require!",
         "emailNotCorrect": "Email is not correct format!",
-        "submitSuccess": "Submit successful"
+        "submitSuccess": "Submit successful",
+        "uploadFile": "Please upload CV!",
+        "phoneFormat": "Phone number is not correct format"
     },
     "titleDialog": {
         "applyJob": "Apply Job"

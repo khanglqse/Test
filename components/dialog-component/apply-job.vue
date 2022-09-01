@@ -85,8 +85,10 @@
               <div class="jp_adp_form_wrapper">
                 <p>Số điện thoại <span class="text-red-500">*</span>:</p>
                 <input
+                  maxlength="10"
                   type="text"
                   placeholder="Số điện thoại"
+                  @keypress="checkPhoneValid"
                   v-model="candidateForm.phone"
                   class="form-control"
                 />
@@ -164,8 +166,10 @@
               <div class="jp_adp_form_wrapper">
                 <p>Số điện thoại <span class="text-red-500">*</span>:</p>
                 <input
+                  maxlength="10"
                   type="text"
                   placeholder="Số điện thoại"
+                  @keypress="checkPhoneValid"
                   v-model="candidateForm.phone"
                   class="form-control"
                 />
@@ -198,16 +202,14 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
               <div class="jp_adp_choose_resume">
                 <!-- <p>{{ $t("candidate.postCV") }}</p> -->
-                <div class="custom-input flex" v-if="candidateForm.file?.name">
+                <div class="custom-input flex" v-if="candidateForm.fileName">
                   <span class="icon-button" @click="removeFile()">
                     <i class="fa fa-close"></i>
                   </span>
-                  <p>{{candidateForm.file?.name}}</p>
+                  <p>{{ candidateForm.fileName }}</p>
                 </div>
               </div>
             </div>
-
-            {{candidateForm.file}}
           </div>
         </div>
       </md-dialog-content>
@@ -216,7 +218,14 @@
         <button class="btn btn-default mr-6" @click="onCancel()">
           {{ $t("button.close") }}
         </button>
-        <button class="btn btn-primary mr-6" @click="onConfirm()">
+        <button
+          class="btn btn-primary mr-6"
+          @click="onSubmitForm()"
+          v-if="candidateForm.isForm == 1"
+        >
+          {{ $t("candidate.submitForm") }}
+        </button>
+        <button class="btn btn-primary mr-6" @click="onSubmitCV()" v-else>
           {{ $t("candidate.submitCV") }}
         </button>
       </md-dialog-actions>
@@ -268,7 +277,7 @@ export default {
     };
   },
   methods: {
-    onConfirm() {
+    onSubmitForm() {
       if (this.validationForm()) {
         this.formValid = true;
         this.showToastMessage(
@@ -281,8 +290,37 @@ export default {
           ButtonName.TOAST_ERROR,
           this.$i18n.t("message.emailNotCorrect")
         );
+      } else if (this.candidateForm.phone.length < 9) {
+        this.showToastMessage(
+          ButtonName.TOAST_ERROR,
+          this.$i18n.t("message.phoneFormat")
+        );
       } else {
-        this.candidateForm.recordId = this.candidateForm.id = uuidv4();
+        this.candidateForm.id = uuidv4();
+        this.candidateForm.isSubmit = 1;
+        this.$emit("confirm", this.candidateForm);
+      }
+    },
+
+    onSubmitCV() {
+      if (this.validationForm()) {
+        this.formValid = true;
+        this.showToastMessage(
+          ButtonName.TOAST_ERROR,
+          this.$i18n.t("message.someFieldRequire")
+        );
+      } else if (!this.candidateForm.file) {
+        this.showToastMessage(
+          ButtonName.TOAST_ERROR,
+          this.$i18n.t("message.uploadFile")
+        );
+      } else if (this.candidateForm.phone.length < 9) {
+        this.showToastMessage(
+          ButtonName.TOAST_ERROR,
+          this.$i18n.t("message.phoneFormat")
+        );
+      } else {
+        this.candidateForm.recordId = uuidv4();
         this.candidateForm.isSubmit = 1;
         this.$emit("confirm", this.candidateForm);
       }
@@ -292,23 +330,23 @@ export default {
       const data = new FormData();
       const file = event.target.files[0];
 
-      // data.append('name', event.target.files[0].name);
-      // data.append('recordId', this.candidateForm.recordId);
-      // data.append('type', 'candidate');
-      data.append('file', file);
+      data.append("file", file);
 
+      // Max size 50MB
       if (event.target.files[0].size > 52428800) {
         this.showToastMessage(
           ButtonName.TOAST_ERROR,
           this.$i18n.t("candidate.fileSize50")
         );
       } else {
+        this.candidateForm.fileName = event.target.files[0].name;
         this.candidateForm.file = data;
       }
     },
 
     removeFile() {
-      this.candidateForm.file = [];
+      this.candidateForm.fileName = "";
+      this.candidateForm.file = new FormData();
     },
 
     onCancel() {
@@ -317,7 +355,10 @@ export default {
     },
 
     onReset() {
-      this.candidateForm = new CandidateModel();
+      (this.formValid = false),
+        (this.emailValid = false),
+        (this.isPhoneValid = false),
+        (this.candidateForm = new CandidateModel());
     },
 
     validationForm() {
@@ -327,13 +368,17 @@ export default {
     validEmail() {
       return !this.validationEmail(this.candidateForm.email);
     },
+
+    checkPhoneValid($event) {
+      this.checkPhoneNumber($event);
+    },
   },
   watch: {
     "candidateForm.isForm"(value) {
       this.candidateForm = new CandidateModel();
-      this.formValid = false,
-      this.emailValid = false,
-      this.candidateForm.isForm = value;
+      (this.formValid = false),
+        (this.emailValid = false),
+        (this.candidateForm.isForm = value);
     },
   },
 };
