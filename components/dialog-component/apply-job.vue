@@ -146,6 +146,37 @@
 
         <div v-else>
           <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+              <div class="jp_adp_form_wrapper">
+                <p>Họ và Tên <span class="text-red-500">*</span>:</p>
+                <input
+                  type="text"
+                  placeholder="Họ và Tên"
+                  v-model="candidateForm.name"
+                  class="form-control"
+                />
+                <p v-if="formValid && !candidateForm.name" class="text-red-500">
+                  {{ $t("message.require") }}
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+              <div class="jp_adp_form_wrapper">
+                <p>Số điện thoại <span class="text-red-500">*</span>:</p>
+                <input
+                  type="text"
+                  placeholder="Số điện thoại"
+                  v-model="candidateForm.phone"
+                  class="form-control"
+                />
+                <p
+                  v-if="formValid && !candidateForm.phone"
+                  class="text-red-500"
+                >
+                  {{ $t("message.require") }}
+                </p>
+              </div>
+            </div>
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
               <div class="jp_adp_choose_resume">
                 <!-- <p>{{ $t("candidate.postCV") }}</p> -->
@@ -155,10 +186,28 @@
                       $t("candidate.postCV")
                     }}</span
                   >
-                  <input type="file" name="resume" id="resume" />
+                  <input
+                    type="file"
+                    name="resume"
+                    id="resume"
+                    @change="onFileChange($event)"
+                  />
                 </div>
               </div>
             </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <div class="jp_adp_choose_resume">
+                <!-- <p>{{ $t("candidate.postCV") }}</p> -->
+                <div class="custom-input flex" v-if="candidateForm.file?.name">
+                  <span class="icon-button" @click="removeFile()">
+                    <i class="fa fa-close"></i>
+                  </span>
+                  <p>{{candidateForm.file?.name}}</p>
+                </div>
+              </div>
+            </div>
+
+            {{candidateForm.file}}
           </div>
         </div>
       </md-dialog-content>
@@ -184,6 +233,7 @@ import { DialogModel } from "@/model/dialog-model";
 import toast from "@/mixins/toast";
 import ButtonName from "@/constant/button-name";
 import validForm from "@/mixins/validForm";
+import { v4 as uuidv4 } from "uuid";
 
 Vue.use(VueMaterial);
 
@@ -232,9 +282,33 @@ export default {
           this.$i18n.t("message.emailNotCorrect")
         );
       } else {
+        this.candidateForm.recordId = this.candidateForm.id = uuidv4();
         this.candidateForm.isSubmit = 1;
         this.$emit("confirm", this.candidateForm);
       }
+    },
+
+    onFileChange(event) {
+      const data = new FormData();
+      const file = event.target.files[0];
+
+      // data.append('name', event.target.files[0].name);
+      // data.append('recordId', this.candidateForm.recordId);
+      // data.append('type', 'candidate');
+      data.append('file', file);
+
+      if (event.target.files[0].size > 52428800) {
+        this.showToastMessage(
+          ButtonName.TOAST_ERROR,
+          this.$i18n.t("candidate.fileSize50")
+        );
+      } else {
+        this.candidateForm.file = data;
+      }
+    },
+
+    removeFile() {
+      this.candidateForm.file = [];
     },
 
     onCancel() {
@@ -247,11 +321,19 @@ export default {
     },
 
     validationForm() {
-      return !this.candidateForm.name || !this.candidateForm.phone || !this.candidateForm.gender || !this.candidateForm.email;
+      return !this.candidateForm.name || !this.candidateForm.phone;
     },
 
     validEmail() {
       return !this.validationEmail(this.candidateForm.email);
+    },
+  },
+  watch: {
+    "candidateForm.isForm"(value) {
+      this.candidateForm = new CandidateModel();
+      this.formValid = false,
+      this.emailValid = false,
+      this.candidateForm.isForm = value;
     },
   },
 };

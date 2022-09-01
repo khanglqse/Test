@@ -45,7 +45,7 @@
                       </h4>
                       <ul>
                         <li>
-                          <nuxt-link to="/job/campaign-posting#campaign-posting" tag="a"><i class="fa fa-plus-circle"></i> &nbsp;{{
+                          <nuxt-link to="/job/campaign-posting#campaign-posting"><i class="fa fa-plus-circle"></i> &nbsp;{{
                               $t("button.addResume")
                             }}</nuxt-link>
                         </li>

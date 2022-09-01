@@ -8,4 +8,7 @@ export class CandidateModel {
     isMale = true;
     isForm = 1;
     isSubmit = 0;
+    file = [];
+    recordId = "";
+    type = "candidate";
 }

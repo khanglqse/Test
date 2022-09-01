@@ -36,16 +36,15 @@
                 <div class="state-item">
                   <div
                     class="item"
-                    data-hash="zero"
                     v-for="(item, index) in paging.items"
                     :key="item.id"
                   >
+                  <!-- data-hash="zero" -->
                     <nuxt-link
                       :to="{
                         path: `/job/${item.id}#campaign-detail`,
                         param: item.id,
                       }"
-                      tag="a"
                     >
                       <div
                         class="jp_job_post_main_wrapper_cont"
@@ -86,13 +85,11 @@
                                     <a href="#">{{ $t("parttime") }}</a>
                                   </li>
                                   <li>
-                                    <!-- <a href="#">{{ $t("button.apply") }}</a> -->
                                     <nuxt-link
                                       :to="{
                                         path: `/job/${item.id}#campaign-detail`,
                                         param: item.id,
                                       }"
-                                      tag="a"
                                       >{{ $t("button.apply") }}</nuxt-link
                                     >
                                   </li>

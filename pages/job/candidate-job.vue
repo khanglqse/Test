@@ -204,7 +204,6 @@ export default {
     },
 
     validEmail() {
-      console.log("email:" + this.validationEmail(this.candidate.email));
       return !this.validationEmail(this.candidate.email);
     },
   },

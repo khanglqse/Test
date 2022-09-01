@@ -99,7 +99,8 @@
         "detail": "CANDIDATE DETAIL",
         "require": "Fields with * are mandetory",
         "postCV": "Post your CV",
-        "submitCV": "Post a job"
+        "submitCV": "Post a job",
+        "fileSize50": "Only upload file 50MB"
     },
     "message": {
         "someFieldRequire": "Some field is require",

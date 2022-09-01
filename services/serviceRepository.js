@@ -84,6 +84,23 @@ class ServiceRepository {
             }
         });
     }
+
+    static multiApiUploadCV(param) {
+        const urlSubmitForm = axios.post(baseUrl + param.urlSubmitForm, param.payload, config);
+        const urlUploadForm = axios.post(baseUrl + param.urlUploadCV, param.file);
+
+        return axios.all([urlSubmitForm, urlUploadForm]).then(axios.spread((...response) => {
+            const responseSubmitForm = response[0];
+            const responseUpload = response[1];
+
+            return {
+                responseSubmitForm: responseSubmitForm,
+                responseUpload: responseUpload
+            }
+        })).catch(error => {
+            return error;
+        })
+    }
 }
 
 export default ServiceRepository;

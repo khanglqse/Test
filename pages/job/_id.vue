@@ -802,8 +802,8 @@ export default {
       let messageResult = "";
 
       try {
-        const result = await CandidateService.submitCandidate(data);
-        console.log(result);
+        const serviceAPI = data.isForm === 1 ? CandidateService.submitCandidate(data) : CandidateService.uploadCVCandidate(data);
+        const result = await serviceAPI;
         if (result.success) {
           this.dialog = new DialogModel();
           this.$refs.applyJob.onReset();

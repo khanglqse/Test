@@ -100,7 +100,8 @@
         "detail": "Thông tin ứng viên",
         "require": "Các trường có * là bắt buộc",
         "postCV": "Tải lên CV của bạn",
-        "submitCV": "Gửi CV"
+        "submitCV": "Gửi CV",
+        "fileSize50": "Tệp quá giới hạn 50MB"
     },
     "message": {
         "someFieldRequire": "Một số trường bắt buộc bị thiếu!",
