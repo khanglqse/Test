@@ -5,6 +5,7 @@
     "button": {
         "submit": "SUBMIT",
         "search": "Search",
+        "reset": "Reset",
         "getStart": "GET START",
         "prev": "PREV",
         "next": "NEXT",
@@ -36,7 +37,9 @@
         "job": "Job",
         "candidates": "Cadidates",
         "page": "Pages",
-        "contact": "Contact"
+        "contact": "Contact",
+        "campaignDetail": "Campaign Detail",
+        "siteMap": "Site Map"
     },
     "trendingKeyWords": "Trending Keywords",
     "trandingJobs": {
@@ -110,7 +113,8 @@
         "emailNotCorrect": "Email is not correct format!",
         "submitSuccess": "Submit successful",
         "uploadFile": "Please upload CV!",
-        "phoneFormat": "Phone number is not correct format"
+        "phoneFormat": "Phone number is not correct format",
+        "noItemFound": "No item found!"
     },
     "titleDialog": {
         "applyJob": "Apply Job"

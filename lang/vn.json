@@ -5,6 +5,7 @@
     "button": {
         "submit": "Gửi",
         "search": "Tìm kiếm",
+        "reset": "Làm mới",
         "getStart": "BẮT ĐẦU",
         "prev": "Trước",
         "next": "Sau",
@@ -36,7 +37,9 @@
         "job": "Công việc",
         "candidates": "Ứng viên",
         "page": "Trang",
-        "contact": "Liên hệ"
+        "contact": "Liên hệ",
+        "campaignDetail": "Chi tiết chiến dịch",
+        "siteMap": "Sơ đồ trang web"
     },
     "trendingKeyWords": "Từ khóa thịnh hành",
     "trandingJobs": {
@@ -111,7 +114,8 @@
         "emailNotCorrect": "Email sai định dạng!",
         "submitSuccess": "Gửi thành công",
         "uploadFile": "Bạn chưa tải lên CV!",
-        "phoneFormat": "Số điện thoại không đúng định dạng"
+        "phoneFormat": "Số điện thoại không đúng định dạng",
+        "noItemFound": "Không tìm thấy kết quả tìm kiếm đã nhập!"
     },
     "titleDialog": {
         "applyJob": "Áp dụng công việc"

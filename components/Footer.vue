@@ -280,3 +280,7 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+@import url('@/assets/css/custom-css/footer.css');
+</style>
