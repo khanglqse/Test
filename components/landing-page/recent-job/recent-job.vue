@@ -36,11 +36,12 @@
                 <div class="state-item">
                   <div
                     class="item"
-                    data-hash="zero"
                     v-for="(item, index) in paging.items"
                     :key="item.id"
                   >
+                    <!-- data-hash="zero" -->
                     <div
+                      @click="goToDetailPage(item)"
                       class="jp_job_post_main_wrapper_cont"
                       :class="index > 0 ? 'jp_job_post_main_wrapper_cont2' : ''"
                     >
@@ -48,10 +49,7 @@
                         <div class="row">
                           <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
                             <div class="jp_job_post_side_img">
-                              <img
-                                :src="item.imageUrl"
-                                alt="post_img"
-                              />
+                              <img :src="item.imageUrl" alt="post_img" />
                             </div>
                             <div class="jp_job_post_right_cont">
                               <h4>{{ item.title }}</h4>
@@ -78,13 +76,11 @@
                                   <a href="#">{{ $t("parttime") }}</a>
                                 </li>
                                 <li>
-                                  <!-- <a href="#">{{ $t("button.apply") }}</a> -->
                                   <nuxt-link
                                     :to="{
-                                      path: '/job/campaign-detail#campaign-detail',
-                                      query: { campaign: item.id },
+                                      path: `/job/${item.id}#campaign-detail`,
+                                      param: item.id,
                                     }"
-                                    tag="a"
                                     >{{ $t("button.apply") }}</nuxt-link
                                   >
                                 </li>
@@ -114,41 +110,42 @@
           </div>
 
           <div v-else>
-            <h4>No item found!</h4>
+            <h4>{{ $t("message.noItemFound") }}</h4>
           </div>
         </div>
         <div
           class="video_nav_img_wrapper flex justify-between items-center"
           v-if="paging.items.length"
         >
-          <a
-            class="button secondary url ~/assets/css/images/_nav"
+          <button
+            class="btn btn-default"
             @click="paging.hasPreviousPage && actionPaging('prev')"
-            >{{ $t("button.prev") }}</a
           >
+            {{ $t("button.prev") }}
+          </button>
 
           <div class="video_nav_img">
             <ul>
               <li v-for="(pageNum, index) in paging.totalPages" :key="pageNum">
-                <a
+                <button
                   :class="
-                    paging.pageIndex === index + 1
-                      ? 'button-active'
-                      : 'button-non-active'
+                    paging.pageIndex === index + 1 ? 'btn-info' : 'btn-default'
                   "
-                  class="button secondary url ~/assets/css/images/_nav"
+                  class="btn"
                   @click="getCurrentPage(index + 1)"
-                  >{{ index + 1 }}</a
                 >
+                  {{ index + 1 }}
+                </button>
               </li>
             </ul>
           </div>
 
-          <a
-            class="button secondary url ~/assets/css/images/_nav"
+          <button
+            class="btn btn-default"
             @click="paging.hasNextPage && actionPaging('next')"
-            >{{ $t("button.next") }}</a
           >
+            {{ $t("button.next") }}
+          </button>
         </div>
       </div>
     </div>
@@ -176,17 +173,30 @@ export default {
   data() {
     return {
       paging: this.pagingModel,
+      listBudget: [
+        {
+          id: 1,
+          from: 0,
+          to: 5000000,
+        },
+        {
+          id: 2,
+          from: 5000000,
+          to: 10000000,
+        },
+        {
+          id: 3,
+          from: 10000000,
+          to: 20000000,
+        },
+      ],
     };
   },
   mixins: [toast],
   methods: {
     async getListCampaign() {
       try {
-        const result = await CampaignService.getListCampaign(
-          this.paging.pageIndex,
-          this.paging.pageSize || 4,
-          this.paging.keyword
-        );
+        const result = await CampaignService.getListCampaign(this.paging);
         if (!result.success) {
           this.showToastMessage(ButtonName.TOAST_ERROR, result.errorMessage);
           this.paging = new PagingModel();
@@ -199,7 +209,12 @@ export default {
     },
 
     getCurrentPage(page) {
+      this.paging.keyword = this.$store.state.filter.filterItem.keyword;
+      this.paging.budget = this.listBudget.find(
+        (value) => value.id == this.$store.state.filter.filterItem.budget
+      );
       this.paging.pageIndex = page;
+
       this.getListCampaign();
     },
 
@@ -213,6 +228,10 @@ export default {
 
       this.getListCampaign();
     },
+
+    goToDetailPage(item) {
+      this.$router.push({ path: `/job/${item.id}#campaign-detail` });
+    },
   },
   computed: {
     ...mapState(["filter"]),
@@ -222,6 +241,10 @@ export default {
       this.paging = new PagingModel();
 
       this.paging.keyword = value.keyword;
+      this.paging.budget = this.listBudget.find(
+        (value) => value.id == this.filter.filterItem.budget
+      );
+
       this.getListCampaign();
     },
   },

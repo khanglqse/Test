@@ -1,8 +1,15 @@
+import moment from "moment";
 export class CandidateModel {
     name = "";
-    gender = 0;
+    gender = "";
     email = "";
     phone = "";
-    birthday = "";
-    isMale = true
+    birthday = moment(new Date()).format("YYYY-MM-DD");
+    isMale = true;
+    isForm = 1;
+    isSubmit = 0;
+    file;
+    fileName = "";
+    recordId = "";
+    type = "candidate";
 }

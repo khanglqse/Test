@@ -34,7 +34,7 @@ export default {
     return {};
   },
   mounted() {
-    console.log(1);
+    // console.log(1);
   },
 };
 </script>

@@ -1,5 +1,7 @@
 <template>
   <div>
+    <SubHeader></SubHeader>
+
     <div class="jp_adp_main_section_wrapper" id="campaign-posting">
       <div class="container">
         <div class="row">
@@ -141,73 +143,64 @@ import CandidateService from "@/services/candidateService";
 import ButtonName from "~/constant/button-name";
 import toast from "@/mixins/toast";
 import validForm from "@/mixins/validForm";
+import SubHeader from "~/components/SubHeader.vue";
 
 export default {
-  name: "CampaignPosting",
-  props: {
-    candidateModel: {
-      type: Object,
-      default: () => {
-        const candidate = new CandidateModel();
-        return candidate;
-      },
+    name: "CampaignPosting",
+    props: {
+        candidateModel: {
+            type: Object,
+            default: () => {
+                const candidate = new CandidateModel();
+                return candidate;
+            },
+        },
     },
-  },
-  mixins: [toast, validForm],
-  data() {
-    return {
-      candidate: this.candidateModel,
-      formValid: false,
-      emailValid: false,
-    };
-  },
-  methods: {
-    async submitCandidateCV() {
-      this.formValid = false;
-      this.emailValid = false;
-
-      const messageResult = {
-        true: ButtonName.TOAST_SUCCESS,
-        false: ButtonName.TOAST_ERROR,
-      };
-
-      if (this.validationForm()) {
-        this.formValid = true;
-        this.showToastMessage(
-          ButtonName.TOAST_ERROR,
-          this.$i18n.t("message.someFieldRequire")
-        );
-      } else if (this.validEmail() && this.candidate.email) {
-        this.emailValid = true;
-        this.showToastMessage(
-          ButtonName.TOAST_ERROR,
-          this.$i18n.t("message.emailNotCorrect")
-        );
-      } else {
-        try {
-          const result = await CandidateService.submitCandidate(this.candidate);
-          if (result.success) {
-            this.candidate = new CandidateModel();
-          }
-          this.showToastMessage(
-            messageResult[result.success],
-            this.$i18n.t("message.submitSuccess")
-          );
-        } catch (error) {
-          this.showToastMessage(ButtonName.TOAST_ERROR, error?.message);
-        }
-      }
+    mixins: [toast, validForm],
+    data() {
+        return {
+            candidate: this.candidateModel,
+            formValid: false,
+            emailValid: false,
+        };
     },
-
-    validationForm() {
-      return !this.candidate.name || !this.candidate.phone;
+    methods: {
+        async submitCandidateCV() {
+            this.formValid = false;
+            this.emailValid = false;
+            const messageResult = {
+                true: ButtonName.TOAST_SUCCESS,
+                false: ButtonName.TOAST_ERROR,
+            };
+            if (this.validationForm()) {
+                this.formValid = true;
+                this.showToastMessage(ButtonName.TOAST_ERROR, this.$i18n.t("message.someFieldRequire"));
+            }
+            else if (this.validEmail() && this.candidate.email) {
+                this.emailValid = true;
+                this.showToastMessage(ButtonName.TOAST_ERROR, this.$i18n.t("message.emailNotCorrect"));
+            }
+            else {
+                try {
+                    const result = await CandidateService.submitCandidate(this.candidate);
+                    if (result.success) {
+                        this.candidate = new CandidateModel();
+                    }
+                    this.showToastMessage(messageResult[result.success], this.$i18n.t("message.submitSuccess"));
+                }
+                catch (error) {
+                    this.showToastMessage(ButtonName.TOAST_ERROR, error?.message);
+                }
+            }
+        },
+        validationForm() {
+            return !this.candidate.name || !this.candidate.phone;
+        },
+        validEmail() {
+            return !this.validationEmail(this.candidate.email);
+        },
     },
-
-    validEmail() {
-      console.log("email:" + this.validationEmail(this.candidate.email));
-      return !this.validationEmail(this.candidate.email);
-    },
-  },
+    components: { SubHeader }
 };
 </script>
   

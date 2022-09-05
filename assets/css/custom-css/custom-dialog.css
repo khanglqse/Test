@@ -1,0 +1,54 @@
+.dialog-notify {
+    /* position: fixed;
+    background: red;
+    top: 50%;
+    left: 25%;
+    width: 50%; */
+    z-index: 99;
+    /* padding: 25px;
+    border-radius: 5px; */
+}
+
+.md-dialog-container {
+    background-color: white;
+    border-radius: 5px;
+    width: 50%;
+    font-family: Montserrat,sans-serif;
+}
+
+.md-dialog-title {
+    color: white;
+    background-color: #23c0e9;
+    padding: 15px;
+}
+
+.form-option {
+    margin-right: 15px; 
+}
+
+.form-option input {
+    margin: 5px 5px 0 0;
+}
+
+.jp_adp_form_wrapper {
+    margin: 15px 0;
+}
+
+.jp_adp_form_heading_wrapper h2 {
+    margin: 15px 0;
+    font-size: 16px;
+}
+
+.md-dialog-actions {
+    padding: 15px;
+}
+
+.custom-input p, .icon-button {
+    margin: 15px 0;
+    color: #23c0e9;
+}
+
+.icon-button {
+    margin-right: 5px;
+    cursor: pointer;
+}

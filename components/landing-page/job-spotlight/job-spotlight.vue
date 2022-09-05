@@ -22,7 +22,7 @@
           <div class="jp_spotlight_slider_btn">
             <ul>
               <li>
-                <nuxt-link to="/job/candidate-job#campaign-posting" tag="a"><i class="fa fa-plus-circle"></i> &nbsp;{{
+                <nuxt-link to="/job/candidate-job#campaign-posting"><i class="fa fa-plus-circle"></i> &nbsp;{{
                               $t("button.addResume")
                             }}</nuxt-link>
               </li>

@@ -5,6 +5,7 @@
     "button": {
         "submit": "SUBMIT",
         "search": "Search",
+        "reset": "Reset",
         "getStart": "GET START",
         "prev": "PREV",
         "next": "NEXT",
@@ -12,6 +13,7 @@
         "opening": "Opening",
         "registerAsCompany": "Register As Company",
         "apply": "APPLY",
+        "applyNow": "APPLY NOW",
         "searchAJob": "Search a Job",
         "applyAGoodJob": "Apply a Good Job",
         "jobSecurity": "Job Security",
@@ -19,7 +21,8 @@
         "viewAll": "VIEW ALL ",
         "category": "CATEGORY",
         "readMore": "READ MORE",
-        "option:": "Lựa chọn"
+        "option:": "Option",
+        "close": "Close"
     },
     "jobFilter": {
         "title": "Browse Jobs",
@@ -34,7 +37,9 @@
         "job": "Job",
         "candidates": "Cadidates",
         "page": "Pages",
-        "contact": "Contact"
+        "contact": "Contact",
+        "campaignDetail": "Campaign Detail",
+        "siteMap": "Site Map"
     },
     "trendingKeyWords": "Trending Keywords",
     "trandingJobs": {
@@ -56,6 +61,7 @@
     "company": "Company",
     "recentResumes": "Recent Resumes",
     "offeringBestDeals": "OFFERING THE BEST DEALS",
+    "jobOverview": "Job Overview",
     "userInfo": {
         "employer": "I’M AN EMPLOYER",
         "candidate": "I’M AN CANDIDATE"
@@ -87,18 +93,30 @@
         "category": "Category",
         "description": "Description",
         "location": "Location",
-        "company": "Company"
+        "company": "Company",
+        "responsiblities": "RESPONSIBILITIES",
+        "minimumQualification": "MINIMUM QUALIFICATIONS",
+        "howToApply": "HOW TO APPLY",
+        "dateStart": "Date Start"
     },
     "candidate": {
         "detail": "CANDIDATE DETAIL",
         "require": "Fields with * are mandetory",
         "postCV": "Post your CV",
-        "submitCV": "Post a job"
+        "submitForm": "Submit Form",
+        "submitCV": "Submit CV",
+        "fileSize50": "Only upload file 50MB"
     },
     "message": {
         "someFieldRequire": "Some field is require",
         "require": "This field is require!",
         "emailNotCorrect": "Email is not correct format!",
-        "submitSuccess": "Submit successful"
+        "submitSuccess": "Submit successful",
+        "uploadFile": "Please upload CV!",
+        "phoneFormat": "Phone number is not correct format",
+        "noItemFound": "No item found!"
+    },
+    "titleDialog": {
+        "applyJob": "Apply Job"
     }
 }

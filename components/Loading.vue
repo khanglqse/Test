@@ -1,39 +1,60 @@
 <template>
-  <div class="loading-page" v-if="loading">
-    <p>Loading...</p>
+  <div id="preloader" v-if="isLoading">
+    <div id="status">
+      <img src="~/assets/css/images/header/loadinganimation.gif" />
+    </div>
   </div>
 </template>
-  
-  <script>
+
+<script>
+import axios from "axios";
+
 export default {
-  data: () => ({
-    loading: false,
-  }),
+  mounted() {
+    this.enableInterceptor();
+  },
+  data() {
+    return {
+      isLoading: false,
+      axiosInterceptor: null,
+    };
+  },
   methods: {
-    start() {
-      this.loading = true;
-      console.log(true);
+    /**
+     * Enable Interceptor
+     * Time create: 09/04/2021
+     */
+    enableInterceptor() {
+      this.axiosInterceptor = axios.interceptors.request.use(
+        (config) => {
+          this.isLoading = true;
+          return config;
+        },
+        (error) => {
+          this.isLoading = false;
+          return Promise.reject(error);
+        }
+      );
+
+      axios.interceptors.response.use(
+        (response) => {
+          this.isLoading = false;
+          return response;
+        },
+        (error) => {
+          this.isLoading = false;
+          return Promise.reject(error);
+        }
+      );
     },
-    finish() {
-      this.loading = false;
-      console.log(true);
+
+    /**
+     * Disable Interceptor
+     * Time create: 09/04/2021
+     */
+    disableInterceptor() {
+      axios.interceptors.request.eject(this.axiosInterceptor);
     },
   },
 };
 </script>
-  
-  <style scoped>
-.loading-page {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  padding-top: 200px;
-  font-size: 30px;
-  font-family: sans-serif;
-  z-index: 999;
-}
-</style>

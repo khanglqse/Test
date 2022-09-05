@@ -5,6 +5,7 @@
     "button": {
         "submit": "Gửi",
         "search": "Tìm kiếm",
+        "reset": "Làm mới",
         "getStart": "BẮT ĐẦU",
         "prev": "Trước",
         "next": "Sau",
@@ -12,6 +13,7 @@
         "opening": "Đang mở",
         "registerAsCompany": "Đăng ký với quyền công ty",
         "apply": "Áp dụng",
+        "applyNow": "ÁP DỤNG NGAY",
         "searchAJob": "Tìm kiếm công việc",
         "applyAGoodJob": "Nhận công việc tốt",
         "jobSecurity": "Công việc an toàn",
@@ -19,7 +21,8 @@
         "viewAll": "XEM TẤT CẢ ",
         "category": "THỂ LOẠI",
         "readMore": "TÌM HIỂU THÊM",
-        "option:": "Lựa chọn"
+        "option:": "Lựa chọn",
+        "close": "Đóng"
     },
     "jobFilter": {
         "title": "Công việc",
@@ -34,7 +37,10 @@
         "job": "Công việc",
         "candidates": "Ứng viên",
         "page": "Trang",
-        "customerCare": "Chăm sóc khách hàng"
+        "customerCare": "Chăm sóc khách hàng",
+        "contact": "Liên hệ",
+        "campaignDetail": "Chi tiết chiến dịch",
+        "siteMap": "Sơ đồ trang web"
     },
     "trendingKeyWords": "Từ khóa thịnh hành",
     "trandingJobs": {
@@ -57,6 +63,7 @@
     "company": "Công ty",
     "recentResumes": "Sơ yếu lý lịch gần đây",
     "offeringBestDeals": "CUNG CẤP CÁC KHOẢN TỐT NHẤT",
+    "jobOverview": "Tổng quan về công việc",
     "userInfo": {
         "employer": "TÔI LÀ NHÀ TUYỂN DỤNG",
         "candidate": "TÔI LÀ ỨNG VIÊN"
@@ -89,28 +96,40 @@
         "category": "Thể loại",
         "description": "NỘI DUNG",
         "location": "Vị trí",
-        "company": "Công ty"
+        "company": "Công ty",
+        "responsiblities": "TRÁCH NHIỆM",
+        "minimumQualification": "YÊU CẦU TỐI THIỂU",
+        "howToApply": "LÀM SAO ĐỂ ĐĂNG KÍ",
+        "dateStart": "Ngày đăng"
     },
     "candidate": {
         "detail": "Thông tin ứng viên",
         "require": "Các trường có * là bắt buộc",
         "postCV": "Tải lên CV của bạn",
-        "submitCV": "Gửi CV"
+        "submitForm": "Gửi Đơn",
+        "submitCV": "Gửi CV",
+        "fileSize50": "Tệp quá giới hạn 50MB"
     },
     "message": {
         "someFieldRequire": "Một số trường bắt buộc bị thiếu!",
         "require": "Trường này là bắt buộc!",
         "emailNotCorrect": "Email sai định dạng!",
-        "submitSuccess": "Gửi thành công"
+        "submitSuccess": "Gửi thành công",
+        "uploadFile": "Bạn chưa tải lên CV!",
+        "phoneFormat": "Số điện thoại không đúng định dạng",
+        "noItemFound": "Không tìm thấy kết quả tìm kiếm đã nhập!"
+    },
+    "titleDialog": {
+        "applyJob": "Áp dụng công việc"
     },
     "contactUs": {
         "contactUs": "Liên hệ",
-        "address":"Số 121 đường King, Thành phố Melbourne, Australia Victoria 3000",
-        "sendBtn":"GỬI",
-        "leaveMessage":"Nhắn với chúng tôi",
-        "name":"Họ và tên *",
-        "phone":"Số điện thoại *",
-        "subject":"Tựa đề",
-        "typeMessage":"Nhập tin nhắn của bạn *"
+        "address": "Số 121 đường King, Thành phố Melbourne, Australia Victoria 3000",
+        "sendBtn": "GỬI",
+        "leaveMessage": "Nhắn với chúng tôi",
+        "name": "Họ và tên *",
+        "phone": "Số điện thoại *",
+        "subject": "Tựa đề",
+        "typeMessage": "Nhập tin nhắn của bạn *"
     }
 }

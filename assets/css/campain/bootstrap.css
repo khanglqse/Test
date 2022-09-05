@@ -1289,7 +1289,7 @@ h6,
   font-size: 12px;
 }
 p {
-  margin: 0 0 10px;
+  /* margin: 0 0 10px; */
 }
 .lead {
   margin-bottom: 20px;
@@ -3035,7 +3035,7 @@ select[multiple].input-lg {
 .btn.focus,
 .btn:active.focus,
 .btn.active.focus {
-  outline: 5px auto -webkit-focus-ring-color;
+  /* outline: 5px auto -webkit-focus-ring-color; */
   outline-offset: -2px;
 }
 .btn:hover,
