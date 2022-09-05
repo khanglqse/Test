@@ -13,29 +13,30 @@
           </div>
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="jp_header_form_wrapper">
-              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+              <div class="col-lg-5 col-md-4 col-sm-12 col-xs-12">
                 <input
                   type="text"
                   placeholder="Từ khóa ví dụ: (Tiêu đề Công Việc, Nội dung)"
                   v-model="itemFilter.keyword"
+                  @keyup.enter="filterWork(itemFilter)"
                 />
               </div>
               <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                 <div class="jp_form_location_wrapper">
                   <i class="fa fa-dot-circle-o first_icon"></i
-                  ><select v-model="itemFilter.location">
+                  ><select v-model="itemFilter.budget">
                     <option :value="0">Lựa chọn</option>
                     <option
-                      v-for="item in location"
+                      v-for="item in listBudget"
                       :key="item.id"
                       :value="item.id"
                     >
-                      {{ item.name }}
+                      {{ item.from }} - {{ item.to }}
                     </option></select
                   ><i class="fa fa-angle-down second_icon"></i>
                 </div>
               </div>
-              <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+              <!-- <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                 <div class="jp_form_exper_wrapper">
                   <i class="fa fa-dot-circle-o first_icon"></i
                   ><select v-model="itemFilter.experience">
@@ -49,7 +50,7 @@
                     </option></select
                   ><i class="fa fa-angle-down second_icon"></i>
                 </div>
-              </div>
+              </div> -->
               <!-- <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                 <div class="jp_form_exper_wrapper">
                   <i class="fa fa-dot-circle-o first_icon"></i
@@ -80,6 +81,18 @@
                         ><i class="fa fa-search"></i>
                         {{ $t("button.search") }}</nuxt-link
                       > -->
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+                <div class="jp_form_btn_wrapper">
+                  <ul>
+                    <li>
+                      <a href="/#recentJob" @click="resetFilter(itemFilter)"
+                        ><i class="fa fa-rotate-right"></i>
+                        {{ $t("button.reset") }}</a
+                      >
                     </li>
                   </ul>
                 </div>
@@ -174,6 +187,23 @@ export default {
           name: "Đà Nẵng",
         },
       ],
+      listBudget: [
+        {
+          id: 1,
+          from: 0,
+          to: 5000000,
+        },
+        {
+          id: 2,
+          from: 5000000,
+          to: 10000000,
+        },
+        {
+          id: 3,
+          from: 10000000,
+          to: 20000000,
+        },
+      ],
       experience: [1, 2, 3, 4, 5],
       pagingCategory: this.pagingModel,
     };
@@ -202,11 +232,17 @@ export default {
 
     ...mapActions({
       filterWork: "filter/filterWork",
+      resetFilter: "filter/resetFilter",
     }),
   },
   computed: {
     ...mapState(["filter"]),
     ...mapState("lang", ["locales", "locale"]),
+  },
+  watch: {
+    "$store.state.filter.filterItem"(value) {
+      this.itemFilter = { ...value };
+    },
   },
   created() {
     this.getListCategory();

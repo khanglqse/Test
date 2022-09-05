@@ -3,7 +3,8 @@ const getDefaultState = () => {
         filterItem: {
             keyword: "",
             location: 0,
-            experience: 0
+            experience: 0,
+            budget: 0,
         }
     };
 }

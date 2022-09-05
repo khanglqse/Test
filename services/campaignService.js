@@ -4,8 +4,8 @@ import ErrorHandler from "./errorHandler.js";
 const resource = 'campaign';
 
 export default class CampaignService {
-    static getListCampaign(pageNum, pageSize, keyword) {
-        const result = ServiceRepository.getAPI(`${resource}?PageNumber=${pageNum}&PageSize=${pageSize}&Keyword=${keyword ?? ""}`);
+    static getListCampaign(param) {
+        const result = ServiceRepository.getAPI(`${resource}?PageNumber=${param.pageIndex}&PageSize=${param.pageSize || 4}&Keyword=${param.keyword || ""}&budgetFrom=${param.budget?.from}&budgetTo=${param.budget?.to}`);
         return result.then(response => response).catch(err => ErrorHandler.errorHandleRequest(err));
     }
 

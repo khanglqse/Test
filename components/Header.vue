@@ -24,7 +24,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 center_responsive">
+          <div class="col-lg-7 col-md-8 col-sm-12 col-xs-12 center_responsive">
             <div class="header-area hidden-menu-bar stick" id="sticker">
               <!-- mainmenu start -->
               <div class="mainmenu">
@@ -72,13 +72,7 @@
                     <ul>
                       <li class="parent">
                         <!-- <a href="index-2.html">Home1</a> -->
-                        <nuxt-link
-                          to="/"
-                          tag="a"
-                          >
-                            Trang chủ
-                          </nuxt-link
-                        >
+                        <nuxt-link to="/"> Trang chủ </nuxt-link>
                       </li>
                       <!-- <li class="parent"><a href="index_II.html">Home2</a></li>
                       <li class="parent"><a href="index_map.html">Home3</a></li>
@@ -147,6 +141,9 @@
                         <a href="register.html">Register</a>
                       </li>
                       <li class="parent"><a href="pricing.html">Pricing</a></li>
+                      <li class="parent">
+                        <nuxt-link to="/site-map/home"> Sơ đồ trang web </nuxt-link>
+                      </li>
                     </ul>
                   </li>
                   <li class="has-mega gc_main_navigation">
@@ -183,12 +180,13 @@
                   <div class="row">
                     <div class="col-xs-6 col-sm-6">
                       <div class="gc_logo">
-                        <a href="index-2.html"
-                          ><img
+                        <a href="index-2.html">
+                          <!-- <img
                             src="images/header/logo.png"
                             alt="Logo"
                             title="Grace Church"
-                        /></a>
+                        /> -->
+                        </a>
                       </div>
                     </div>
                     <div class="col-xs-6 col-sm-6">
@@ -405,7 +403,7 @@
           </div>
           <!-- mobile menu area end -->
           <div
-            class="col-lg-2 col-md-2 col-sm-12 col-xs-12 hidden-sm hidden-xs"
+            class="col-lg-3 col-md-2 col-sm-12 col-xs-12 hidden-sm hidden-xs"
           >
             <div class="jp_navi_right_btn_wrapper">
               <ul>

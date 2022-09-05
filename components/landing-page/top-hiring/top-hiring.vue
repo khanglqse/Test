@@ -1,17 +1,13 @@
 <template>
   <div class="jp_hiring_slider_wrapper">
     <div class="carousel theme flex">
-      <div class="item flex-1" v-for="item in listHiring" :key="item.title">
+      <div class="item flex-1" v-for="item in listHiring" :key="item.img">
         <div class="jp_hiring_content_main_wrapper">
           <div class="jp_hiring_content_wrapper">
-            <img
+            <!-- <img
               :src="'~/assets/css/images/content/' + item.img"
               alt="hiring_img"
-            />
-            <!-- <img
-                              src="~/assets/css/images/content/hiring_img2.png"
-                              alt="hiring_img"
-                            /> -->
+            /> -->
             <h4>{{ item.title }}</h4>
             <p>{{ item.city }}</p>
             <ul>
