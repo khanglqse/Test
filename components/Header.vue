@@ -131,7 +131,7 @@
                     ></a>
                     <!-- mega menu start -->
                     <ul>
-                      <li class="parent"><a href="about.html">About-Us</a></li>
+                      <!-- <li class="parent"><a href="about.html">About-Us</a></li>
                       <li class="parent"><a href="404_error.html">404</a></li>
                       <li class="parent">
                         <a href="add_postin.html">Add-Posting</a>
@@ -140,9 +140,9 @@
                       <li class="parent">
                         <a href="register.html">Register</a>
                       </li>
-                      <li class="parent"><a href="pricing.html">Pricing</a></li>
+                      <li class="parent"><a href="pricing.html">Pricing</a></li> -->
                       <li class="parent">
-                        <nuxt-link to="/site-map/home"> Sơ đồ trang web </nuxt-link>
+                        <nuxt-link to="/site-map/home#site-map-detail"> Sơ đồ trang web </nuxt-link>
                       </li>
                     </ul>
                   </li>

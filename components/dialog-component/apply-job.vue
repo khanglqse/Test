@@ -215,17 +215,17 @@
       </md-dialog-content>
 
       <md-dialog-actions>
-        <button class="btn btn-default mr-6" @click="onCancel()">
+        <button class="btn btn-default mr-4" @click="onCancel()">
           {{ $t("button.close") }}
         </button>
         <button
-          class="btn btn-primary mr-6"
+          class="btn btn-primary mr-4"
           @click="onSubmitForm()"
           v-if="candidateForm.isForm == 1"
         >
           {{ $t("candidate.submitForm") }}
         </button>
-        <button class="btn btn-primary mr-6" @click="onSubmitCV()" v-else>
+        <button class="btn btn-primary mr-4" @click="onSubmitCV()" v-else>
           {{ $t("candidate.submitCV") }}
         </button>
       </md-dialog-actions>
