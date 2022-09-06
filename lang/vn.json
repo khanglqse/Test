@@ -37,6 +37,7 @@
         "job": "Công việc",
         "candidates": "Ứng viên",
         "page": "Trang",
+        "customerCare": "Chăm sóc khách hàng",
         "contact": "Liên hệ",
         "campaignDetail": "Chi tiết chiến dịch",
         "siteMap": "Sơ đồ trang web"
@@ -86,7 +87,8 @@
         "privacyPolicy": "Chính sách bảo mật",
         "careersWithUs": "Sự nghiệp với chúng tôi",
         "sitemap": "Sơ đồ trang web",
-        "contactUs": "Liên hệ chúng tôi"
+        "contactUs": "Liên hệ",
+        "qna": "Hỏi đáp"
     },
     "campaign": {
         "campaignDetail": "CHI TIẾT CHIẾN DỊCH",
@@ -119,5 +121,15 @@
     },
     "titleDialog": {
         "applyJob": "Áp dụng công việc"
+    },
+    "contactUs": {
+        "contactUs": "Liên hệ",
+        "address": "Số 121 đường King, Thành phố Melbourne, Australia Victoria 3000",
+        "sendBtn": "GỬI",
+        "leaveMessage": "Nhắn với chúng tôi",
+        "name": "Họ và tên *",
+        "phone": "Số điện thoại *",
+        "subject": "Tựa đề",
+        "typeMessage": "Nhập tin nhắn của bạn *"
     }
 }
