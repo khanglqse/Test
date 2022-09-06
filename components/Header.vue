@@ -153,7 +153,7 @@
                         }}</a>
                       </li>
                       <li class="parent">
-                        <nuxt-link to="/customer-care/contact-us" tag="a">{{
+                        <nuxt-link to="/customer-care/contact-us">{{
                             $t("menu.contactUs")
                         }}
                         </nuxt-link>
