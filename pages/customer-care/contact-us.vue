@@ -115,7 +115,7 @@
 
 <script>
 import { ContactUsModel } from "@/model/contact-us-model";
-import CustomerCareService from "@/services/CustomerCareService";
+import CustomerCareService from "~/services/customerCareService";
 import ButtonName from "~/constant/button-name";
 import toast from "@/mixins/toast";
 import validForm from "@/mixins/validForm";
