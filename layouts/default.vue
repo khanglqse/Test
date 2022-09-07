@@ -2,7 +2,7 @@
   <div
     class="leading-normal tracking-normal gradient flex flex-col min-h-screen"
   >
-    <!-- <Header /> -->
+    <Header />
     <div>
       <Loading></Loading>
       <!-- class="flex shrink-0 grow basis-auto mx-auto" -->

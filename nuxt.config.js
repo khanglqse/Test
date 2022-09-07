@@ -4,6 +4,7 @@ module.exports = {
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/toast',
+    '@nuxt/image',
   ],
   axios: {
     baseUrl: process.env.ENDPOINT_URL || 'http://localhost:5000/'
@@ -50,7 +51,8 @@ module.exports = {
   */
   buildModules: [
     '@nuxt/postcss8',
-    ['@nuxtjs/dotenv', { /* module options */ }]
+    '@nuxt/image',
+    ['@nuxtjs/dotenv', { /* module options */ },]
   ],
   css: [
     '@/assets/css/main.css',

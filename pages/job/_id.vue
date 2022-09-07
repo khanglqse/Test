@@ -544,11 +544,7 @@
                   </div>
                   <div class="jp_jop_overview_img_wrapper">
                     <div class="jp_jop_overview_img">
-                      <img
-                        :src="campaign.imageUrl"
-                        alt="post_img"
-                        style="width: 300px"
-                      />
+                      <nuxt-img :src="campaign.imageUrl || '~/assets/css/images/job_post_img1.jpg'" width="300" alt="campaign-detail"/>
                     </div>
                   </div>
                   <div class="jp_job_listing_single_post_right_cont">

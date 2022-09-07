@@ -49,7 +49,7 @@
                         <div class="row">
                           <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
                             <div class="jp_job_post_side_img">
-                              <img :src="item.imageUrl" alt="post_img" />
+                              <nuxt-img :src="item.imageUrl || '~/assets/css/images/job_post_img1.jpg'" alt="rent-job"/>
                             </div>
                             <div class="jp_job_post_right_cont">
                               <h4>{{ item.title }}</h4>

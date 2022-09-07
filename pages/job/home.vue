@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header></Header>
+    <FilterJob></FilterJob>
 
     <div
       class="jp_tittle_slider_main_wrapper"
@@ -168,7 +168,7 @@ import JobByCategory from "@/components/landing-page/job-by-category/job-by-cate
 import CareerAdvice from "@/components/landing-page/career-advice/career-advice.vue";
 import JobReport from "@/components/landing-page/job-report/job-report.vue";
 import BestDeal from "@/components/landing-page/best-deal/best-deal.vue";
-import Header from "~/components/Header.vue";
+import FilterJob from "~/components/FilterJob.vue";
 
 export default {
   setup() {},
@@ -182,7 +182,7 @@ export default {
     CareerAdvice,
     JobReport,
     BestDeal,
-    Header
+    FilterJob
 },
 };
 </script>
