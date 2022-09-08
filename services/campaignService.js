@@ -14,8 +14,8 @@ export default class CampaignService {
         return result.then(response => response).catch(err => ErrorHandler.errorHandleRequest(err));
     }
 
-    static getDetailCampaign(campaignId) {
-        const result = ServiceRepository.getAPI(`${resource}/${campaignId}`);
+    static getDetailCampaign(campaignId, queryParam) {
+        const result = ServiceRepository.getAPI(`${resource}/${campaignId}?social=${queryParam.social}&referralId=${queryParam.referralId}`);
         return result.then(response => response).catch(err => ErrorHandler.errorHandleRequest(err));
     }
 }

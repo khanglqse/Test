@@ -149,6 +149,9 @@
 
         <div v-else>
           <div class="row">
+            <div class="jp_adp_form_heading_wrapper cv-form">
+              <h2>{{ $t("candidate.detail") }}</h2>
+            </div>
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
               <div class="jp_adp_form_wrapper">
                 <p>Họ và Tên <span class="text-red-500">*</span>:</p>
@@ -218,10 +221,7 @@
           <a class="mr-4" @click="onCancel()">
             {{ $t("button.close") }}
           </a>
-          <a
-            @click="onSubmitForm()"
-            v-if="candidateForm.isForm == 1"
-          >
+          <a @click="onSubmitForm()" v-if="candidateForm.isForm == 1">
             {{ $t("candidate.submitForm") }}
           </a>
           <a @click="onSubmitCV()" v-else>

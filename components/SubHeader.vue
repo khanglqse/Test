@@ -71,7 +71,7 @@
                       <!-- <a href="#">Trang chủ</a> -->
                     </li>
                     <li>
-                      <a>{{ $t(`menuHeader.${header.title}`) }}</a>
+                      <p>{{ $t(`menuHeader.${header.title}`) }}</p>
                     </li>
                     <!-- <li>About-Us</li> -->
                   </ul>

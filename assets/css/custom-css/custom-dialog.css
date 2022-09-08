@@ -35,6 +35,10 @@
     font-size: 16px;
 }
 
+.cv-form h2{
+  margin: 15px;
+}
+
 .md-dialog-actions {
     padding: 15px;
 }

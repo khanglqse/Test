@@ -25,11 +25,17 @@ module.exports = {
   ** Headers of the page
   */
   head: {
+    htmlAttrs: {
+      lang: 'en'
+    },
     title: 'Mass Recruitment',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'Mass Recruitment', name: 'Mass Recruitment', content: 'Mass Recruitment Platform' }
+      {
+        hid: 'Mass Recruitment Jobs', name: "description", content: 'Mass Recruitment Platform using for find the jobs.',
+        description: "Mass Recruitment Platform using for find the jobs."
+      }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }

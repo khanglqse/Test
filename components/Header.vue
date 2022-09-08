@@ -42,7 +42,7 @@
                     <li>
                       <div id="search_open" class="gc_search_box">
                         <input type="text" placeholder="Search here" />
-                        <button>
+                        <button aria-label="search">
                           <i class="fa fa-search" aria-hidden="true"></i>
                         </button>
                       </div>

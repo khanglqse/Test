@@ -13,6 +13,7 @@
                 "
                 alt="campaign-detail"
                 width="300"
+                height="auto"
               />
               <!-- <h2>John Doe</h2>
               <p>UI/UX Designer in Dewas</p>

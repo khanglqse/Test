@@ -903,6 +903,7 @@ ul{
 	-ms-transition: all 0.5s;
 	-moz-transition: all 0.5s;
 	transition: all 0.5s;
+	margin: 0;
 }
 .jp_form_btn_wrapper li a:hover{
 	background:#ffffff;

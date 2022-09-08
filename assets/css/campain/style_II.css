@@ -5645,7 +5645,8 @@ input[type="checkbox"]:checked + label:after {
 	display:inline-block;
 	margin-top:40px;
 }
-.jp_listing_right_bar_btn li:first-child a{
+.jp_listing_right_bar_btn li:first-child a, 
+.jp_listing_right_bar_btn li:first-child p{
 	float:left;
 	width:230px;
 	height:50px;
@@ -5664,13 +5665,15 @@ input[type="checkbox"]:checked + label:after {
 	-moz-transition: all 0.5s;
 	transition: all 0.5s;
 }
-.jp_listing_right_bar_btn li:first-child a:hover{
+.jp_listing_right_bar_btn li:first-child a:hover, 
+.jp_listing_right_bar_btn li:first-child p:hover{
 	background:#f36964;
 	-webkit-transition: all 0.5s;
 	-o-transition: all 0.5s;
 	-ms-transition: all 0.5s;
 	-moz-transition: all 0.5s;
 	transition: all 0.5s;
+	cursor: pointer;
 }
 .jp_listing_right_bar_btn li:last-child{
 	margin-top:70px;
