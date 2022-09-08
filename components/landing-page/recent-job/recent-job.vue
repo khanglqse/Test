@@ -6,14 +6,24 @@
       </div>
       <ul class="nav nav-tabs" role="tablist" aria-owns="tablist">
         <li role="presentation" class="active">
-          <a href="#best" aria-controls="best" role="tab" data-toggle="tab" aria-selected="false">{{
-            $t("featured")
-          }}</a>
+          <a
+            href="#best"
+            aria-controls="best"
+            role="tab"
+            data-toggle="tab"
+            aria-selected="false"
+            >{{ $t("featured") }}</a
+          >
         </li>
         <li role="presentation">
-          <a href="#hot" aria-controls="hot" role="tab" data-toggle="tab" aria-selected="false">{{
-            $t("remotely")
-          }}</a>
+          <a
+            href="#hot"
+            aria-controls="hot"
+            role="tab"
+            data-toggle="tab"
+            aria-selected="false"
+            >{{ $t("remotely") }}</a
+          >
         </li>
         <li role="presentation">
           <a
@@ -26,7 +36,12 @@
           >
         </li>
         <li role="presentation">
-          <a href="#best" aria-controls="fulltime" role="tab" data-toggle="tab" aria-selected="false"
+          <a
+            href="#best"
+            aria-controls="fulltime"
+            role="tab"
+            data-toggle="tab"
+            aria-selected="false"
             >{{ $t("fulltime") }}
           </a>
         </li>
@@ -64,16 +79,16 @@
                               />
                             </div>
                             <div class="jp_job_post_right_cont">
-                              <h4>{{ item.title || 'N/A' }}</h4>
-                              <p>{{ item.categoryName || 'N/A' }}</p>
+                              <h4>{{ item.title || "N/A" }}</h4>
+                              <p>{{ item.categoryName || "N/A" }}</p>
                               <ul>
                                 <li>
                                   <i class="fa fa-cc-paypal"></i>&nbsp;
-                                  {{ item.description || 'N/A' }}
+                                  {{ item.description || "N/A" }}
                                 </li>
                                 <li>
                                   <i class="fa fa-map-marker"></i>&nbsp;
-                                  {{ item.location || 'N/A' }}
+                                  {{ item.location || "N/A" }}
                                 </li>
                               </ul>
                             </div>
@@ -129,18 +144,17 @@
           class="video_nav_img_wrapper flex justify-between items-center"
           v-if="paging.items.length"
         >
-          <button
-            aria-label="prev"
-            class="btn btn-default"
+          <p
+            class="btn btn-default button-paging"
             @click="paging.hasPreviousPage && actionPaging('prev')"
           >
             {{ $t("button.prev") }}
-          </button>
+          </p>
 
           <div class="video_nav_img">
             <ul>
               <li v-for="(pageNum, index) in paging.totalPages" :key="pageNum">
-                <button
+                <p
                   aria-label="paging"
                   :class="
                     paging.pageIndex === index + 1 ? 'btn-info' : 'btn-default'
@@ -149,18 +163,18 @@
                   @click="getCurrentPage(index + 1)"
                 >
                   {{ index + 1 }}
-                </button>
+                </p>
               </li>
             </ul>
           </div>
 
-          <button
+          <p
             aria-label="next"
-            class="btn btn-default"
+            class="btn btn-default button-paging"
             @click="paging.hasNextPage && actionPaging('next')"
           >
             {{ $t("button.next") }}
-          </button>
+          </p>
         </div>
       </div>
     </div>
