@@ -6,12 +6,14 @@
           <div class="jp_cp_left_side_wrapper">
             <div class="jp_cp_left_pro_wallpaper">
               {{ campaign.imageUrl }}
-              <img
+              <nuxt-img
                 :src="
                   campaign.imageUrl ||
                   '~/assets/css/images/content/career_img1.jpg'
                 "
-                alt="profile_img"
+                alt="campaign-detail"
+                width="300"
+                height="auto"
               />
               <!-- <h2>John Doe</h2>
               <p>UI/UX Designer in Dewas</p>

@@ -20,93 +20,94 @@
 
         <div v-if="candidateForm.isForm == 1">
           <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
               <div class="jp_adp_form_heading_wrapper">
                 <h2>{{ $t("candidate.detail") }}</h2>
               </div>
-              <div class="jp_adp_form_wrapper">
-                <p>Họ và Tên <span class="text-red-500">*</span>:</p>
-                <input
-                  type="text"
-                  placeholder="Họ và Tên"
-                  v-model="candidateForm.name"
-                  class="form-control"
-                />
-                <p v-if="formValid && !candidateForm.name" class="text-red-500">
-                  {{ $t("message.require") }}
-                </p>
-              </div>
-              <div class="jp_adp_form_wrapper">
-                <p>Giới tính <span class="text-red-500">*</span>:</p>
-                <select v-model="candidateForm.gender" class="form-control">
-                  <option value="">Chọn giới tính</option>
-                  <option value="Nam">Nam</option>
-                  <option value="Nữ">Nữ</option>
-                  <option value="Other">Khác</option>
-                </select>
+              <div class="grid">
+                <div class="jp_adp_form_wrapper">
+                  <p>Họ và Tên <span class="text-red-500">*</span>:</p>
+                  <input
+                    type="text"
+                    placeholder="Họ và Tên"
+                    v-model="candidateForm.name"
+                  />
+                  <p
+                    v-if="formValid && !candidateForm.name"
+                    class="text-red-500"
+                  >
+                    {{ $t("message.require") }}
+                  </p>
+                </div>
+                <div class="jp_adp_form_wrapper">
+                  <p>Giới tính <span class="text-red-500">*</span>:</p>
+                  <select v-model="candidateForm.gender">
+                    <option value="">Chọn giới tính</option>
+                    <option value="Nam">Nam</option>
+                    <option value="Nữ">Nữ</option>
+                    <option value="Other">Khác</option>
+                  </select>
 
-                <p
-                  v-if="formValid && !candidateForm.gender"
-                  class="text-red-500"
-                >
-                  {{ $t("message.require") }}
-                </p>
-              </div>
-              <!-- <div class="row">
-              <div class="col-lg-6 col-md-6 col-md-6 col-xs-12">
-                <div class="jp_adp_form_wrapper">
-                  <input type="text" placeholder="Salary Min" />
+                  <p
+                    v-if="formValid && !candidateForm.gender"
+                    class="text-red-500"
+                  >
+                    {{ $t("message.require") }}
+                  </p>
                 </div>
-              </div>
-              <div class="col-lg-6 col-md-6 col-md-6 col-xs-12">
-                <div class="jp_adp_form_wrapper">
-                  <input type="text" placeholder="Salary Max" />
+                <!-- <div class="row">
+                <div class="col-lg-6 col-md-6 col-md-6 col-xs-12">
+                  <div class="jp_adp_form_wrapper">
+                    <input type="text" placeholder="Salary Min" />
+                  </div>
                 </div>
-              </div>
-            </div> -->
-              <div class="jp_adp_form_wrapper">
-                <p>Email <span class="text-red-500">*</span>:</p>
-                <input
-                  type="text"
-                  placeholder="Email"
-                  v-model="candidateForm.email"
-                  class="form-control"
-                />
-                <p v-if="emailValid" class="text-red-500">
-                  {{ $t("message.emailNotCorrect") }}
-                </p>
-                <p
-                  v-if="formValid && !candidateForm.email"
-                  class="text-red-500"
-                >
-                  {{ $t("message.require") }}
-                </p>
-              </div>
-              <div class="jp_adp_form_wrapper">
-                <p>Số điện thoại <span class="text-red-500">*</span>:</p>
-                <input
-                  maxlength="10"
-                  type="text"
-                  placeholder="Số điện thoại"
-                  @keypress="checkPhoneValid"
-                  v-model="candidateForm.phone"
-                  class="form-control"
-                />
-                <p
-                  v-if="formValid && !candidateForm.phone"
-                  class="text-red-500"
-                >
-                  {{ $t("message.require") }}
-                </p>
-              </div>
-              <div class="jp_adp_form_wrapper">
-                <p>Ngày sinh:</p>
-                <input
-                  type="date"
-                  placeholder="Ngày tháng năm sinh"
-                  v-model="candidateForm.birthday"
-                  class="form-control"
-                />
+                <div class="col-lg-6 col-md-6 col-md-6 col-xs-12">
+                  <div class="jp_adp_form_wrapper">
+                    <input type="text" placeholder="Salary Max" />
+                  </div>
+                </div>
+              </div> -->
+                <div class="jp_adp_form_wrapper">
+                  <p>Email <span class="text-red-500">*</span>:</p>
+                  <input
+                    type="text"
+                    placeholder="Email"
+                    v-model="candidateForm.email"
+                  />
+                  <p v-if="emailValid" class="text-red-500">
+                    {{ $t("message.emailNotCorrect") }}
+                  </p>
+                  <p
+                    v-if="formValid && !candidateForm.email"
+                    class="text-red-500"
+                  >
+                    {{ $t("message.require") }}
+                  </p>
+                </div>
+                <div class="jp_adp_form_wrapper">
+                  <p>Số điện thoại <span class="text-red-500">*</span>:</p>
+                  <input
+                    maxlength="10"
+                    type="text"
+                    placeholder="Số điện thoại"
+                    @keypress="checkPhoneValid"
+                    v-model="candidateForm.phone"
+                  />
+                  <p
+                    v-if="formValid && !candidateForm.phone"
+                    class="text-red-500"
+                  >
+                    {{ $t("message.require") }}
+                  </p>
+                </div>
+                <div class="jp_adp_form_wrapper">
+                  <p>Ngày sinh:</p>
+                  <input
+                    type="date"
+                    placeholder="Ngày tháng năm sinh"
+                    v-model="candidateForm.birthday"
+                  />
+                </div>
               </div>
             </div>
             <!-- <div
@@ -148,6 +149,9 @@
 
         <div v-else>
           <div class="row">
+            <div class="jp_adp_form_heading_wrapper cv-form">
+              <h2>{{ $t("candidate.detail") }}</h2>
+            </div>
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
               <div class="jp_adp_form_wrapper">
                 <p>Họ và Tên <span class="text-red-500">*</span>:</p>
@@ -155,7 +159,6 @@
                   type="text"
                   placeholder="Họ và Tên"
                   v-model="candidateForm.name"
-                  class="form-control"
                 />
                 <p v-if="formValid && !candidateForm.name" class="text-red-500">
                   {{ $t("message.require") }}
@@ -171,7 +174,6 @@
                   placeholder="Số điện thoại"
                   @keypress="checkPhoneValid"
                   v-model="candidateForm.phone"
-                  class="form-control"
                 />
                 <p
                   v-if="formValid && !candidateForm.phone"
@@ -215,19 +217,17 @@
       </md-dialog-content>
 
       <md-dialog-actions>
-        <button class="btn btn-default mr-4" @click="onCancel()">
-          {{ $t("button.close") }}
-        </button>
-        <button
-          class="btn btn-primary mr-4"
-          @click="onSubmitForm()"
-          v-if="candidateForm.isForm == 1"
-        >
-          {{ $t("candidate.submitForm") }}
-        </button>
-        <button class="btn btn-primary mr-4" @click="onSubmitCV()" v-else>
-          {{ $t("candidate.submitCV") }}
-        </button>
+        <div class="jp_form_btn_wrapper flex">
+          <a class="mr-4" @click="onCancel()">
+            {{ $t("button.close") }}
+          </a>
+          <a @click="onSubmitForm()" v-if="candidateForm.isForm == 1">
+            {{ $t("candidate.submitForm") }}
+          </a>
+          <a @click="onSubmitCV()" v-else>
+            {{ $t("candidate.submitCV") }}
+          </a>
+        </div>
       </md-dialog-actions>
     </md-dialog>
   </div>

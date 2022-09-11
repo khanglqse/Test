@@ -544,10 +544,15 @@
                   </div>
                   <div class="jp_jop_overview_img_wrapper">
                     <div class="jp_jop_overview_img">
-                      <img
-                        :src="campaign.imageUrl"
-                        alt="post_img"
-                        style="width: 300px"
+                      <nuxt-img
+                        :src="
+                          campaign.imageUrl ||
+                          '~/assets/css/images/content/tittle_img1.png'
+                        "
+                        sizes="sm:100px md:50px lg:300px"
+                        width="300"
+                        height="300"
+                        alt="campaign-detail"
                       />
                     </div>
                   </div>
@@ -683,18 +688,12 @@
                       <div class="jp_listing_right_bar_btn">
                         <ul style="margin-top: 0">
                           <li>
-                            <a @click="showApplyDialog()"
+                            <p @click="showApplyDialog()"
                               ><i class="fa fa-plus-circle"></i> &nbsp;{{
                                 $t("button.applyNow")
-                              }}!</a
+                              }}!</p
                             >
                           </li>
-                          <!-- <li>
-                          <a href="#"
-                            ><i class="fa fa-plus-circle"></i> &nbsp;Apply With
-                            Facebook</a
-                          >
-                        </li> -->
                         </ul>
                       </div>
                     </div>
@@ -729,27 +728,8 @@ const TitleToast = {
 export default {
   components: {
     ApplyJobDialog,
-    SubHeader
-},
-  // data() {
-  //   return {
-  //     id: this.$route.params.id,
-  //   };
-  // },
-  // computed: {
-  //   // ...mapState(['name']),
-  //   ...mapState(["user"]),
-  // },
-  // methods: {
-  //   ...mapActions({
-  //     setNameWithUpperCase: "user/setNameWithUpperCase",
-  //     setName: "user/setName",
-  //     fetchName: "user/fetchName",
-  //   }),
-  //   ...mapMutations({
-  //     setName: "user/setName",
-  //   }),
-  // },
+    SubHeader,
+  },
   props: {
     campaignValue: {
       type: Object,
@@ -776,8 +756,9 @@ export default {
   mixins: [toast, validForm],
   methods: {
     async getDetailCampaign() {
+      const queryParam = this.$route.query;
       try {
-        const result = await CampaignService.getDetailCampaign(this.id);
+        const result = await CampaignService.getDetailCampaign(this.id, queryParam);
         if (result.success) {
           this.campaign = result.data;
         } else {

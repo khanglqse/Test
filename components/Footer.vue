@@ -6,11 +6,7 @@
         <div class="row">
           <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
             <div class="jp_newsletter_text">
-              <img
-                src="~/assets/css/images/content/news_logo.png"
-                class="img-responsive"
-                alt="news_logo"
-              />
+              <img src="~/assets/css/images/content/news_logo.png" width="330" height="47" alt="news_logo">
             </div>
           </div>
           <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
@@ -18,6 +14,7 @@
               <i class="fa fa-envelope-o"></i
               ><input type="text" placeholder="Nhập Email của bạn" /><button
                 type="submit"
+                aria-label="submit"
               >
                 {{ $t("button.submit") }}
               </button>
@@ -241,22 +238,22 @@
                   <div class="jp_bottom_footer_right_cont">
                     <ul>
                       <li>
-                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="https://mass-recruitment-landing-git-master-khanglqse.vercel.app/" aria-label="facebook"><i class="fa fa-facebook"></i></a>
                       </li>
                       <li>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="https://mass-recruitment-landing-git-master-khanglqse.vercel.app/" aria-label="twitter"><i class="fa fa-twitter"></i></a>
                       </li>
                       <li>
-                        <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                        <a href="https://mass-recruitment-landing-git-master-khanglqse.vercel.app/" aria-label="pinterest"><i class="fa fa-pinterest-p"></i></a>
                       </li>
                       <li>
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="https://mass-recruitment-landing-git-master-khanglqse.vercel.app/" aria-label="linkedin"><i class="fa fa-linkedin"></i></a>
                       </li>
                       <li class="hidden-xs">
-                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                        <a href="https://mass-recruitment-landing-git-master-khanglqse.vercel.app/" aria-label="google"><i class="fa fa-google-plus"></i></a>
                       </li>
                       <li class="hidden-xs">
-                        <a href="#"><i class="fa fa-vimeo"></i></a>
+                        <a href="https://mass-recruitment-landing-git-master-khanglqse.vercel.app/" aria-label="vimeo"><i class="fa fa-vimeo"></i></a>
                       </li>
                     </ul>
                   </div>

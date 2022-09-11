@@ -30,13 +30,13 @@
     margin: 5px 5px 0 0;
 }
 
-.jp_adp_form_wrapper {
-    margin: 15px 0;
-}
-
 .jp_adp_form_heading_wrapper h2 {
     margin: 15px 0;
     font-size: 16px;
+}
+
+.cv-form h2{
+  margin: 15px;
 }
 
 .md-dialog-actions {
@@ -51,4 +51,71 @@
 .icon-button {
     margin-right: 5px;
     cursor: pointer;
+}
+
+.jp_adp_form_wrapper input,
+select {
+  width: 100%;
+  height: 50px;
+  padding-left: 20px;
+  border: 1px solid #e9e9e9;
+  border-radius: 10px;
+}
+
+.jp_adp_form_wrapper input:hover,
+select:hover {
+  border: 1px solid #23c0e9;
+  border-top-color: #e9e9e9;
+  transition: all 0.5s;
+}
+
+.jp_adp_form_wrapper input:focus,
+select:focus {
+  border: 1px solid #23c0e9;
+  border-top-color: #e9e9e9;
+  transition: all 0.5s;
+}
+
+.jp_adp_form_wrapper input:active,
+select:active {
+  border: 1px solid #23c0e9;
+  border-top-color: #e9e9e9;
+  transition: all 0.5s;
+}
+
+.jp_form_btn_wrapper a {
+  float: left;
+  width: 120px;
+  height: 40px;
+  border-radius: 15px;
+  background: #23c0e9;
+  color: #fff;
+  line-height: 40px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  margin: 5px;
+}
+
+.jp_form_btn_wrapper a:hover {
+  text-decoration: none;
+  opacity: 0.5;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 15px;
+}
+
+@media (max-width: 765px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 10px;
+  }
+}
+
+.md-dialog-content {
+  padding: 0 24px 24px 12px;
 }

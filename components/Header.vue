@@ -42,7 +42,7 @@
                     <li>
                       <div id="search_open" class="gc_search_box">
                         <input type="text" placeholder="Search here" />
-                        <button>
+                        <button aria-label="search">
                           <i class="fa fa-search" aria-hidden="true"></i>
                         </button>
                       </div>
@@ -153,7 +153,7 @@
                         }}</a>
                       </li>
                       <li class="parent">
-                        <nuxt-link to="/customer-care/contact-us" tag="a">{{
+                        <nuxt-link to="/customer-care/contact-us">{{
                             $t("menu.contactUs")
                         }}
                         </nuxt-link>
@@ -376,7 +376,7 @@
       </div>
     </div>
 
-    <FilterJob></FilterJob>
+    <!-- <FilterJob></FilterJob> -->
 
     <!-- <HeaderPosting></HeaderPosting> -->
   </div>

@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div class="jp_top_header_img_wrapper">
+    <div class="jp_banner_background"></div>
     <div class="jp_banner_heading_cont_wrapper">
       <div class="container">
         <div class="row">
@@ -133,7 +134,7 @@
           <div class="jp_top_jobs_category">
             <i class="fa fa-code"></i>
             <h3>
-              <a href="#">{{ item.categoryName || "---" }}</a>
+              {{ item.categoryName || "N/a" }}
             </h3>
             <p>({{ item.count || 0 }} {{ $t("trandingJobs.jobs") }})</p>
           </div>
@@ -249,3 +250,18 @@ export default {
   },
 };
 </script>
+
+<style>
+.jp_banner_background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(14, 20, 39, 0.8313725490196079);
+}
+
+.jp_form_btn_wrapper a {
+  margin: 0;
+}
+</style>

@@ -4,24 +4,44 @@
       <div class="jp_hiring_heading_wrapper jp_job_post_heading_wrapper">
         <h2>{{ $t("rentJobs") }}</h2>
       </div>
-      <ul class="nav nav-tabs" role="tablist">
+      <ul class="nav nav-tabs" role="tablist" aria-owns="tablist">
         <li role="presentation" class="active">
-          <a href="#best" aria-controls="best" role="tab" data-toggle="tab">{{
-            $t("featured")
-          }}</a>
+          <a
+            href="#best"
+            aria-controls="best"
+            role="tab"
+            data-toggle="tab"
+            aria-selected="false"
+            >{{ $t("featured") }}</a
+          >
         </li>
         <li role="presentation">
-          <a href="#hot" aria-controls="hot" role="tab" data-toggle="tab">{{
-            $t("remotely")
-          }}</a>
+          <a
+            href="#hot"
+            aria-controls="hot"
+            role="tab"
+            data-toggle="tab"
+            aria-selected="false"
+            >{{ $t("remotely") }}</a
+          >
         </li>
         <li role="presentation">
-          <a href="#trand" aria-controls="trand" role="tab" data-toggle="tab">{{
-            $t("parttime")
-          }}</a>
+          <a
+            href="#trand"
+            aria-controls="partime"
+            role="tab"
+            data-toggle="tab"
+            aria-selected="false"
+            >{{ $t("parttime") }}</a
+          >
         </li>
         <li role="presentation">
-          <a href="#best" aria-controls="best" role="tab" data-toggle="tab"
+          <a
+            href="#best"
+            aria-controls="fulltime"
+            role="tab"
+            data-toggle="tab"
+            aria-selected="false"
             >{{ $t("fulltime") }}
           </a>
         </li>
@@ -49,19 +69,26 @@
                         <div class="row">
                           <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
                             <div class="jp_job_post_side_img">
-                              <img :src="item.imageUrl" alt="post_img" />
+                              <nuxt-img
+                                :src="
+                                  item.imageUrl ||
+                                  '~/assets/css/images/content/tittle_img1.png'
+                                "
+                                sizes="sm:100vw md:50vw lg:400px"
+                                alt="rent-job"
+                              />
                             </div>
                             <div class="jp_job_post_right_cont">
-                              <h4>{{ item.title }}</h4>
-                              <p>{{ item.categoryName }}</p>
+                              <h4>{{ item.title || "N/A" }}</h4>
+                              <p>{{ item.categoryName || "N/A" }}</p>
                               <ul>
                                 <li>
                                   <i class="fa fa-cc-paypal"></i>&nbsp;
-                                  {{ item.description }}
+                                  {{ item.description || "N/A" }}
                                 </li>
                                 <li>
                                   <i class="fa fa-map-marker"></i>&nbsp;
-                                  {{ item.location }}
+                                  {{ item.location || "N/A" }}
                                 </li>
                               </ul>
                             </div>
@@ -70,7 +97,7 @@
                             <div class="jp_job_post_right_btn_wrapper">
                               <ul>
                                 <li>
-                                  <a href="#"><i class="fa fa-heart-o"></i></a>
+                                  <p href="#"><i class="fa fa-heart-o"></i></p>
                                 </li>
                                 <li>
                                   <a href="#">{{ $t("parttime") }}</a>
@@ -117,17 +144,18 @@
           class="video_nav_img_wrapper flex justify-between items-center"
           v-if="paging.items.length"
         >
-          <button
-            class="btn btn-default"
+          <p
+            class="btn btn-default button-paging"
             @click="paging.hasPreviousPage && actionPaging('prev')"
           >
             {{ $t("button.prev") }}
-          </button>
+          </p>
 
           <div class="video_nav_img">
             <ul>
               <li v-for="(pageNum, index) in paging.totalPages" :key="pageNum">
-                <button
+                <p
+                  aria-label="paging"
                   :class="
                     paging.pageIndex === index + 1 ? 'btn-info' : 'btn-default'
                   "
@@ -135,17 +163,18 @@
                   @click="getCurrentPage(index + 1)"
                 >
                   {{ index + 1 }}
-                </button>
+                </p>
               </li>
             </ul>
           </div>
 
-          <button
-            class="btn btn-default"
+          <p
+            aria-label="next"
+            class="btn btn-default button-paging"
             @click="paging.hasNextPage && actionPaging('next')"
           >
             {{ $t("button.next") }}
-          </button>
+          </p>
         </div>
       </div>
     </div>

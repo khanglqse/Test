@@ -733,9 +733,17 @@ ul{
 .gc_main_navigation i{
 	color:#23c0e9;
 }
-.jp_navi_right_btn_wrapper ul{
-	float:right;
+
+.jp_navi_right_btn_wrapper {
+	position: relative;
 }
+
+.jp_navi_right_btn_wrapper ul{
+	/* float:right; */
+	position: absolute;
+	right: 30px;
+}
+
 .jp_navi_right_btn_wrapper li{
 	float:left;
 	margin-left:20px;
@@ -774,7 +782,7 @@ ul{
 	float:left;
 	width:130px;
 	height:50px;
-	line-height:50px;
+	line-height:45px;
 	color:#ffffff;
 	border:1px solid #f36969;
 	background:#f36969;
@@ -796,6 +804,7 @@ ul{
 	-ms-transition: all 0.5s;
 	-moz-transition: all 0.5s;
 	transition: all 0.5s;
+	text-decoration: none;
 }
 /*-- Heading Css Start --*/
 .gc_heading{
@@ -903,6 +912,7 @@ ul{
 	-ms-transition: all 0.5s;
 	-moz-transition: all 0.5s;
 	transition: all 0.5s;
+	margin: 0;
 }
 .jp_form_btn_wrapper li a:hover{
 	background:#ffffff;
@@ -1483,6 +1493,7 @@ ul{
 .jp_job_post_main_wrapper{
 	float:left;
 	width:100%;
+	/* height: 500px; */
 	background:#ffffff;
 	padding-left: 30px;
     padding-right: 30px;
@@ -1666,6 +1677,7 @@ ul{
 .jp_job_post_main_wrapper_cont{
 	float:left;
 	width:100%;
+	margin: 0 0 15px 0;
 	-webkit-transition: all 0.5s;
 	-o-transition: all 0.5s;
 	-ms-transition: all 0.5s;
@@ -1702,7 +1714,7 @@ ul{
 	transition: all 0.5s;
 }
 .jp_job_post_main_wrapper_cont2{
-	margin-top:35px;
+	/* margin-top:35px; */
 }
 .jp_register_section_main_wrapper{
 	float:left;
@@ -3290,6 +3302,14 @@ ul{
 
 .state-item {
 	/* width: 848px; */
+	/* display: grid;
+	grid-template-columns: 33% 33% 33%;
+	grid-auto-columns: 700px;
+	gap: 5px; */
+}
+
+.state-item .item {
+	/* margin: 5px; */
 }
 
 .button-active {
@@ -3309,4 +3329,36 @@ ul{
 .header-posting .jp_tittle_img_overlay {
 	padding-top: 150px;
     padding-bottom: 100px;
+}
+
+.video_nav_img_wrapper .button-paging {
+	float: left;
+    width: 75px;
+    height: 30px;
+    line-height: 19px;
+    text-align: center;
+    background: #fff;
+    color: #262626;
+    font-size: 10px;
+    text-transform: uppercase;
+    border-radius: 10px;
+}
+
+.video_nav_img_wrapper .button-paging:hover {
+	color: #fff;
+	background-color: #23c0e9;
+	border-color: #23c0e9;
+}
+
+.video_nav_img p:hover {
+	color: #fff;
+	background-color: #23c0e9;
+	border-color: #23c0e9;
+	transform: all 0.5 ease-in-out;
+}
+
+@media (min-width: 1600px) {
+	.jp_navi_right_btn_wrapper ul{
+		right: 75px;
+	}
 }

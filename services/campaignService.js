@@ -5,7 +5,7 @@ const resource = 'campaign';
 
 export default class CampaignService {
     static getListCampaign(param) {
-        const result = ServiceRepository.getAPI(`${resource}?PageNumber=${param.pageIndex}&PageSize=${param.pageSize || 4}&Keyword=${param.keyword || ""}&budgetFrom=${param.budget?.from}&budgetTo=${param.budget?.to}`);
+        const result = ServiceRepository.getAPI(`${resource}?PageNumber=${param.pageIndex}&PageSize=${param.pageSize || 4}&Keyword=${param.keyword || ""}&SalaryFrom=${param.budget?.from}&SalaryTo=${param.budget?.to}`);
         return result.then(response => response).catch(err => ErrorHandler.errorHandleRequest(err));
     }
 
@@ -14,8 +14,8 @@ export default class CampaignService {
         return result.then(response => response).catch(err => ErrorHandler.errorHandleRequest(err));
     }
 
-    static getDetailCampaign(campaignId) {
-        const result = ServiceRepository.getAPI(`${resource}/${campaignId}`);
+    static getDetailCampaign(campaignId, queryParam) {
+        const result = ServiceRepository.getAPI(`${resource}/${campaignId}?social=${queryParam.social}&referralId=${queryParam.referralId}`);
         return result.then(response => response).catch(err => ErrorHandler.errorHandleRequest(err));
     }
 }
