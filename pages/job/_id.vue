@@ -547,12 +547,13 @@
                       <nuxt-img
                         :src="
                           campaign.imageUrl ||
-                          '~/assets/css/images/content/tittle_img1.png'
+                          'assets/css/images/content/default-img.svg'
                         "
                         sizes="sm:100px md:50px lg:300px"
                         width="300"
                         height="300"
                         alt="campaign-detail"
+                        :key="campaign.imageUrl"
                       />
                     </div>
                   </div>

@@ -134,7 +134,7 @@
           <div class="jp_top_jobs_category">
             <i class="fa fa-code"></i>
             <h3>
-              {{ item.categoryName || "N/a" }}
+              <p>{{ item.categoryName || "N/a" }}</p>
             </h3>
             <p>({{ item.count || 0 }} {{ $t("trandingJobs.jobs") }})</p>
           </div>
@@ -263,5 +263,39 @@ export default {
 
 .jp_form_btn_wrapper a {
   margin: 0;
+}
+</style>
+
+<style scoped>
+@media (max-width: 767px) {
+  .jp_form_location_wrapper {
+    margin-top: 20px;
+  }
+
+  .jp_form_location_wrapper i {
+    top: 37px;
+  }
+
+  .jp_form_btn_wrapper ul {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .jp_form_btn_wrapper ul li {
+    width: 100%;
+  }
+
+  @media (max-width: 600px) {
+    .jp_top_jobs_category_wrapper {
+      width: 49%;
+      border: 1px solid #ffffff21;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .jp_banner_main_jobs_wrapper {
+      padding-bottom: 70px;
+    }
+  }
 }
 </style>

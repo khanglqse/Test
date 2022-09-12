@@ -218,15 +218,15 @@
 
       <md-dialog-actions>
         <div class="jp_form_btn_wrapper flex">
-          <a class="mr-4" @click="onCancel()">
+          <p class="mr-4" @click="onCancel()">
             {{ $t("button.close") }}
-          </a>
-          <a @click="onSubmitForm()" v-if="candidateForm.isForm == 1">
+          </p>
+          <p @click="onSubmitForm()" v-if="candidateForm.isForm == 1">
             {{ $t("candidate.submitForm") }}
-          </a>
-          <a @click="onSubmitCV()" v-else>
+          </p>
+          <p @click="onSubmitCV()" v-else>
             {{ $t("candidate.submitCV") }}
-          </a>
+          </p>
         </div>
       </md-dialog-actions>
     </md-dialog>

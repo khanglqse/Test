@@ -14,6 +14,7 @@
                 alt="campaign-detail"
                 width="300"
                 height="auto"
+                :key="campaign.imageUrl"
               />
               <!-- <h2>John Doe</h2>
               <p>UI/UX Designer in Dewas</p>

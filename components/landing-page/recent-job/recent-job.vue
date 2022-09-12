@@ -72,10 +72,11 @@
                               <nuxt-img
                                 :src="
                                   item.imageUrl ||
-                                  '~/assets/css/images/content/tittle_img1.png'
+                                  'assets/css/images/content/default-img.svg'
                                 "
                                 sizes="sm:100vw md:50vw lg:400px"
                                 alt="rent-job"
+                                :key="item.imageUrl"
                               />
                             </div>
                             <div class="jp_job_post_right_cont">
@@ -282,3 +283,7 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+@import "~/assets/css/campain/responsive.css";
+</style>

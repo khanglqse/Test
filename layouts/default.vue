@@ -13,11 +13,13 @@
 </template>
 
 <script>
+import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Loading from "../components/Loading.vue";
 
 export default {
   components: {
+    Header,
     Footer,
     Loading,
   },
@@ -30,24 +32,6 @@ export default {
 @import "~/assets/css/campain/font-awesome.css";
 @import "~/assets/css/campain/fonts.css";
 @import "~/assets/css/campain/reset.css";
-/* @import '~/assets/css/campain/owl.carousel.css';
-@import '~/assets/css/campain/owl.theme.default.css'; */
 @import "~/assets/css/campain/flaticon.css";
 @import "~/assets/css/campain/responsive.css";
-@import "~/assets/css/campain/custom-header.css";
-/* html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
-
-.gradient {
-  background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
-} */
 </style>

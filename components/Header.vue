@@ -445,3 +445,7 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+@import "~/assets/css/campain/custom-header.css";
+</style>

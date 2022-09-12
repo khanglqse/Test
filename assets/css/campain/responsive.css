@@ -81,7 +81,7 @@
 		display:inline-block;
 	}
 	.jp_form_location_wrapper, .jp_form_exper_wrapper, .jp_form_btn_wrapper{
-		margin-top:20px;
+		/* margin-top:20px; */
 	}
 	.jp_form_location_wrapper .first_icon, .jp_form_exper_wrapper .first_icon{
 		top:37px;

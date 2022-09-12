@@ -33,7 +33,7 @@ module.exports = {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
-        hid: 'Mass Recruitment Jobs', name: "description", content: 'Mass Recruitment Platform using for find the jobs.',
+        hid: 'Mass Recruitment Jobs', name: "Mass Recruitment", content: 'Mass Recruitment Platform using for find the jobs.',
         description: "Mass Recruitment Platform using for find the jobs."
       }
     ],
@@ -105,5 +105,12 @@ module.exports = {
         }
       ]
     }
-  }
+  },
+  image: {
+    provider: 'ipx',
+    ipx: {}
+  }, 
+  serverMiddleware: {
+    '/_ipx': '@/server/middleware/ipx.js'
+  },
 }

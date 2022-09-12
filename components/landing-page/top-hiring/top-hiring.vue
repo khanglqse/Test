@@ -1,7 +1,7 @@
 <template>
   <div class="jp_hiring_slider_wrapper">
     <div class="carousel theme flex">
-      <div class="item flex-1" v-for="item in listHiring" :key="item.img">
+      <div class="item flex-1 mr-4" v-for="item in listHiring" :key="item.img">
         <div class="jp_hiring_content_main_wrapper">
           <div class="jp_hiring_content_wrapper">
             <!-- <img

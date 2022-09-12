@@ -83,7 +83,7 @@ select:active {
   transition: all 0.5s;
 }
 
-.jp_form_btn_wrapper a {
+.jp_form_btn_wrapper p {
   float: left;
   width: 120px;
   height: 40px;
