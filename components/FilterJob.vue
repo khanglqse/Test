@@ -69,19 +69,13 @@
                 <div class="jp_form_btn_wrapper">
                   <ul>
                     <li>
-                      <a href="/#recentJob" @click="filterWork(itemFilter)"
+                      <a
+                        href="/#recentJob"
+                        @click="filterWork(itemFilter)"
+                        aria-label="search"
                         ><i class="fa fa-search"></i>
                         {{ $t("button.search") }}</a
                       >
-                      <!-- <nuxt-link
-                        :to="{
-                          path: '/',
-                        }"
-                        @click="filterWork(itemFilter)"
-                        tag="a"
-                        ><i class="fa fa-search"></i>
-                        {{ $t("button.search") }}</nuxt-link
-                      > -->
                     </li>
                   </ul>
                 </div>
@@ -90,7 +84,10 @@
                 <div class="jp_form_btn_wrapper">
                   <ul>
                     <li>
-                      <a href="/#recentJob" @click="resetFilter(itemFilter)"
+                      <a
+                        href="/#recentJob"
+                        @click="resetFilter(itemFilter)"
+                        aria-label="reset"
                         ><i class="fa fa-rotate-right"></i>
                         {{ $t("button.reset") }}</a
                       >
@@ -134,7 +131,7 @@
           <div class="jp_top_jobs_category">
             <i class="fa fa-code"></i>
             <h3>
-              <p>{{ item.categoryName || "N/a" }}</p>
+              {{ item.categoryName || "N/a" }}
             </h3>
             <p>({{ item.count || 0 }} {{ $t("trandingJobs.jobs") }})</p>
           </div>

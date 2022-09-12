@@ -16,34 +16,7 @@
                 height="auto"
                 :key="campaign.imageUrl"
               />
-              <!-- <h2>John Doe</h2>
-              <p>UI/UX Designer in Dewas</p>
-              <ul>
-                <li>
-                  <a href="#"><i class="fa fa-facebook"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-twitter"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-youtube-play"></i></a>
-                </li>
-              </ul> -->
             </div>
-            <!-- <div class="jp_cp_rd_wrapper">
-              <ul>
-                <li>
-                  <a href="#"
-                    ><i class="fa fa-download"></i> &nbsp;Download Resume</a
-                  >
-                </li>
-                <li>
-                  <a href="#"
-                    ><i class="fa fa-phone"></i> &nbsp;Contact candidate</a
-                  >
-                </li>
-              </ul>
-            </div> -->
           </div>
         </div>
         <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
@@ -89,96 +62,6 @@
                 </p>
               </div>
             </div>
-            <!-- <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
-              <div class="accordion_wrapper abt_page_2_wrapper">
-                <div class="panel-group" id="accordion_threeLeft">
-                  <div class="panel panel-default">
-                    <div class="panel-heading bell">
-                      <h4 class="panel-title">
-                        <a
-                          class="collapsed"
-                          data-toggle="collapse"
-                          data-parent="#accordion_threeLeft"
-                          href="#collapseTwentyLeftThree"
-                          aria-expanded="false"
-                        >
-                          DIPLOMA IN COMPUTER
-                        </a>
-                      </h4>
-                    </div>
-                    <div
-                      id="collapseTwentyLeftThree"
-                      class="panel-collapse collapse"
-                      aria-expanded="false"
-                      role="tablist"
-                    >
-                      <div class="panel-body">
-                        Praesent in nisl egestas mauris aliquam luctus. Ut
-                        auctor faucibus orci, nec semper purus ultrices idorbi
-                        nec lorem risus orbi vitae felis gravida Pellentesque id
-                        eros quis massa convallis feugiat eu quis urna.
-                      </div>
-                    </div>
-                  </div>
-                  <div class="panel panel-default">
-                    <div class="panel-heading bell">
-                      <h4 class="panel-title">
-                        <a
-                          class="collapsed"
-                          data-toggle="collapse"
-                          data-parent="#accordion_threeLeft"
-                          href="#collapseTwentyLeftThree2"
-                          aria-expanded="false"
-                        >
-                          HIGHER SECONDRY EDUCATION
-                        </a>
-                      </h4>
-                    </div>
-                    <div
-                      id="collapseTwentyLeftThree2"
-                      class="panel-collapse collapse"
-                      aria-expanded="false"
-                      role="tablist"
-                    >
-                      <div class="panel-body">
-                        Praesent in nisl egestas mauris aliquam luctus. Ut
-                        auctor faucibus orci, nec semper purus ultrices idorbi
-                        nec lorem risus orbi vitae felis gravida Pellentesque id
-                        eros quis massa convallis feugiat eu quis urna.
-                      </div>
-                    </div>
-                  </div>
-                  <div class="panel panel-default">
-                    <div class="panel-heading bell">
-                      <h4 class="panel-title">
-                        <a
-                          class="collapsed"
-                          data-toggle="collapse"
-                          data-parent="#accordion_threeLeft"
-                          href="#collapseTwentyLeftThree3"
-                          aria-expanded="false"
-                        >
-                          HIGH SCHOOL DEGREE
-                        </a>
-                      </h4>
-                    </div>
-                    <div
-                      id="collapseTwentyLeftThree3"
-                      class="panel-collapse collapse"
-                      aria-expanded="false"
-                      role="tablist"
-                    >
-                      <div class="panel-body">
-                        Praesent in nisl egestas mauris aliquam luctus. Ut
-                        auctor faucibus orci, nec semper purus ultrices idorbi
-                        nec lorem risus orbi vitae felis gravida Pellentesque id
-                        eros quis massa convallis feugiat eu quis urna.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div> -->
           </div>
         </div>
       </div>

@@ -88,37 +88,7 @@
                       <div class="jp_rightside_job_categories_heading">
                         <h4>{{ $t("JobsByCategory") }}</h4>
                       </div>
-                      <div class="jp_rightside_job_categories_content">
-                        <ul>
-                          <li>
-                            <i class="fa fa-caret-right"></i>
-                            <a href="#">Graphic Designer <span>(214)</span></a>
-                          </li>
-                          <li>
-                            <i class="fa fa-caret-right"></i>
-                            <a href="#">Engineering Jobs <span>(514)</span></a>
-                          </li>
-                          <li>
-                            <i class="fa fa-caret-right"></i>
-                            <a href="#">Mainframe Jobs <span>(554)</span></a>
-                          </li>
-                          <li>
-                            <i class="fa fa-caret-right"></i>
-                            <a href="#">Legal Jobs <span>(457)</span></a>
-                          </li>
-                          <li>
-                            <i class="fa fa-caret-right"></i>
-                            <a href="#">IT Jobs <span>(1254)</span></a>
-                          </li>
-                          <li>
-                            <i class="fa fa-plus-circle"></i>
-                            <a href="#"
-                              >{{ $t("button.viewAll") }}
-                              {{ $t("button.category") }}</a
-                            >
-                          </li>
-                        </ul>
-                      </div>
+                      <JobByCategory></JobByCategory>
                     </div>
                   </div>
                 </div>
@@ -182,11 +152,11 @@ export default {
     CareerAdvice,
     JobReport,
     BestDeal,
-    FilterJob
-},
+    FilterJob,
+  },
 };
 </script>
 
 <style>
-  @import url('@/assets/css/campain/style.css');
+@import url("@/assets/css/campain/style.css");
 </style>

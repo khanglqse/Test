@@ -100,7 +100,8 @@
         "responsiblities": "TRÁCH NHIỆM",
         "minimumQualification": "YÊU CẦU TỐI THIỂU",
         "howToApply": "LÀM SAO ĐỂ ĐĂNG KÍ",
-        "dateStart": "Ngày đăng"
+        "dateStart": "Ngày đăng",
+        "salary": "Mức lương"
     },
     "candidate": {
         "detail": "Thông tin ứng viên",

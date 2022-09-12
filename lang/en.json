@@ -97,7 +97,8 @@
         "responsiblities": "RESPONSIBILITIES",
         "minimumQualification": "MINIMUM QUALIFICATIONS",
         "howToApply": "HOW TO APPLY",
-        "dateStart": "Date Start"
+        "dateStart": "Date Start",
+        "salary": "Salary"
     },
     "candidate": {
         "detail": "CANDIDATE DETAIL",
