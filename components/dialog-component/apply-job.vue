@@ -24,7 +24,7 @@
               <div class="jp_adp_form_heading_wrapper">
                 <h2>{{ $t("candidate.detail") }}</h2>
               </div>
-              <div class="grid">
+              <div class="grid-template">
                 <div class="jp_adp_form_wrapper">
                   <p>Họ và Tên <span class="text-red-500">*</span>:</p>
                   <input

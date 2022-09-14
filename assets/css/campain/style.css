@@ -1510,24 +1510,40 @@ ul{
 }
 .jp_job_post_side_img{
 	float:left;
-	width:105px;
+	/* width:105px; */
+}
+.jp_job_post_side_img img {
+	width: 100%;
 }
 .jp_job_post_right_cont{
 	float:left;
-	width:calc(100% - 105px);
-	padding-left:30px;
+	/* width:calc(100% - 105px); */
+	/* padding-left:30px; */
 	padding-top:10px;
 }
 .jp_job_post_right_cont h4{
 	font-size:16px;
 	color:#000000;
 	font-weight:bold;
+	display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
+.jp_job_post_right_cont p:first-child{
+	color:#23c0e9;
+}
+
 .jp_job_post_right_cont p{
 	font-size:16px;
-	color:#23c0e9;
 	padding-top:5px;
 }
+
+.jp_job_post_right_cont p:nth-child(2n+1){
+	color:red;
+}
+
 .jp_job_post_right_cont li{
 	margin-left:20px;
 	float:left;
@@ -1549,15 +1565,16 @@ ul{
 	float:left;
 }
 .jp_job_post_right_btn_wrapper ul{
-	float:right;
+	/* float:right; */
 	margin-top: 15px;
+	display: flex;
 }
 .jp_job_post_right_btn_wrapper li{
-	float:left;
-	margin-left:20px;
+	/* float:left;
+	margin-left:20px; */
 }
 .jp_job_post_right_btn_wrapper li:first-child{
-	margin-left:0;
+	margin-right: 10px;
 } 
 .jp_job_post_right_btn_wrapper li:first-child a{
 	float:left;
@@ -1588,8 +1605,8 @@ ul{
     transition: all 0.5s;
 }
 .jp_job_post_right_btn_wrapper li:nth-child(2){
-	float:none;
-	margin-left:50px;
+	/* float:none;
+	margin-left:50px; */
 }
 .jp_job_post_right_btn_wrapper li:nth-child(2) a{
 	float:left;
@@ -1606,9 +1623,9 @@ ul{
 	border-radius:10px;
 }
 .jp_job_post_right_btn_wrapper li:last-child{
-	margin-left:50px;
+	/* margin-left:50px;
 	margin-top:40px;
-	float:none;
+	float:none; */
 }
 .jp_job_post_right_btn_wrapper li:last-child a{
 	float:left;
@@ -1627,6 +1644,20 @@ ul{
 .jp_job_post_right_btn_wrapper li a:hover {
 	text-decoration: none;
 	opacity: .5;
+}
+.jp_job_post_right_btn_wrapper li p{
+	float:left;
+	width:110px;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	background:#37d09c;
+	color:#ffffff;
+	font-size:12px;
+	text-transform:uppercase;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
 }
 .jp_job_post_keyword_wrapper{
 	float:left;
@@ -3303,10 +3334,10 @@ ul{
 
 .state-item {
 	/* width: 848px; */
-	/* display: grid;
-	grid-template-columns: 33% 33% 33%;
-	grid-auto-columns: 700px;
-	gap: 5px; */
+	/* display: grid; */
+	/* grid-template-columns: 25% 25% 25% 25%; */
+	/* grid-auto-columns: 700px; */
+	/* gap: 5px; */
 }
 
 .state-item .item {
