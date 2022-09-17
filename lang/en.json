@@ -115,7 +115,8 @@
         "submitSuccess": "Submit successful",
         "uploadFile": "Please upload CV!",
         "phoneFormat": "Phone number is not correct format",
-        "noItemFound": "No item found!"
+        "noItemFound": "No item found!",
+        "notAllowFileType": "File type does not support! only allow (.doc, .pdf)"
     },
     "titleDialog": {
         "applyJob": "Apply Job"

@@ -1,0 +1,1 @@
+export const FileType = ['doc', 'docx', 'pdf'];

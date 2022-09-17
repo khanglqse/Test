@@ -118,7 +118,8 @@
         "submitSuccess": "Gửi thành công",
         "uploadFile": "Bạn chưa tải lên CV!",
         "phoneFormat": "Số điện thoại không đúng định dạng",
-        "noItemFound": "Không tìm thấy kết quả tìm kiếm đã nhập!"
+        "noItemFound": "Không tìm thấy kết quả tìm kiếm đã nhập!",
+        "notAllowFileType": "Kiểu file này không được hỗ trợ! Chỉ cho phép loại file (.doc, .pdf)"
     },
     "titleDialog": {
         "applyJob": "Áp dụng công việc"

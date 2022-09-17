@@ -55,18 +55,6 @@
                     {{ $t("message.require") }}
                   </p>
                 </div>
-                <!-- <div class="row">
-                <div class="col-lg-6 col-md-6 col-md-6 col-xs-12">
-                  <div class="jp_adp_form_wrapper">
-                    <input type="text" placeholder="Salary Min" />
-                  </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-md-6 col-xs-12">
-                  <div class="jp_adp_form_wrapper">
-                    <input type="text" placeholder="Salary Max" />
-                  </div>
-                </div>
-              </div> -->
                 <div class="jp_adp_form_wrapper">
                   <p>Email <span class="text-red-500">*</span>:</p>
                   <input
@@ -110,40 +98,6 @@
                 </div>
               </div>
             </div>
-            <!-- <div
-            class="col-lg-6 col-md-6 col-sm-12 col-xs-12 bottom_line_Wrapper"
-          >
-            <div class="jp_adp_form_heading_wrapper">
-              <p>{{ $t("candidate.require") }}</p>
-            </div>
-            <div class="jp_adp_form_wrapper">
-              <select>
-                <option>Job Category</option>
-                <option>Job Category</option>
-                <option>Job Category</option>
-                <option>Job Category</option>
-              </select>
-            </div>
-            <div class="jp_adp_form_wrapper">
-              <select>
-                <option>Job Type</option>
-                <option>Job Type</option>
-                <option>Job Type</option>
-                <option>Job Type</option>
-              </select>
-            </div>
-            <div class="jp_adp_form_wrapper">
-              <input type="text" placeholder="Skills required" />
-            </div>
-            <div class="jp_adp_form_wrapper">
-              <input type="text" placeholder="Joining facilities" />
-            </div>
-          </div> -->
-            <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <div class="jp_adp_textarea_main_wrapper">
-              <textarea rows="7" placeholder="Job Description"></textarea>
-            </div>
-          </div> -->
           </div>
         </div>
 
@@ -203,7 +157,6 @@
             </div>
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
               <div class="jp_adp_choose_resume">
-                <!-- <p>{{ $t("candidate.postCV") }}</p> -->
                 <div class="custom-input flex" v-if="candidateForm.fileName">
                   <span class="icon-button" @click="removeFile()">
                     <i class="fa fa-close"></i>
@@ -243,6 +196,7 @@ import toast from "@/mixins/toast";
 import ButtonName from "@/constant/button-name";
 import validForm from "@/mixins/validForm";
 import { v4 as uuidv4 } from "uuid";
+import { FileType } from "@/config/file-type";
 
 Vue.use(VueMaterial);
 
@@ -329,6 +283,7 @@ export default {
     onFileChange(event) {
       const data = new FormData();
       const file = event.target.files[0];
+      const fileType = event.target.files[0].name.split('.');
 
       data.append("file", file);
 
@@ -337,6 +292,11 @@ export default {
         this.showToastMessage(
           ButtonName.TOAST_ERROR,
           this.$i18n.t("candidate.fileSize50")
+        );
+      } else if(!FileType.includes(fileType[1])) {
+        this.showToastMessage(
+          ButtonName.TOAST_ERROR,
+          this.$i18n.t("message.notAllowFileType")
         );
       } else {
         this.candidateForm.fileName = event.target.files[0].name;
