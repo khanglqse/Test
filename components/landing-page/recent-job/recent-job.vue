@@ -53,7 +53,7 @@
           <div class="carousel theme" v-if="paging.items.length">
             <div class="state-outer">
               <div class="state state-transform-1">
-                <div class="state-item">
+                <div class="state-item grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-2 gap-2">
                   <div
                     class="item"
                     v-for="(item, index) in paging.items"
@@ -67,40 +67,43 @@
                     >
                       <div class="jp_job_post_main_wrapper">
                         <div class="row">
-                          <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="jp_job_post_side_img">
                               <nuxt-img
                                 :src="
                                   item.imageUrl ||
-                                  '~/assets/css/images/content/tittle_img1.png'
+                                  'assets/css/images/content/default-img.svg'
                                 "
                                 sizes="sm:100vw md:50vw lg:400px"
                                 alt="rent-job"
+                                :key="item.imageUrl"
                               />
                             </div>
                             <div class="jp_job_post_right_cont">
-                              <h4>{{ item.title || "N/A" }}</h4>
+                              <h4 :title="item.title">{{ item.title || "N/A" }}</h4>
                               <p>{{ item.categoryName || "N/A" }}</p>
-                              <ul>
-                                <li>
-                                  <i class="fa fa-cc-paypal"></i>&nbsp;
-                                  {{ item.description || "N/A" }}
-                                </li>
-                                <li>
-                                  <i class="fa fa-map-marker"></i>&nbsp;
-                                  {{ item.location || "N/A" }}
-                                </li>
-                              </ul>
+                              <!-- <p>
+                                <i class="fa fa-cc-paypal"></i>&nbsp;
+                                {{ item.description || "N/A" }}
+                              </p> -->
+                              <p>
+                                <i class="fa fa-map-marker"></i>&nbsp;
+                                {{ item.location || "N/A" }}
+                              </p>
+                              <p>
+                                <i class="fa fa-money"></i>&nbsp;
+                                {{ item.salary || "0" }} VND
+                              </p>
                             </div>
                           </div>
-                          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                          <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="jp_job_post_right_btn_wrapper">
                               <ul>
                                 <li>
                                   <p href="#"><i class="fa fa-heart-o"></i></p>
                                 </li>
                                 <li>
-                                  <a href="#">{{ $t("parttime") }}</a>
+                                  <p href="#">{{ $t("parttime") }}</p>
                                 </li>
                                 <li>
                                   <nuxt-link
@@ -113,7 +116,7 @@
                                 </li>
                               </ul>
                             </div>
-                          </div>
+                          </div> -->
                         </div>
                       </div>
                       <div class="jp_job_post_keyword_wrapper">
@@ -282,3 +285,7 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+@import "~/assets/css/campain/responsive.css";
+</style>

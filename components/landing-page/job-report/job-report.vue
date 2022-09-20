@@ -26,3 +26,14 @@
     </div>
   </div>
 </template>
+
+<style scoped>
+@media (max-width: 767px) {
+  .gc_counter_cont_wrapper,
+  .gc_counter_cont_wrapper2,
+  .gc_counter_cont_wrapper3,
+  .gc_counter_cont_wrapper4 {
+    width: 100%;
+  }
+}
+</style>

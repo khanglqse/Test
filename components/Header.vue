@@ -12,12 +12,12 @@
             <div class="gc_header_wrapper">
               <div class="gc_logo">
                 <a href="index-2.html">
-                  <!-- <img
-                    src="~/assets/css/images/header/logo.png"
+                  <img
+                    src="~/assets/css/images/header/mass-logo.jpg"
                     alt="Logo"
                     title="Job Pro"
                     class="img-responsive"
-                /> -->
+                />
                 </a>
               </div>
             </div>
@@ -28,7 +28,7 @@
               <div class="mainmenu">
                 <div class="gc_right_menu">
                   <ul>
-                    <li id="search_button">
+                    <!-- <li id="search_button">
                       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
                         id="Capa_3" x="0px" y="0px" viewBox="0 0 451 451" style="enable-background: new 0 0 451 451"
                         xml:space="preserve">
@@ -38,7 +38,7 @@
                             fill="#23c0e9" />
                         </g>
                       </svg>
-                    </li>
+                    </li> -->
                     <li>
                       <div id="search_open" class="gc_search_box">
                         <input type="text" placeholder="Search here" />
@@ -52,12 +52,12 @@
                 <ul class="float_left">
                   <li class="has-mega gc_main_navigation">
                     <a href="#" class="gc_main_navigation">
-                      {{ $t("menuHeader.home") }}&nbsp;<i class="fa fa-angle-down"></i></a>
+                      {{ $t("menuHeader.publisher") }}&nbsp;<i class="fa fa-angle-down"></i></a>
                     <!-- mega menu start -->
                     <ul>
                       <li class="parent">
                         <!-- <a href="index-2.html">Home1</a> -->
-                        <nuxt-link to="/"> Trang chủ </nuxt-link>
+                        <nuxt-link to="/"> Publisher </nuxt-link>
                       </li>
                       <!-- <li class="parent"><a href="index_II.html">Home2</a></li>
                       <li class="parent"><a href="index_map.html">Home3</a></li>
@@ -68,7 +68,7 @@
                   </li>
                   <li class="has-mega gc_main_navigation">
                     <a href="#" class="gc_main_navigation">
-                      {{ $t("menuHeader.job") }}&nbsp;<i class="fa fa-angle-down"></i></a>
+                      {{ $t("menuHeader.advertiser") }}&nbsp;<i class="fa fa-angle-down"></i></a>
                     <!-- mega menu start -->
                     <ul>
                       <li class="parent">
@@ -83,7 +83,7 @@
                     </ul>
                   </li>
                   <li class="parent gc_main_navigation">
-                    <a href="#" class="gc_main_navigation">{{ $t("menuHeader.candidates") }} &nbsp;<i
+                    <a href="#" class="gc_main_navigation">{{ $t("menuHeader.sharedCorner") }} &nbsp;<i
                         class="fa fa-angle-down"></i></a>
                     <!-- sub menu start -->
                     <ul>
@@ -104,7 +104,7 @@
                   </li>
                   <li class="has-mega gc_main_navigation">
                     <a href="#" class="gc_main_navigation">
-                      {{ $t("menuHeader.page") }}&nbsp;<i class="fa fa-angle-down"></i></a>
+                      {{ $t("menuHeader.companyIntroduction") }}&nbsp;<i class="fa fa-angle-down"></i></a>
                     <!-- mega menu start -->
                     <ul>
                       <!-- <li class="parent"><a href="about.html">About-Us</a></li>
@@ -122,10 +122,9 @@
                       </li>
                     </ul>
                   </li>
-                  <li class="has-mega gc_main_navigation">
+                  <!-- <li class="has-mega gc_main_navigation">
                     <a href="#" class="gc_main_navigation">
                       Blog&nbsp;<i class="fa fa-angle-down"></i></a>
-                    <!-- mega menu start -->
                     <ul>
                       <li class="parent">
                         <a href="blog_left.html">Blog-Left</a>
@@ -140,7 +139,7 @@
                         <a href="blog_single_right.html">Blog-Single-Right</a>
                       </li>
                     </ul>
-                  </li>
+                  </li> -->
                   <li class="gc_main_navigation parent">
                     <a href="#" class="gc_main_navigation">{{
                         $t("menuHeader.customerCare")
@@ -445,3 +444,7 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+@import "~/assets/css/custom-css/header.css";
+</style>

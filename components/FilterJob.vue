@@ -14,7 +14,7 @@
           </div>
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="jp_header_form_wrapper">
-              <div class="col-lg-5 col-md-4 col-sm-12 col-xs-12">
+              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                 <input
                   type="text"
                   placeholder="Từ khóa ví dụ: (Tiêu đề Công Việc, Nội dung)"
@@ -22,11 +22,11 @@
                   @keyup.enter="filterWork(itemFilter)"
                 />
               </div>
-              <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+              <div class="col-lg-2 col-md-3 col-sm-12 col-xs-12">
                 <div class="jp_form_location_wrapper">
                   <i class="fa fa-dot-circle-o first_icon"></i
                   ><select v-model="itemFilter.budget">
-                    <option :value="0">Lựa chọn</option>
+                    <option :value="0">Mức lương</option>
                     <option
                       v-for="item in listBudget"
                       :key="item.id"
@@ -37,21 +37,21 @@
                   ><i class="fa fa-angle-down second_icon"></i>
                 </div>
               </div>
-              <!-- <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+              <div class="col-lg-2 col-md-3 col-sm-12 col-xs-12">
                 <div class="jp_form_exper_wrapper">
                   <i class="fa fa-dot-circle-o first_icon"></i
-                  ><select v-model="itemFilter.experience">
-                    <option :value="0">Kinh nghiệm</option>
+                  ><select v-model="itemFilter.location">
+                    <option :value="0">Vị trí</option>
                     <option
-                      v-for="item in experience"
-                      :key="item"
-                      :value="item"
+                      v-for="item in location"
+                      :key="item.id"
+                      :value="item.id"
                     >
-                      {{ item }}
+                      {{ item.name }}
                     </option></select
                   ><i class="fa fa-angle-down second_icon"></i>
                 </div>
-              </div> -->
+              </div>
               <!-- <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                 <div class="jp_form_exper_wrapper">
                   <i class="fa fa-dot-circle-o first_icon"></i
@@ -69,19 +69,14 @@
                 <div class="jp_form_btn_wrapper">
                   <ul>
                     <li>
-                      <a href="/#recentJob" @click="filterWork(itemFilter)"
-                        ><i class="fa fa-search"></i>
-                        {{ $t("button.search") }}</a
-                      >
-                      <!-- <nuxt-link
-                        :to="{
-                          path: '/',
-                        }"
+                      <a
+                        href="/#recentJob"
                         @click="filterWork(itemFilter)"
-                        tag="a"
+                        aria-label="search"
                         ><i class="fa fa-search"></i>
-                        {{ $t("button.search") }}</nuxt-link
-                      > -->
+                        {{ $t("button.search") }}
+                        </a
+                      >
                     </li>
                   </ul>
                 </div>
@@ -90,9 +85,13 @@
                 <div class="jp_form_btn_wrapper">
                   <ul>
                     <li>
-                      <a href="/#recentJob" @click="resetFilter(itemFilter)"
+                      <a
+                        href="/#recentJob"
+                        @click="resetFilter(itemFilter)"
+                        aria-label="reset"
                         ><i class="fa fa-rotate-right"></i>
-                        {{ $t("button.reset") }}</a
+                        {{ $t("button.reset") }}
+                        </a
                       >
                     </li>
                   </ul>
@@ -263,5 +262,39 @@ export default {
 
 .jp_form_btn_wrapper a {
   margin: 0;
+}
+</style>
+
+<style scoped>
+@media (max-width: 767px) {
+  .jp_form_location_wrapper {
+    margin-top: 20px;
+  }
+
+  .jp_form_location_wrapper i {
+    top: 37px;
+  }
+
+  .jp_form_btn_wrapper ul {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .jp_form_btn_wrapper ul li {
+    width: 100%;
+  }
+
+  @media (max-width: 600px) {
+    .jp_top_jobs_category_wrapper {
+      width: 49%;
+      border: 1px solid #ffffff21;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .jp_banner_main_jobs_wrapper {
+      padding-bottom: 70px;
+    }
+  }
 }
 </style>

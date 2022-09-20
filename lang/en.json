@@ -85,7 +85,11 @@
         "privacyPolicy": "Privacy Policy",
         "careersWithUs": "Careers With Us",
         "sitemap": "Sitemap",
-        "contactUs": "ContactUs"
+        "contactUs": "ContactUs",
+        "publisher": "Publisher",
+        "advertiser": "Advertiser",
+        "sharedCorner": "Shared Corner",
+        "companyIntroduction": "Company Introduction"
     },
     "campaign": {
         "campaignDetail": "CAMPAIGN DETAIL",
@@ -97,7 +101,8 @@
         "responsiblities": "RESPONSIBILITIES",
         "minimumQualification": "MINIMUM QUALIFICATIONS",
         "howToApply": "HOW TO APPLY",
-        "dateStart": "Date Start"
+        "dateStart": "Date Start",
+        "salary": "Salary"
     },
     "candidate": {
         "detail": "CANDIDATE DETAIL",
@@ -114,7 +119,8 @@
         "submitSuccess": "Submit successful",
         "uploadFile": "Please upload CV!",
         "phoneFormat": "Phone number is not correct format",
-        "noItemFound": "No item found!"
+        "noItemFound": "No item found!",
+        "notAllowFileType": "File type does not support! only allow (.doc, .pdf)"
     },
     "titleDialog": {
         "applyJob": "Apply Job"

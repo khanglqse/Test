@@ -6,7 +6,7 @@ export class PagingModel {
     hasPreviousPage = false;
     hasNextPage = false;
     pageNum = 1;
-    pageSize = 4;
+    pageSize = 5;
     keyword = "";
     rating = 0;
 }

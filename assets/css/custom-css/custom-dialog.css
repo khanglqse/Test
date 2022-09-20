@@ -83,7 +83,7 @@ select:active {
   transition: all 0.5s;
 }
 
-.jp_form_btn_wrapper a {
+.jp_form_btn_wrapper p {
   float: left;
   width: 120px;
   height: 40px;
@@ -95,14 +95,15 @@ select:active {
   font-weight: 700;
   font-size: 14px;
   margin: 5px;
+  cursor: pointer;
 }
 
-.jp_form_btn_wrapper a:hover {
+.jp_form_btn_wrapper p:hover {
   text-decoration: none;
   opacity: 0.5;
 }
 
-.grid {
+.grid-template {
   display: grid;
   grid-template-columns: 50% 50%;
   gap: 15px;

@@ -11,7 +11,7 @@
       <div class="jp_first_sidebar_main_wrapper">
         <div class="container">
           <div class="row">
-            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
               <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <div class="jp_hiring_slider_main_wrapper">
@@ -31,17 +31,13 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            <!-- <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
               <div class="jp_first_right_sidebar_main_wrapper">
                 <div class="row">
                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="jp_add_resume_wrapper">
                       <div class="jp_add_resume_img_overlay"></div>
                       <div class="jp_add_resume_cont">
-                        <!-- <img
-                        src="~/assets/css/images/content/resume_logo.png"
-                        alt="logo"
-                      /> -->
                         <h4>
                           Nhận công việc phù hợp nhất trên email của bạn. Thêm
                           Tiếp tục NGAY BÂY GIỜ!
@@ -88,42 +84,12 @@
                       <div class="jp_rightside_job_categories_heading">
                         <h4>{{ $t("JobsByCategory") }}</h4>
                       </div>
-                      <div class="jp_rightside_job_categories_content">
-                        <ul>
-                          <li>
-                            <i class="fa fa-caret-right"></i>
-                            <a href="#">Graphic Designer <span>(214)</span></a>
-                          </li>
-                          <li>
-                            <i class="fa fa-caret-right"></i>
-                            <a href="#">Engineering Jobs <span>(514)</span></a>
-                          </li>
-                          <li>
-                            <i class="fa fa-caret-right"></i>
-                            <a href="#">Mainframe Jobs <span>(554)</span></a>
-                          </li>
-                          <li>
-                            <i class="fa fa-caret-right"></i>
-                            <a href="#">Legal Jobs <span>(457)</span></a>
-                          </li>
-                          <li>
-                            <i class="fa fa-caret-right"></i>
-                            <a href="#">IT Jobs <span>(1254)</span></a>
-                          </li>
-                          <li>
-                            <i class="fa fa-plus-circle"></i>
-                            <a href="#"
-                              >{{ $t("button.viewAll") }}
-                              {{ $t("button.category") }}</a
-                            >
-                          </li>
-                        </ul>
-                      </div>
+                      <JobByCategory></JobByCategory>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -182,11 +148,11 @@ export default {
     CareerAdvice,
     JobReport,
     BestDeal,
-    FilterJob
-},
+    FilterJob,
+  },
 };
 </script>
 
 <style>
-  @import url('@/assets/css/campain/style.css');
+@import url("@/assets/css/campain/style.css");
 </style>

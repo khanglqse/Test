@@ -52,3 +52,13 @@
     </div>
   </div>
 </template>
+
+<style scoped>
+@media (max-width: 767px) {
+  .jp_regis_left_side_box_wrapper,
+  .jp_regis_right_side_box_wrapper {
+    float: none;
+    width: 100%;
+  }
+}
+</style>

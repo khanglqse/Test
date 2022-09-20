@@ -13,7 +13,7 @@
             <div class="jp_tittle_slides_one">
               <div class="jp_tittle_side_img_wrapper">
                 <img
-                  src="~/assets/css/images/content/tittle_img1.png"
+                  src="~/assets/css/images/content/default-img.svg"
                   alt="tittle_img"
                 />
               </div>
@@ -58,3 +58,7 @@ export default {
   setup() {},
 };
 </script>
+
+<style scoped>
+  @import "~/assets/css/campain/responsive.css";
+  </style>
