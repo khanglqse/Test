@@ -85,7 +85,11 @@
         "privacyPolicy": "Privacy Policy",
         "careersWithUs": "Careers With Us",
         "sitemap": "Sitemap",
-        "contactUs": "ContactUs"
+        "contactUs": "ContactUs",
+        "publisher": "Publisher",
+        "advertiser": "Advertiser",
+        "sharedCorner": "Shared Corner",
+        "companyIntroduction": "Company Introduction"
     },
     "campaign": {
         "campaignDetail": "CAMPAIGN DETAIL",

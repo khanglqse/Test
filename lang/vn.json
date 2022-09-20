@@ -40,7 +40,11 @@
         "customerCare": "Chăm sóc khách hàng",
         "contact": "Liên hệ",
         "campaignDetail": "Chi tiết chiến dịch",
-        "siteMap": "Sơ đồ trang web"
+        "siteMap": "Sơ đồ trang web",
+        "publisher": "Publisher",
+        "advertiser": "Advertiser",
+        "sharedCorner": "Góc chia sẻ",
+        "companyIntroduction": "Giới thiệu công ty"
     },
     "trendingKeyWords": "Từ khóa thịnh hành",
     "trandingJobs": {
