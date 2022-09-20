@@ -12,7 +12,7 @@
           <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
             <div class="jp_newsletter_field">
               <i class="fa fa-envelope-o"></i
-              ><input type="text" placeholder="Nhập Email của bạn" /><button
+              ><input type="text" :placeholder="$t('placeholder.yourEmail')" /><button
                 type="submit"
                 aria-label="submit"
               >

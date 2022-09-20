@@ -92,7 +92,9 @@
         "careersWithUs": "Sự nghiệp với chúng tôi",
         "sitemap": "Sơ đồ trang web",
         "contactUs": "Liên hệ",
-        "qna": "Hỏi đáp"
+        "qna": "Hỏi đáp",
+        "location": "Vị trí",
+        "salary": "Mức lương"
     },
     "campaign": {
         "campaignDetail": "CHI TIẾT CHIẾN DỊCH",
@@ -137,5 +139,9 @@
         "phone": "Số điện thoại *",
         "subject": "Tựa đề",
         "typeMessage": "Nhập tin nhắn của bạn *"
+    },
+    "placeholder": {
+        "filter": "Từ khóa ví dụ: Tiêu đề Công Việc, Nội dung",
+        "yourEmail": "Email của bạn"
     }
 }

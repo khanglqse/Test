@@ -48,6 +48,14 @@ module.exports = {
     '~/plugins/material-icon.js',
     '~/plugins/i18n.js',
   ],
+  pluginOptions: {
+    i18n: {
+      locale: "en",
+      fallbackLocale: "en",
+      localeDir: "locales",
+      enableInSFC: false
+    }
+  },
   /*
   ** Customize the progress bar color
   */
@@ -104,7 +112,7 @@ module.exports = {
           }
         }
       ]
-    }
+    },
   },
   image: {
     provider: 'ipx',
