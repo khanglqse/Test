@@ -39,7 +39,12 @@
         "page": "Pages",
         "contact": "Contact",
         "campaignDetail": "Campaign Detail",
-        "siteMap": "Site Map"
+        "siteMap": "Site Map",
+        "publisher": "Publisher",
+        "advertiser": "Advertiser",
+        "sharedCorner": "Shared Corner",
+        "companyIntroduction": "Company Introduction",
+        "customerCare": "Cusomter Care"
     },
     "trendingKeyWords": "Trending Keywords",
     "trandingJobs": {
@@ -56,6 +61,7 @@
     "JobsByCategory": "Jobs by Category",
     "careerAdvice": "Career Advice",
     "keywords": "Keywords",
+    "jobAvailable": "Job Available",
     "members": "Members",
     "resume": "Resume",
     "company": "Company",
@@ -86,10 +92,9 @@
         "careersWithUs": "Careers With Us",
         "sitemap": "Sitemap",
         "contactUs": "ContactUs",
-        "publisher": "Publisher",
-        "advertiser": "Advertiser",
-        "sharedCorner": "Shared Corner",
-        "companyIntroduction": "Company Introduction"
+        "qna": "Question and Answer",
+        "location": "Location",
+        "salary": "Salary"
     },
     "campaign": {
         "campaignDetail": "CAMPAIGN DETAIL",
@@ -124,5 +129,9 @@
     },
     "titleDialog": {
         "applyJob": "Apply Job"
+    },
+    "placeholder": {
+        "filter": "Keywords example: Category, Content",
+        "yourEmail": "Your email"
     }
 }

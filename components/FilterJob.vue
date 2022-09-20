@@ -17,7 +17,7 @@
               <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                 <input
                   type="text"
-                  placeholder="Từ khóa ví dụ: (Tiêu đề Công Việc, Nội dung)"
+                  :placeholder="$t('placeholder.filter')"
                   v-model="itemFilter.keyword"
                   @keyup.enter="filterWork(itemFilter)"
                 />
@@ -26,7 +26,7 @@
                 <div class="jp_form_location_wrapper">
                   <i class="fa fa-dot-circle-o first_icon"></i
                   ><select v-model="itemFilter.budget">
-                    <option :value="0">Mức lương</option>
+                    <option :value="0">{{$t('menu.salary')}}</option>
                     <option
                       v-for="item in listBudget"
                       :key="item.id"
@@ -41,7 +41,7 @@
                 <div class="jp_form_exper_wrapper">
                   <i class="fa fa-dot-circle-o first_icon"></i
                   ><select v-model="itemFilter.location">
-                    <option :value="0">Vị trí</option>
+                    <option :value="0">{{$t('menu.location')}}</option>
                     <option
                       v-for="item in location"
                       :key="item.id"
@@ -52,19 +52,6 @@
                   ><i class="fa fa-angle-down second_icon"></i>
                 </div>
               </div>
-              <!-- <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                <div class="jp_form_exper_wrapper">
-                  <i class="fa fa-dot-circle-o first_icon"></i
-                  ><select :value="locale" @change="onChangeLanguage">
-                    <option
-                      v-for="(item, index) in locales"
-                      :key="index"
-                      :label="item.label"
-                      :value="item.value"
-                    /></select
-                  ><i class="fa fa-angle-down second_icon"></i>
-                </div>
-              </div> -->
               <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
                 <div class="jp_form_btn_wrapper">
                   <ul>
@@ -226,10 +213,6 @@ export default {
       }
     },
 
-    onChangeLanguage(locale) {
-      this.$store.commit("lang/set", locale);
-    },
-
     ...mapActions({
       filterWork: "filter/filterWork",
       resetFilter: "filter/resetFilter",
@@ -237,7 +220,6 @@ export default {
   },
   computed: {
     ...mapState(["filter"]),
-    ...mapState("lang", ["locales", "locale"]),
   },
   watch: {
     "$store.state.filter.filterItem"(value) {

@@ -2,7 +2,8 @@
   <div
     class="leading-normal tracking-normal gradient flex flex-col min-h-screen"
   >
-    <Header />
+    <!-- <i18n lang="i18n"></i18n> -->
+    <Header language="vi" />
     <div>
       <Loading></Loading>
       <!-- class="flex shrink-0 grow basis-auto mx-auto" -->

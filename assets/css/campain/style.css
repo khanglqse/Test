@@ -156,7 +156,7 @@ ul{
 }
 .mainmenu:after{
 	content: '';
-    border: 1px solid #ffffff21;
+    /* border: 1px solid #ffffff21; */
     width: 1px;
     height: 111px;
     position: absolute;
@@ -415,9 +415,9 @@ ul{
 }
 
 .jp_navi_right_btn_wrapper ul{
-	/* float:right; */
-	position: absolute;
-	right: 30px;
+	float:right;
+	/* position: absolute; */
+	/* right: 30px; */
 }
 
 .jp_navi_right_btn_wrapper li{
@@ -435,7 +435,7 @@ ul{
 	color:#ffffff;
 	border:1px solid #ffffff40;
 	text-align:center;
-	background:transparent;
+	background:#f36969;
 	-webkit-border-radius:10px;
 	-moz-border-radius:10px;
 	border-radius:10px;
@@ -453,6 +453,8 @@ ul{
 	-ms-transition: all 0.5s;
 	-moz-transition: all 0.5s;
 	transition: all 0.5s;
+	text-decoration: none;
+	opacity: 0.5;
 }
 .jp_navi_right_btn_wrapper li:last-child a{
 	float:left;
