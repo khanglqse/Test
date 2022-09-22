@@ -1,4 +1,5 @@
 module.exports = {
+  target: 'server',
   components: true,
   loading: '@/components/Loading.vue',
   modules: [
@@ -65,7 +66,6 @@ module.exports = {
   */
   buildModules: [
     '@nuxt/postcss8',
-    '@nuxt/image',
     ['@nuxtjs/dotenv', { /* module options */ },]
   ],
   css: [
