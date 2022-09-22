@@ -72,7 +72,7 @@
                               <nuxt-img
                                 :src="
                                   item.imageUrl ||
-                                  'assets/css/images/content/default-img.svg'
+                                  '/default-img.svg'
                                 "
                                 sizes="sm:100vw md:50vw lg:400px"
                                 alt="rent-job"
