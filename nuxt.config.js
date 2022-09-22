@@ -1,4 +1,5 @@
 module.exports = {
+  target: 'server',
   components: true,
   loading: '@/components/Loading.vue',
   modules: [
