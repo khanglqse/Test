@@ -119,6 +119,6 @@ module.exports = {
     ipx: {}
   }, 
   serverMiddleware: {
-    '/_ipx': '~/server/middleware/ipx.js'
+    // '/_ipx': '~/server/middleware/ipx.js'
   },
 }
