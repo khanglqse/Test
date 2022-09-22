@@ -155,7 +155,7 @@
                       <nuxt-img
                         :src="
                           campaign.imageUrl ||
-                          'assets/css/images/content/default-img.svg'
+                          '/default-img.svg'
                         "
                         sizes="sm:100px md:50px lg:300px"
                         width="300"

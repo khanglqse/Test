@@ -118,7 +118,10 @@ module.exports = {
     provider: 'ipx',
     ipx: {}
   }, 
-  serverMiddleware: {
-    // '/_ipx': '~/server/middleware/ipx.js'
-  },
+  static: {
+    prefix: false
+  }
+  // serverMiddleware: {
+  //   '/_ipx': '@/server/middleware/ipx.js'
+  // },
 }
