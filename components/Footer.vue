@@ -52,168 +52,78 @@
                     Proin akshay handge vel velit auctor aliquet. Aenean
                     sollicitudin,
                   </p>
-                  <ul>
+                  <!-- <ul>
                     <li>
                       <i class="fa fa-plus-circle"></i>
                       <a href="#">{{ $t("button.readMore") }}</a>
                     </li>
-                  </ul>
+                  </ul> -->
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
               <div
                 class="jp_footer_candidate_wrapper jp_footer_candidate_wrapper2"
               >
                 <div class="jp_footer_candidate">
-                  <h2>{{ $t("jobFilter.forCandidate") }}</h2>
+                  <h2>{{ $t("menu.affiliate") }}</h2>
                   <ul>
                     <li>
                       <a href="#"
                         ><i class="fa fa-caret-right" aria-hidden="true"></i>
-                        {{ $t("menu.addAResume") }}</a
+                        {{ $t("menu.publisher") }}</a
                       >
                     </li>
                     <li>
                       <a href="#"
                         ><i class="fa fa-caret-right" aria-hidden="true"></i>
-                        {{ $t("menu.candidateDashboard") }}</a
-                      >
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><i class="fa fa-caret-right" aria-hidden="true"></i>
-                        {{ $t("menu.pastApplications") }}</a
-                      >
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><i class="fa fa-caret-right" aria-hidden="true"></i>
-                        {{ $t("menu.jobAlerts") }}</a
-                      >
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><i class="fa fa-caret-right" aria-hidden="true"></i>
-                        {{ $t("menu.bookmarks") }}</a
-                      >
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><i class="fa fa-caret-right" aria-hidden="true"></i
-                        >{{ $t("menu.myAccount") }}</a
-                      >
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><i class="fa fa-caret-right" aria-hidden="true"></i>
-                        {{ $t("menu.yourJobs") }}</a
+                        {{ $t("menu.advertiser") }}</a
                       >
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
               <div
                 class="jp_footer_candidate_wrapper jp_footer_candidate_wrapper3"
               >
                 <div class="jp_footer_candidate">
-                  <h2>{{ $t("jobFilter.forEmployers") }}</h2>
+                  <h2>{{ $t("menu.aboutUs") }}</h2>
                   <ul>
                     <li>
                       <a href="#"
                         ><i class="fa fa-caret-right" aria-hidden="true"></i>
-                        {{ $t("menu.browseCandidates") }}</a
+                        {{ $t("menu.companyIntroduction") }}</a
                       >
                     </li>
                     <li>
                       <a href="#"
                         ><i class="fa fa-caret-right" aria-hidden="true"></i>
-                        {{ $t("menu.employerDashboard") }}</a
-                      >
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><i class="fa fa-caret-right" aria-hidden="true"></i>
-                        {{ $t("menu.addJob") }}</a
-                      >
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><i class="fa fa-caret-right" aria-hidden="true"></i>
-                        {{ $t("menu.jobPage") }}</a
-                      >
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><i class="fa fa-caret-right" aria-hidden="true"></i>
-                        {{ $t("menu.jobPackages") }}</a
-                      >
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><i class="fa fa-caret-right" aria-hidden="true"></i>
-                        {{ $t("menu.workProcess") }}</a
-                      >
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><i class="fa fa-caret-right" aria-hidden="true"></i
-                        >{{ $t("menu.myAccount") }}</a
+                        Blog</a
                       >
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
               <div
                 class="jp_footer_candidate_wrapper jp_footer_candidate_wrapper4"
               >
                 <div class="jp_footer_candidate">
-                  <h2>{{ $t("jobFilter.information") }}</h2>
+                  <h2>{{ $t("menu.contactUs") }}</h2>
                   <ul>
                     <li>
                       <a href="#"
                         ><i class="fa fa-caret-right" aria-hidden="true"></i>
-                        {{ $t("menu.aboutUs") }}</a
+                        Email: massrecruitment@gmail.com</a
                       >
                     </li>
                     <li>
                       <a href="#"
                         ><i class="fa fa-caret-right" aria-hidden="true"></i>
-                        {{ $t("menu.terms&Conditions") }}</a
-                      >
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><i class="fa fa-caret-right" aria-hidden="true"></i>
-                        {{ $t("menu.privacyPolicy") }}</a
-                      >
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><i class="fa fa-caret-right" aria-hidden="true"></i>
-                        {{ $t("menu.careersWithUs") }}</a
-                      >
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><i class="fa fa-caret-right" aria-hidden="true"></i>
-                        {{ $t("menu.sitemap") }}</a
-                      >
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><i class="fa fa-caret-right" aria-hidden="true"></i>
-                        {{ $t("menu.contactUs") }}</a
-                      >
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><i class="fa fa-caret-right" aria-hidden="true"></i>
-                        FAQs</a
+                        {{ $t("menu.phoneNumber") }}: 0123456789</a
                       >
                     </li>
                   </ul>
@@ -226,7 +136,7 @@
               <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                   <div class="jp_bottom_footer_left_cont">
-                    <p>© 2022-23 Job Pro. All Rights Reserved.</p>
+                    <p>{{$t("menu.address")}}: Đường A, Phường B, Gò Vấp, Hồ Chí Minh</p>
                   </div>
                   <div class="jp_bottom_top_scrollbar_wrapper">
                     <a href="javascript:" id="return-to-top"
@@ -281,3 +191,5 @@ export default {
 <style scoped>
 @import url('@/assets/css/custom-css/footer.css');
 </style>
+
+cert => yes change to no

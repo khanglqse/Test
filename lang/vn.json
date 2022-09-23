@@ -94,7 +94,14 @@
         "contactUs": "Liên hệ",
         "qna": "Hỏi đáp",
         "location": "Vị trí",
-        "salary": "Mức lương"
+        "salary": "Mức lương",
+        "publisher": "Publisher",
+        "advertiser": "Advertiser",
+        "companyIntroduction": "Giới thiệu công ty",
+        "address": "Địa chỉ",
+        "taxNumber": "Tax Number",
+        "affiliate": "Affiliate",
+        "phoneNumber": "Số điện thoại"
     },
     "campaign": {
         "campaignDetail": "CHI TIẾT CHIẾN DỊCH",
@@ -107,7 +114,10 @@
         "minimumQualification": "YÊU CẦU TỐI THIỂU",
         "howToApply": "LÀM SAO ĐỂ ĐĂNG KÍ",
         "dateStart": "Ngày đăng",
-        "salary": "Mức lương"
+        "dateEnd": "Ngày kết thúc",
+        "salary": "Mức lương",
+        "comissionPolicy": "Chính sách hoa hồng",
+        "comissionPCookie": "Chính sách Cookie"
     },
     "candidate": {
         "detail": "Thông tin ứng viên",
