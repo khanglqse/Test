@@ -3,16 +3,17 @@
     <div class="jp_newsletter_img_overlay_wrapper"></div>
     <div class="jp_newsletter_wrapper">
       <div class="container">
-        <div class="row">
+        <div class="row flex items-end">
           <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
             <div class="jp_newsletter_text">
               <img src="~/assets/css/images/content/news_logo.png" width="330" height="47" alt="news_logo">
             </div>
           </div>
-          <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+          <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 mass-notification-footer">
+            <h3 class="m-4 text-lg">{{$t("notificationMessage")}}</h3>
             <div class="jp_newsletter_field">
               <i class="fa fa-envelope-o"></i
-              ><input type="text" :placeholder="$t('placeholder.yourEmail')" /><button
+              ><input type="text" placeholder="massrecruiment@gmail.com" /><button
                 type="submit"
                 aria-label="submit"
               >
@@ -137,6 +138,7 @@
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                   <div class="jp_bottom_footer_left_cont">
                     <p>{{$t("menu.address")}}: Đường A, Phường B, Gò Vấp, Hồ Chí Minh</p>
+                    <p>{{$t("menu.taxCode")}}: 0123456789</p>
                   </div>
                   <div class="jp_bottom_top_scrollbar_wrapper">
                     <a href="javascript:" id="return-to-top"
@@ -154,16 +156,7 @@
                         <a href="https://mass-recruitment-landing-git-master-khanglqse.vercel.app/" aria-label="twitter"><i class="fa fa-twitter"></i></a>
                       </li>
                       <li>
-                        <a href="https://mass-recruitment-landing-git-master-khanglqse.vercel.app/" aria-label="pinterest"><i class="fa fa-pinterest-p"></i></a>
-                      </li>
-                      <li>
-                        <a href="https://mass-recruitment-landing-git-master-khanglqse.vercel.app/" aria-label="linkedin"><i class="fa fa-linkedin"></i></a>
-                      </li>
-                      <li class="hidden-xs">
-                        <a href="https://mass-recruitment-landing-git-master-khanglqse.vercel.app/" aria-label="google"><i class="fa fa-google-plus"></i></a>
-                      </li>
-                      <li class="hidden-xs">
-                        <a href="https://mass-recruitment-landing-git-master-khanglqse.vercel.app/" aria-label="vimeo"><i class="fa fa-vimeo"></i></a>
+                        <a href="https://mass-recruitment-landing-git-master-khanglqse.vercel.app/" aria-label="youtube"><i class="fa fa-youtube"></i></a>
                       </li>
                     </ul>
                   </div>

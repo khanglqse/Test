@@ -145,6 +145,7 @@
                         height="300"
                         alt="campaign-detail"
                         :key="campaign.imageUrl"
+                        format="webp"
                       />
                     </div>
                   </div>

@@ -175,6 +175,9 @@
 	-moz-transition: all 0.5s;
 	transition: all 0.5s;
 }
+.jp_bottom_footer_right_cont li .fa {
+	font-size: 18px;
+}
 .jp_bottom_footer_left_cont{
 	position:relative;
 }
@@ -337,3 +340,7 @@
 	transition: all 0.5s;
 }
 /*-- Newsletter css End --*/
+
+.mass-notification-footer h3{
+	color: #fff;
+}

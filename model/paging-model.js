@@ -9,6 +9,7 @@ export class PagingModel {
     pageSize = 5;
     keyword = "";
     rating = 0;
+    type = "";
 }
 
 class ItemModel {

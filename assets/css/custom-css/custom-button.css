@@ -25,3 +25,59 @@
     cursor: pointer;
     width: 210px;
 }
+
+.jp_form_location_wrapper select, .jp_form_exper_wrapper select{
+	/* width:100%;
+	height:50px; */
+	-webkit-border-radius:15px;
+	-moz-border-radius:15px;
+	border-radius:15px;
+	border:transparent;
+	padding-left:40px;
+	-webkit-appearance: none;
+    -moz-appearance: none;
+	position:relative;
+}
+.jp_form_location_wrapper .second_icon, .jp_form_exper_wrapper .second_icon{
+	margin-left:-30px;
+	position: absolute;
+    top: 19px;
+}
+.jp_form_location_wrapper .first_icon, .jp_form_exper_wrapper .first_icon{
+	position:absolute;
+	top:16px;
+	font-size:20px;
+	left:30px;
+	z-index:1;
+	color:#23c0e9;
+}
+
+.jp_adp_form_wrapper input,
+select {
+  width: 100%;
+  height: 50px;
+  padding-left: 20px;
+  border: 1px solid #e9e9e9;
+  border-radius: 10px;
+}
+
+.jp_adp_form_wrapper input:hover,
+select:hover {
+  border: 1px solid #23c0e9;
+  border-top-color: #e9e9e9;
+  transition: all 0.5s;
+}
+
+.jp_adp_form_wrapper input:focus,
+select:focus {
+  border: 1px solid #23c0e9;
+  border-top-color: #e9e9e9;
+  transition: all 0.5s;
+}
+
+.jp_adp_form_wrapper input:active,
+select:active {
+  border: 1px solid #23c0e9;
+  border-top-color: #e9e9e9;
+  transition: all 0.5s;
+}
