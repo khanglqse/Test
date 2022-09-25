@@ -346,6 +346,5 @@ export default {
   
 <style>
 @import "@/assets/css/custom-css/custom-dialog.css";
-@import "@/assets/css/custom-css/custom-button.css";
 </style>
   

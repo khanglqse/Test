@@ -5,6 +5,8 @@
         <img
           src="~/assets/css/images/content/career_img1.jpg"
           alt="career_img"
+          width="80"
+          height="80"
         />
       </div>
       <div class="jp_rightside_career_img_cont">
@@ -17,6 +19,8 @@
         <img
           src="~/assets/css/images/content/career_img2.jpg"
           alt="career_img"
+          width="80"
+          height="80"
         />
       </div>
       <div class="jp_rightside_career_img_cont">
@@ -29,6 +33,8 @@
         <img
           src="~/assets/css/images/content/career_img3.jpg"
           alt="career_img"
+          width="80"
+          height="80"
         />
       </div>
       <div class="jp_rightside_career_img_cont">

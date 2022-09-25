@@ -547,31 +547,7 @@ ul{
 	padding-left:20px;
 	padding-right: 20px;
 }
-.jp_form_location_wrapper select, .jp_form_exper_wrapper select{
-	width:100%;
-	height:50px;
-	-webkit-border-radius:15px;
-	-moz-border-radius:15px;
-	border-radius:15px;
-	border:transparent;
-	padding-left:40px;
-	-webkit-appearance: none;
-    -moz-appearance: none;
-	position:relative;
-}
-.jp_form_location_wrapper .second_icon, .jp_form_exper_wrapper .second_icon{
-	margin-left:-30px;
-	position: absolute;
-    top: 19px;
-}
-.jp_form_location_wrapper .first_icon, .jp_form_exper_wrapper .first_icon{
-	position:absolute;
-	top:16px;
-	font-size:20px;
-	left:30px;
-	z-index:1;
-	color:#23c0e9;
-}
+
 .jp_form_btn_wrapper li a{
 	float:left;
 	width:100%;
@@ -646,6 +622,9 @@ ul{
 	height:100%;
 	background:#ffffff24;
 	position:relative;
+}
+.jp_banner_jobs_categories_wrapper .container {
+	margin-bottom: 0;
 }
 .jp_top_jobs_category_wrapper{
 	float:left;
@@ -1103,7 +1082,7 @@ ul{
 	border-radius:10px;
 	border:2px solid #e9e9e9;
 }
-.nav-tabs > li > a{
+.nav-tabs > li > p{
 	text-transform:uppercase;
 	font-weight:bold;
 	color:#000000;
@@ -1111,18 +1090,21 @@ ul{
 	font-family: 'Lato', sans-serif;
 	padding-bottom: 13px;
 	padding-top: 13px;
-	border-left:1px solid #00000026;
+	/* border-left:1px solid #00000026; */
 	margin-right:0;
 	-webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
     -ms-transition: all 0.5s;
     -moz-transition: all 0.5s;
     transition: all 0.5s;
+	padding: 10px 15px;
+	font-family: Montserrat,sans-serif;
+	border: 1px solid transparent;
 }
-.nav-tabs > li:first-child > a{
+.nav-tabs > li:first-child > p{
 	border-left:0;
 }
-.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
+.nav-tabs > li.active > p, .nav-tabs > li.active > p:hover, .nav-tabs > li.active > p:focus{
 	color: #ffffff;
     border: 1px solid #23c0e9;
     background: #23c0e9;
@@ -1138,7 +1120,7 @@ ul{
     -moz-transition: all 0.5s;
     transition: all 0.5s;
 }
-.nav-tabs > li:first-child.active > a, .nav-tabs > li:first-child.active > a:hover, .nav-tabs > li:first-child.active > a:focus{
+.nav-tabs > li:first-child.active > p, .nav-tabs > li:first-child.active > p:hover, .nav-tabs > li:first-child.active > p:focus{
 	-webkit-border-top-left-radius:10px;
 	-moz-border-top-left-radius:10px;
 	border-top-left-radius:10px;
@@ -1146,7 +1128,7 @@ ul{
 	-moz-border-top-bottom-radius:10px;
 	border-bottom-left-radius:10px;
 }
-.nav-tabs > li:last-child.active > a, .nav-tabs > li:last-child.active > a:hover, .nav-tabs > li:last-child.active > a:focus{
+.nav-tabs > li:last-child.active > p, .nav-tabs > li:last-child.active > p:hover, .nav-tabs > li:last-child.active > p:focus{
 	-webkit-border-top-right-radius:10px;
 	-moz-border-top-right-radius:10px;
 	border-top-right-radius:10px;
@@ -1154,11 +1136,12 @@ ul{
 	-moz-border-bottom-right-radius:10px;
 	border-bottom-right-radius:10px;
 }
-.nav-tabs > li > a:hover{
+.nav-tabs > li > p:hover{
 	border-left:1px solid #00000026;
+	cursor: pointer;
 }
-.nav-tabs > li:first-child > a:hover{
-	border-left:0;
+.nav-tabs > li:first-child > p:hover{
+	border-left:1px solid transparent;
 }
 .nav-tabs{
 	border-top:1px solid #eeeeee;

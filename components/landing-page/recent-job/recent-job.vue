@@ -5,45 +5,29 @@
         <h2>{{ $t("rentJobs") }}</h2>
       </div>
       <ul class="nav nav-tabs" role="tablist" aria-owns="tablist">
-        <li role="presentation" class="active">
-          <a
+        <li
+          :role="tab.name"
+          :class="{ active: tabActive == tab.id }"
+          v-for="tab in listTab"
+          :key="tab.id"
+          @click="changeTab(tab.id, tab.type)"
+        >
+          <!-- <a
             href="#best"
             aria-controls="best"
             role="tab"
             data-toggle="tab"
             aria-selected="false"
             >{{ $t("featured") }}</a
-          >
-        </li>
-        <li role="presentation">
-          <a
-            href="#hot"
-            aria-controls="hot"
+          > -->
+          <p
+            :aria-controls="tab.name"
             role="tab"
             data-toggle="tab"
             aria-selected="false"
-            >{{ $t("remotely") }}</a
           >
-        </li>
-        <li role="presentation">
-          <a
-            href="#trand"
-            aria-controls="partime"
-            role="tab"
-            data-toggle="tab"
-            aria-selected="false"
-            >{{ $t("parttime") }}</a
-          >
-        </li>
-        <li role="presentation">
-          <a
-            href="#best"
-            aria-controls="fulltime"
-            role="tab"
-            data-toggle="tab"
-            aria-selected="false"
-            >{{ $t("fulltime") }}
-          </a>
+            {{ $t(tab.name) }}
+          </p>
         </li>
       </ul>
     </div>
@@ -53,7 +37,16 @@
           <div class="carousel theme" v-if="paging.items.length">
             <div class="state-outer">
               <div class="state state-transform-1">
-                <div class="state-item grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-2 gap-2">
+                <div
+                  class="
+                    state-item
+                    grid
+                    lg:grid-cols-5
+                    md:grid-cols-4
+                    sm:grid-cols-2
+                    gap-2
+                  "
+                >
                   <div
                     class="item"
                     v-for="(item, index) in paging.items"
@@ -70,17 +63,17 @@
                           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="jp_job_post_side_img">
                               <nuxt-img
-                                :src="
-                                  item.imageUrl ||
-                                  '/default-img.svg'
-                                "
+                                :src="item.imageUrl || '/default-img.svg'"
                                 sizes="sm:100vw md:50vw lg:400px"
                                 alt="rent-job"
                                 :key="item.imageUrl"
+                                format="webp"
                               />
                             </div>
-                            <div class="jp_job_post_right_cont">
-                              <h4 :title="item.title">{{ item.title || "N/A" }}</h4>
+                            <div class="jp_job_post_right_cont lg:pl-0 sm:pl-4 md:pl-4">
+                              <h4 :title="item.title">
+                                {{ item.title || "N/A" }}
+                              </h4>
                               <p>{{ item.categoryName || "N/A" }}</p>
                               <!-- <p>
                                 <i class="fa fa-cc-paypal"></i>&nbsp;
@@ -222,6 +215,29 @@ export default {
           to: 20000000,
         },
       ],
+      listTab: [
+        {
+          id: 1,
+          name: "featured",
+          type: "feature"
+        },
+        {
+          id: 2,
+          name: "remotely",
+          type: "remote"
+        },
+        {
+          id: 3,
+          name: "parttime",
+          type: "part"
+        },
+        {
+          id: 4,
+          name: "fulltime",
+          type: "full"
+        },
+      ],
+      tabActive: 1,
     };
   },
   mixins: [toast],
@@ -263,6 +279,13 @@ export default {
 
     goToDetailPage(item) {
       this.$router.push({ path: `/job/${item.id}#campaign-detail` });
+    },
+
+    changeTab(tab, type) {
+      this.tabActive = tab;
+      this.paging.type = type;
+
+      this.getListCampaign();
     },
   },
   computed: {

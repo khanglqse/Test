@@ -6,6 +6,8 @@
           src="~/assets/css/images/content/regis_icon.png"
           alt="icon"
           class="inline"
+          width="40"
+          height="34"
         />
         <h4>{{ $t("userInfo.employer") }}</h4>
         <p>
@@ -30,6 +32,8 @@
           src="~/assets/css/images/content/regis_icon2.png"
           alt="icon"
           class="inline"
+          width="40"
+          height="34"
         />
         <h4>{{ $t("userInfo.candidate") }}</h4>
         <p>

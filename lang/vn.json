@@ -101,7 +101,8 @@
         "address": "Địa chỉ",
         "taxNumber": "Tax Number",
         "affiliate": "Affiliate",
-        "phoneNumber": "Số điện thoại"
+        "phoneNumber": "Số điện thoại",
+        "taxCode": "Mã số thuế"
     },
     "campaign": {
         "campaignDetail": "CHI TIẾT CHIẾN DỊCH",
@@ -153,5 +154,6 @@
     "placeholder": {
         "filter": "Từ khóa ví dụ: Tiêu đề Công Việc, Nội dung",
         "yourEmail": "Email của bạn"
-    }
+    },
+    "notificationMessage": "Nhận thông báo về Mass Recruiment:"
 }

@@ -15,6 +15,7 @@
                 width="300"
                 height="auto"
                 :key="campaign.imageUrl"
+                format="webp"
               />
             </div>
           </div>

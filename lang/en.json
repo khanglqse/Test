@@ -101,7 +101,8 @@
         "address": "Adress",
         "taxNumber": "Tax Number",
         "affiliate": "Affiliate",
-        "phoneNumber": "Phone Number"
+        "phoneNumber": "Phone Number",
+        "taxCode": "Tax Code"
     },
     "campaign": {
         "campaignDetail": "CAMPAIGN DETAIL",
@@ -143,5 +144,6 @@
     "placeholder": {
         "filter": "Keywords example: Category, Content",
         "yourEmail": "Your email"
-    }
+    },
+    "notificationMessage": "Receive notifications about Mass Recruiment:"
 }
