@@ -38,7 +38,7 @@
                 </div>
               </div>
               <div class="col-lg-2 col-md-3 col-sm-12 col-xs-12">
-                <div class="jp_form_exper_wrapper">
+                <div class="jp_form_location_wrapper">
                   <i class="fa fa-dot-circle-o first_icon"></i
                   ><select v-model="itemFilter.location">
                     <option :value="0">{{$t('menu.location')}}</option>

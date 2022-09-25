@@ -35,4 +35,5 @@ export default {
 @import "~/assets/css/campain/reset.css";
 @import "~/assets/css/campain/flaticon.css";
 @import "~/assets/css/campain/responsive.css";
+@import "~/assets/css/custom-css/header.css";
 </style>

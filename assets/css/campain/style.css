@@ -407,7 +407,7 @@ ul{
 	transition: all 0.5s;
 }
 .gc_main_navigation i{
-	color:#23c0e9;
+	color:#ffffff;
 }
 
 .jp_navi_right_btn_wrapper {
@@ -1191,7 +1191,9 @@ ul{
 	/* width:105px; */
 }
 .jp_job_post_side_img img {
-	width: 100%;
+	/* width: 100%; */
+	width: 160px;
+	height: 120px;
 }
 .jp_job_post_right_cont{
 	float:left;

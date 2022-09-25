@@ -490,7 +490,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-@import "~/assets/css/custom-css/header.css";
-</style>

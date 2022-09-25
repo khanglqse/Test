@@ -94,7 +94,14 @@
         "contactUs": "ContactUs",
         "qna": "Question and Answer",
         "location": "Location",
-        "salary": "Salary"
+        "salary": "Salary",
+        "publisher": "Publisher",
+        "advertiser": "Advertiser",
+        "companyIntroduction": "Company Introduction",
+        "address": "Adress",
+        "taxNumber": "Tax Number",
+        "affiliate": "Affiliate",
+        "phoneNumber": "Phone Number"
     },
     "campaign": {
         "campaignDetail": "CAMPAIGN DETAIL",
@@ -106,8 +113,11 @@
         "responsiblities": "RESPONSIBILITIES",
         "minimumQualification": "MINIMUM QUALIFICATIONS",
         "howToApply": "HOW TO APPLY",
-        "dateStart": "Date Start",
-        "salary": "Salary"
+        "dateStart": "Start Date",
+        "dateEnd": "End Date",
+        "salary": "Salary",
+        "comissionPolicy": "Comission Policy",
+        "comissionPCookie": "Cookie Policy"
     },
     "candidate": {
         "detail": "CANDIDATE DETAIL",

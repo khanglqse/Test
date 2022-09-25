@@ -71,28 +71,11 @@
                 </ul>
               </div>
               <div class="jp_job_res jp_job_qua">
-                <h2>{{ $t("campaign.minimumQualification") }}</h2>
-                <ul>
-                  <li>
-                    <i class="fa fa-caret-right"></i>&nbsp;&nbsp; BA/BS degree
-                    in a technical field or equivalent practical experience.
-                  </li>
-                  <li>
-                    <i class="fa fa-caret-right"></i>&nbsp;&nbsp; 2 years of
-                    relevant work experience in software development.
-                  </li>
-                  <li>
-                    <i class="fa fa-caret-right"></i>&nbsp;&nbsp; Programming
-                    experience in C, C++ or Java.
-                  </li>
-                  <li>
-                    <i class="fa fa-caret-right"></i>&nbsp;&nbsp; Experience
-                    with AJAX, HTML and CSS.
-                  </li>
-                </ul>
+                <h2>{{ $t("campaign.comissionPolicy") }}</h2>
+                <p>{{ campaign.commission || 'N/a' }}%</p>
               </div>
               <div class="jp_job_apply">
-                <h2>{{ $t("campaign.minimumQualification") }}</h2>
+                <h2>{{ $t("campaign.comissionPCookie") }}</h2>
                 <p>
                   Praesent sapien massa, convallis a pellentesque nec, egestas
                   non nisi. Curabitur aliquet quam id dui posuere blandit.
@@ -194,6 +177,22 @@
                           <li>
                             {{ convertDate(campaign.startDate) || "---" }}
                           </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div
+                      class="
+                        jp_listing_overview_list_main_wrapper
+                        jp_listing_overview_list_main_wrapper2
+                      "
+                    >
+                      <div class="jp_listing_list_icon">
+                        <i class="fa fa-calendar"></i>
+                      </div>
+                      <div class="jp_listing_list_icon_cont_wrapper">
+                        <ul>
+                          <li>{{ $t("campaign.dateEnd") }}:</li>
+                          <li>{{ convertDate(campaign.endDate) || "---" }}</li>
                         </ul>
                       </div>
                     </div>
