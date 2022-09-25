@@ -28,18 +28,18 @@
     <div class="jp_footer_main_wrapper">
       <div class="container">
         <div class="row">
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="jp_footer_logo_wrapper">
               <div class="jp_footer_logo">
                 <a href="#">
-                  <!-- <img
+                  <img
                     src="~/assets/css/images/content/resume_logo.png"
                     alt="footer_logo"
-                /> -->
+                />
                 </a>
               </div>
             </div>
-          </div>
+          </div> -->
           <div class="jp_footer_three_sec_main_wrapper">
             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
               <div class="jp_footer_first_cont_wrapper">

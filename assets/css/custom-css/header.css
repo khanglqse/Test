@@ -76,6 +76,7 @@
 	padding-top: 30px;
 	border-bottom: 1px solid #ffffff21;
 	position:relative;
+    background-color: #ef243c;
 }		
 .jp_slide_img_overlay{
 	position:absolute;
@@ -84,7 +85,7 @@
 	left:0%;
 	bottom:0%;
 	/* background:#0e1427d4; */
-    background-color: rgba(239,36,60,255);
+    /* background-color: rgba(239,36,60,255); */
 }
 .menu-bar {
     cursor: pointer;

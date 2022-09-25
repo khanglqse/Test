@@ -25,7 +25,7 @@
 .jp_footer_main_wrapper{
 	float:left;
 	width:100%;
-	padding-top:50px;
+	/* padding-top:50px; */
 }
 .jp_footer_logo{
 	display:inline-block;
