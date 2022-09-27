@@ -5,7 +5,7 @@ const resource = 'campaign';
 
 export default class CampaignService {
     static getListCampaign(param) {
-        const result = ServiceRepository.getAPI(`${resource}?PageNumber=${param.pageIndex}&PageSize=${param.pageSize || 5}&Keyword=${param.keyword || ""}&SalaryFrom=${param.budget?.from}&SalaryTo=${param.budget?.to}&Type=${param.type}`);
+        const result = ServiceRepository.getAPI(`${resource}?PageNumber=${param.pageIndex}&PageSize=${param.pageSize || 5}&Keyword=${param.keyword || ""}&SalaryFrom=${param.budget?.from || ""}&SalaryTo=${param.budget?.to || ""}&Type=${param.type || ""}`);
         return result.then(response => response).catch(err => ErrorHandler.errorHandleRequest(err));
     }
 

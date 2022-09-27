@@ -73,7 +73,7 @@
 .gc_main_menu_wrapper{
 	float:left;
 	width:100%;
-	padding-top: 30px;
+	padding-top: 15px;
 	border-bottom: 1px solid #ffffff21;
 	position:relative;
     background-color: #ef243c;
@@ -135,7 +135,7 @@
     font-size: 14px;
     letter-spacing: 1px;
 	text-transform: capitalize;
-    padding: 0px 20px 47px 10px;
+    padding: 0px 20px 36px 10px;
 	font-family: 'Montserrat', sans-serif;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
     position: relative;

@@ -168,7 +168,7 @@
                       <div class="cd-dropdown-wrapper">
                         <a
                           class="house_toggle"
-                          href="#0"
+                          href="#"
                           @click="showMenuMobile()"
                         >
                           <svg

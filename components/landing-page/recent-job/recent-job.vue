@@ -138,7 +138,7 @@
         </div>
         <div
           class="video_nav_img_wrapper flex justify-between items-center"
-          v-if="paging.items.length"
+          v-if="paging.items.length && paging.totalPages > 1"
         >
           <p
             class="btn btn-default button-paging"
@@ -217,6 +217,11 @@ export default {
       ],
       listTab: [
         {
+          id: 0,
+          name: "all",
+          type: ""
+        },
+        {
           id: 1,
           name: "featured",
           type: "feature"
@@ -237,7 +242,7 @@ export default {
           type: "full"
         },
       ],
-      tabActive: 1,
+      tabActive: 0,
     };
   },
   mixins: [toast],
@@ -283,6 +288,7 @@ export default {
 
     changeTab(tab, type) {
       this.tabActive = tab;
+      this.paging.pageIndex = 1;
       this.paging.type = type;
 
       this.getListCampaign();
