@@ -17,6 +17,13 @@
                 :key="campaign.imageUrl"
                 format="webp"
                 loading="lazy"
+                sizes="sm:100vw md:50vw lg:400px"
+                v-if="campaign.imageUrl"
+              />
+
+              <img v-else
+                src="~/assets/css/images/content/default-img.svg"
+                alt="tittle_img"
               />
             </div>
           </div>

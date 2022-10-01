@@ -5,7 +5,7 @@
         <h2>{{ $t("rentJobs") }}</h2>
       </div>
       <ul class="nav nav-tabs" role="tablist" aria-label="rentJob">
-        <li role="tab" :class="{ active: tabActive == tab.id }" v-for="(tab, index) in listTab" :key="tab.id"
+        <li role="tab" :class="tabActive == tab.id ? 'active' : 'in-active'" v-for="(tab, index) in listTab" :key="tab.id"
           :aria-controls="'panel-' + (index + 1)" :id="'tab-' + (index + 1)" @click="changeTab(tab.id, tab.type)"
           :tabindex="tabActive == tab.id ? 0 : -1" :aria-selected="tabActive == tab.id">
           <p>
@@ -37,8 +37,13 @@
                         <div class="row">
                           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="jp_job_post_side_img">
-                              <nuxt-img :src="item.imageUrl || '/default-img.svg'" sizes="sm:100vw md:50vw lg:400px"
-                                alt="rent-job" :key="item.imageUrl" format="webp" loading="lazy"/>
+                              <nuxt-img :src="item.imageUrl || 'null'" sizes="sm:100vw md:50vw lg:400px"
+                                alt="rent-job" :key="item.imageUrl" format="webp" loading="lazy" v-if="item.imageUrl"/>
+
+                              <img v-else
+                                src="~/assets/css/images/content/default-img.svg"
+                                alt="tittle_img"
+                              />
                             </div>
                             <div class="jp_job_post_right_cont lg:pl-0 sm:pl-4 md:pl-4">
                               <h4 :title="item.title">
