@@ -936,10 +936,10 @@ ul{
 	width:100%;
 	float:left;
 	padding-top:48px;
+	margin-bottom: 23px;
 }
 .cc_featured_product_main_wrapper .nav-tabs{
 	margin-top: -18px;
-    margin-bottom: 23px;
 	float:right;
 	border: 1px solid #00000026;
 	-webkit-border-radius:10px;
