@@ -13,7 +13,7 @@
           >
             <div class="gc_header_wrapper">
               <div class="gc_logo">
-                <a href="index-2.html">
+                <a href="index-2.html" aria-label="index2">
                   <img
                     src="~/assets/css/images/header/mass-logo.jpg"
                     alt="Logo"
@@ -139,7 +139,7 @@
                   <div class="row">
                     <div class="col-xs-6 col-sm-6">
                       <div class="gc_logo">
-                        <a href="index-2.html">
+                        <a href="index-2.html" aria-label="index2">
                           <!-- <img
                             src="images/header/logo.png"
                             alt="Logo"
@@ -150,9 +150,8 @@
                     </div>
                     <div class="col-xs-6 col-sm-6">
                       <div class="cd-dropdown-wrapper">
-                        <a
+                        <p
                           class="house_toggle"
-                          href="#0"
                           @click="showMenuMobile()"
                         >
                           <svg
@@ -206,7 +205,7 @@
                               </g>
                             </g>
                           </svg>
-                        </a>
+                        </p>
                         <nav class="cd-dropdown" :class="classShowMenuMobile">
                           <h2>
                             <a href="#">Job<span>Pro</span></a>
@@ -223,12 +222,6 @@
 
                               <ul class="cd-secondary-dropdown is-hidden">
                                 <li class="go-back"><a href="#0">Menu</a></li>
-                                <li><a href="index-2.html">Home1</a></li>
-                                <li><a href="index_II.html">Home2</a></li>
-                                <li><a href="index_map.html">Home3</a></li>
-                                <li><a href="index_iv.html">Home4</a></li>
-                                <li><a href="index_v.html">Home5</a></li>
-                                <li><a href="index_vi.html">Home6</a></li>
                                 <!-- .has-children -->
                               </ul>
                               <!-- .cd-secondary-dropdown -->
