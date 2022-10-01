@@ -31,65 +31,6 @@
                 </div>
               </div>
             </div>
-            <!-- <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-              <div class="jp_first_right_sidebar_main_wrapper">
-                <div class="row">
-                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="jp_add_resume_wrapper">
-                      <div class="jp_add_resume_img_overlay"></div>
-                      <div class="jp_add_resume_cont">
-                        <h4>
-                          Nhận công việc phù hợp nhất trên email của bạn. Thêm
-                          Tiếp tục NGAY BÂY GIỜ!
-                        </h4>
-                        <ul>
-                          <li>
-                            <nuxt-link
-                              to="/job/campaign-posting#campaign-posting"
-                              ><i class="fa fa-plus-circle"></i> &nbsp;{{
-                                $t("button.addResume")
-                              }}</nuxt-link
-                            >
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="jp_spotlight_main_wrapper">
-                      <div class="spotlight_header_wrapper">
-                        <h4>{{ $t("jobSpotlight") }}</h4>
-                      </div>
-                      <JobSpotlight></JobSpotlight>
-                    </div>
-                  </div>
-                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="jp_rightside_job_categories_wrapper">
-                      <div class="jp_rightside_job_categories_heading">
-                        <h4>{{ $t("JobsByCategory") }}</h4>
-                      </div>
-                      <JobByCategory></JobByCategory>
-                    </div>
-                  </div>
-                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="jp_rightside_career_wrapper">
-                      <div class="jp_rightside_career_heading">
-                        <h4>{{ $t("careerAdvice") }}</h4>
-                      </div>
-                      <CareerAdvice></CareerAdvice>
-                    </div>
-                  </div>
-                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="jp_rightside_job_categories_wrapper">
-                      <div class="jp_rightside_job_categories_heading">
-                        <h4>{{ $t("JobsByCategory") }}</h4>
-                      </div>
-                      <JobByCategory></JobByCategory>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div> -->
           </div>
         </div>
       </div>

@@ -151,6 +151,8 @@
                       />
 
                       <img v-else
+                        width="225"
+                        height="225"
                         src="~/assets/css/images/content/default-img.svg"
                         alt="tittle_img"
                       />
