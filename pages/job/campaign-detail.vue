@@ -16,6 +16,7 @@
                 height="auto"
                 :key="campaign.imageUrl"
                 format="webp"
+                loading="lazy"
               />
             </div>
           </div>
