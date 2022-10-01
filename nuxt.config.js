@@ -36,7 +36,8 @@ module.exports = {
       {
         hid: 'Mass Recruitment Jobs', name: "Mass Recruitment", content: 'Mass Recruitment Platform using for find the jobs.',
         description: "Mass Recruitment Platform using for find the jobs."
-      }
+      },
+      { name:"theme-color", content:"#317EFB" }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -117,7 +118,7 @@ module.exports = {
   image: {
     provider: 'ipx',
     ipx: {}
-  }, 
+  },
   static: {
     prefix: false
   }

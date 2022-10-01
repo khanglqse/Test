@@ -146,6 +146,7 @@
                         alt="campaign-detail"
                         :key="campaign.imageUrl"
                         format="webp"
+                        loading="lazy"
                       />
                     </div>
                   </div>

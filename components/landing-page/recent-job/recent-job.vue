@@ -4,10 +4,10 @@
       <div class="jp_hiring_heading_wrapper jp_job_post_heading_wrapper">
         <h2>{{ $t("rentJobs") }}</h2>
       </div>
-      <ul class="nav nav-tabs" role="tablist" aria-owns="tablist" aria-label="rentJob">
+      <ul class="nav nav-tabs" role="tablist" aria-label="rentJob">
         <li role="tab" :class="{ active: tabActive == tab.id }" v-for="(tab, index) in listTab" :key="tab.id"
-          :aria-controls="'panel-' + (index + 1)" @click="changeTab(tab.id, tab.type)"
-          :tabindex="tabActive == tab.id ? 0 : -1" data-toggle="tab" :aria-selected="tabActive == tab.id">
+          :aria-controls="'panel-' + (index + 1)" :id="'tab-' + (index + 1)" @click="changeTab(tab.id, tab.type)"
+          :tabindex="tabActive == tab.id ? 0 : -1" :aria-selected="tabActive == tab.id">
           <p>
             {{ $t(tab.name) }}
           </p>
@@ -15,7 +15,8 @@
       </ul>
     </div>
     <div class="tab-content">
-      <div role="tabpanel" class="tab-pane fade in active" id="best">
+      <div role="tabpanel" class="tab-pane fade in active" :id="'panel-' + tabActive" tabindex="0"
+        :aria-labelledby="'tab-' + tabActive">
         <div class="ss_featured_products">
           <div class="carousel theme" v-if="paging.items.length">
             <div class="state-outer">
@@ -37,17 +38,13 @@
                           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="jp_job_post_side_img">
                               <nuxt-img :src="item.imageUrl || '/default-img.svg'" sizes="sm:100vw md:50vw lg:400px"
-                                alt="rent-job" :key="item.imageUrl" format="webp" />
+                                alt="rent-job" :key="item.imageUrl" format="webp" loading="lazy"/>
                             </div>
                             <div class="jp_job_post_right_cont lg:pl-0 sm:pl-4 md:pl-4">
                               <h4 :title="item.title">
                                 {{ item.title || "N/A" }}
                               </h4>
                               <p>{{ item.categoryName || "N/A" }}</p>
-                              <!-- <p>
-                                <i class="fa fa-cc-paypal"></i>&nbsp;
-                                {{ item.description || "N/A" }}
-                              </p> -->
                               <p>
                                 <i class="fa fa-map-marker"></i>&nbsp;
                                 {{ item.location || "N/A" }}
@@ -58,27 +55,6 @@
                               </p>
                             </div>
                           </div>
-                          <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="jp_job_post_right_btn_wrapper">
-                              <ul>
-                                <li>
-                                  <p href="#"><i class="fa fa-heart-o"></i></p>
-                                </li>
-                                <li>
-                                  <p href="#">{{ $t("parttime") }}</p>
-                                </li>
-                                <li>
-                                  <nuxt-link
-                                    :to="{
-                                      path: `/job/${item.id}#campaign-detail`,
-                                      param: item.id,
-                                    }"
-                                    >{{ $t("button.apply") }}</nuxt-link
-                                  >
-                                </li>
-                              </ul>
-                            </div>
-                          </div> -->
                         </div>
                       </div>
                       <div class="jp_job_post_keyword_wrapper">
@@ -173,32 +149,32 @@ export default {
       ],
       listTab: [
         {
-          id: 0,
+          id: 1,
           name: "all",
           type: ""
         },
         {
-          id: 1,
+          id: 2,
           name: "featured",
           type: "feature"
         },
         {
-          id: 2,
+          id: 3,
           name: "remotely",
           type: "remote"
         },
         {
-          id: 3,
+          id: 4,
           name: "parttime",
           type: "part"
         },
         {
-          id: 4,
+          id: 5,
           name: "fulltime",
           type: "full"
         },
       ],
-      tabActive: 0,
+      tabActive: 1,
     };
   },
   mixins: [toast],
