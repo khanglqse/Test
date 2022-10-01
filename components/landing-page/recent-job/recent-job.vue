@@ -4,28 +4,11 @@
       <div class="jp_hiring_heading_wrapper jp_job_post_heading_wrapper">
         <h2>{{ $t("rentJobs") }}</h2>
       </div>
-      <ul class="nav nav-tabs" role="tablist" aria-owns="tablist">
-        <li
-          :role="tab.name"
-          :class="{ active: tabActive == tab.id }"
-          v-for="tab in listTab"
-          :key="tab.id"
-          @click="changeTab(tab.id, tab.type)"
-        >
-          <!-- <a
-            href="#best"
-            aria-controls="best"
-            role="tab"
-            data-toggle="tab"
-            aria-selected="false"
-            >{{ $t("featured") }}</a
-          > -->
-          <p
-            :aria-controls="tab.name"
-            role="tab"
-            data-toggle="tab"
-            aria-selected="false"
-          >
+      <ul class="nav nav-tabs" role="tablist" aria-owns="tablist" aria-label="rentJob">
+        <li role="tab" :class="{ active: tabActive == tab.id }" v-for="(tab, index) in listTab" :key="tab.id"
+          :aria-controls="'panel-' + (index + 1)" @click="changeTab(tab.id, tab.type)"
+          :tabindex="tabActive == tab.id ? 0 : -1" data-toggle="tab" :aria-selected="tabActive == tab.id">
+          <p>
             {{ $t(tab.name) }}
           </p>
         </li>
@@ -37,38 +20,24 @@
           <div class="carousel theme" v-if="paging.items.length">
             <div class="state-outer">
               <div class="state state-transform-1">
-                <div
-                  class="
+                <div class="
                     state-item
                     grid
                     lg:grid-cols-5
                     md:grid-cols-4
                     sm:grid-cols-2
                     gap-2
-                  "
-                >
-                  <div
-                    class="item"
-                    v-for="(item, index) in paging.items"
-                    :key="item.id"
-                  >
+                  ">
+                  <div class="item" v-for="(item, index) in paging.items" :key="item.id">
                     <!-- data-hash="zero" -->
-                    <div
-                      @click="goToDetailPage(item)"
-                      class="jp_job_post_main_wrapper_cont"
-                      :class="index > 0 ? 'jp_job_post_main_wrapper_cont2' : ''"
-                    >
+                    <div @click="goToDetailPage(item)" class="jp_job_post_main_wrapper_cont"
+                      :class="index > 0 ? 'jp_job_post_main_wrapper_cont2' : ''">
                       <div class="jp_job_post_main_wrapper">
                         <div class="row">
                           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="jp_job_post_side_img">
-                              <nuxt-img
-                                :src="item.imageUrl || '/default-img.svg'"
-                                sizes="sm:100vw md:50vw lg:400px"
-                                alt="rent-job"
-                                :key="item.imageUrl"
-                                format="webp"
-                              />
+                              <nuxt-img :src="item.imageUrl || '/default-img.svg'" sizes="sm:100vw md:50vw lg:400px"
+                                alt="rent-job" :key="item.imageUrl" format="webp" />
                             </div>
                             <div class="jp_job_post_right_cont lg:pl-0 sm:pl-4 md:pl-4">
                               <h4 :title="item.title">
@@ -136,39 +105,26 @@
             <h4>{{ $t("message.noItemFound") }}</h4>
           </div>
         </div>
-        <div
-          class="video_nav_img_wrapper flex justify-between items-center"
-          v-if="paging.items.length && paging.totalPages > 1"
-        >
-          <p
-            class="btn btn-default button-paging"
-            @click="paging.hasPreviousPage && actionPaging('prev')"
-          >
+        <div class="video_nav_img_wrapper flex justify-between items-center"
+          v-if="paging.items.length && paging.totalPages > 1">
+          <p class="btn btn-default button-paging" @click="paging.hasPreviousPage && actionPaging('prev')">
             {{ $t("button.prev") }}
           </p>
 
           <div class="video_nav_img">
             <ul>
               <li v-for="(pageNum, index) in paging.totalPages" :key="pageNum">
-                <p
-                  aria-label="paging"
-                  :class="
-                    paging.pageIndex === index + 1 ? 'btn-info' : 'btn-default'
-                  "
-                  class="btn"
-                  @click="getCurrentPage(index + 1)"
-                >
+                <p aria-label="paging" :class="
+                  paging.pageIndex === index + 1 ? 'btn-info' : 'btn-default'
+                " class="btn" @click="getCurrentPage(index + 1)">
                   {{ index + 1 }}
                 </p>
               </li>
             </ul>
           </div>
 
-          <p
-            aria-label="next"
-            class="btn btn-default button-paging"
-            @click="paging.hasNextPage && actionPaging('next')"
-          >
+          <p aria-label="next" class="btn btn-default button-paging"
+            @click="paging.hasNextPage && actionPaging('next')">
             {{ $t("button.next") }}
           </p>
         </div>
@@ -185,7 +141,7 @@ import { mapActions, mapGetters, mapMutations, mapState } from "vuex";
 import ButtonName from "@/constant/button-name";
 
 export default {
-  setup() {},
+  setup() { },
   props: {
     pagingModel: {
       type: Object,

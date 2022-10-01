@@ -1106,7 +1106,7 @@ ul{
 }
 .nav-tabs > li.active > p, .nav-tabs > li.active > p:hover, .nav-tabs > li.active > p:focus{
 	color: #ffffff;
-    border: 1px solid #23c0e9;
+    /* border: 1px solid #23c0e9; */
     background: #23c0e9;
     -webkit-border-top-right-radius: 0;
     -moz-border-top-right-radius: 0;
@@ -1141,7 +1141,13 @@ ul{
 	cursor: pointer;
 }
 .nav-tabs > li:first-child > p:hover{
-	border-left:1px solid transparent;
+	border-left: 1px;
+	-webkit-border-bottom-left-radius: 10px;
+    -moz-border-bottom-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    -webkit-border-top-left-radius: 10px;
+    -moz-border-top-left-radius: 10px;
+    border-top-left-radius: 10px;
 }
 .nav-tabs{
 	border-top:1px solid #eeeeee;
@@ -1496,7 +1502,7 @@ ul{
 	width:50%;
 	padding-top:85px;
 	padding-bottom:85px;
-	background:url('../images/content/register_bg.jpg') 50% 0 repeat-y;
+	/* background:url('../images/content/register_bg.jpg') 50% 0 repeat-y; */
 	background-position:center 0;
 	background-size:cover;
 	background-repeat:no-repeat;
