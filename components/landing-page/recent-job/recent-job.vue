@@ -9,7 +9,7 @@
         <li role="tab" :class="tabActive == tab.id ? 'active' : 'in-active'" v-for="(tab, index) in listTab"
           :key="tab.id" :aria-controls="'panel-' + (index + 1)" :id="'tab-' + (index + 1)"
           @click="changeTab(tab.id, tab.type)" :tabindex="tabActive == tab.id ? 0 : -1"
-          :aria-selected="tabActive == tab.id">
+          :aria-selected="tabActive == tab.id" :aria-hidden="tabActive != tab.id">
           <p>
             {{ $t(tab.name) }}
           </p>
@@ -40,6 +40,7 @@
                           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="jp_job_post_side_img">
                               <nuxt-img :src="item.imageUrl || 'null'" sizes="sm:100vw md:50vw lg:400px" alt="rent-job"
+                                width="200" heigh="135"
                                 :key="item.imageUrl" format="webp" loading="lazy" v-if="item.imageUrl" />
 
                               <img v-else src="~/assets/css/images/content/default-img.svg" alt="tittle_img" />
@@ -117,7 +118,7 @@
 import CampaignService from "@/services/campaignService";
 import { PagingModel } from "@/model/paging-model";
 import toast from "@/mixins/toast";
-import { mapActions, mapGetters, mapMutations, mapState } from "vuex";
+import { mapState } from "vuex";
 import ButtonName from "@/constant/button-name";
 
 export default {
