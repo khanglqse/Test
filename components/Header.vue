@@ -5,22 +5,18 @@
       <div class="container-fluid">
         <div class="row">
           <div
-            class="
-              col-lg-1 col-md-1 col-sm-12 col-xs-12
-              hidden-xs hidden-sm
-              full_width
-            "
+            class="col-lg-1 col-md-1 col-sm-12 col-xs-12 hidden-xs hidden-sm full_width"
           >
             <div class="gc_header_wrapper">
               <div class="gc_logo">
-                <a href="index-2.html" aria-label="index2">
+                <nuxt-link to="/">
                   <img
                     src="~/assets/css/images/header/mass-logo.jpg"
                     alt="Logo"
                     title="Job Pro"
                     class="img-responsive"
                   />
-                </a>
+                </nuxt-link>
               </div>
             </div>
           </div>
@@ -150,10 +146,7 @@
                     </div>
                     <div class="col-xs-6 col-sm-6">
                       <div class="cd-dropdown-wrapper">
-                        <p
-                          class="house_toggle"
-                          @click="showMenuMobile()"
-                        >
+                        <p class="house_toggle" @click="showMenuMobile()">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink"
