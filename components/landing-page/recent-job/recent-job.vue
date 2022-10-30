@@ -5,11 +5,24 @@
         <h2 v-if="!isFilter">{{ $t("rentJobs") }}</h2>
         <h2 v-else>{{ $t("filterResult") }}</h2>
       </div>
-      <ul class="nav nav-tabs" role="tablist" aria-label="rentJob" v-if="!isFilter">
-        <li role="tab" :class="tabActive == tab.id ? 'active' : 'in-active'" v-for="(tab, index) in listTab"
-          :key="tab.id" :aria-controls="'panel-' + (index + 1)" :id="'tab-' + (index + 1)"
-          @click="changeTab(tab.id, tab.type)" :tabindex="tabActive == tab.id ? 0 : -1"
-          :aria-selected="tabActive == tab.id" :aria-hidden="tabActive != tab.id">
+      <ul
+        class="nav nav-tabs"
+        role="tablist"
+        aria-label="rentJob"
+        v-if="!isFilter"
+      >
+        <li
+          role="tab"
+          :class="tabActive == tab.id ? 'active' : 'in-active'"
+          v-for="(tab, index) in listTab"
+          :key="tab.id"
+          :aria-controls="'panel-' + (index + 1)"
+          :id="'tab-' + (index + 1)"
+          @click="changeTab(tab.id, tab.type)"
+          :tabindex="tabActive == tab.id ? 0 : -1"
+          :aria-selected="tabActive == tab.id"
+          :aria-hidden="tabActive != tab.id"
+        >
           <p>
             {{ $t(tab.name) }}
           </p>
@@ -17,35 +30,56 @@
       </ul>
     </div>
     <div class="tab-content">
-      <div role="tabpanel" class="tab-pane fade in active" :id="'panel-' + tabActive" tabindex="0"
-        :aria-labelledby="'tab-' + tabActive">
+      <div
+        role="tabpanel"
+        class="tab-pane fade in active"
+        :id="'panel-' + tabActive"
+        tabindex="0"
+        :aria-labelledby="'tab-' + tabActive"
+      >
         <div class="ss_featured_products">
           <div class="carousel theme" v-if="paging.items.length">
             <div class="state-outer">
               <div class="state state-transform-1">
-                <div class="
-                    state-item
-                    grid
-                    lg:grid-cols-5
-                    md:grid-cols-4
-                    sm:grid-cols-2
-                    gap-2
-                  ">
-                  <div class="item" v-for="(item, index) in paging.items" :key="item.id">
+                <div
+                  class="state-item grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-2 gap-2"
+                >
+                  <div
+                    class="item"
+                    v-for="(item, index) in paging.items"
+                    :key="item.id"
+                  >
                     <!-- data-hash="zero" -->
-                    <div @click="goToDetailPage(item)" class="jp_job_post_main_wrapper_cont"
-                      :class="index > 0 ? 'jp_job_post_main_wrapper_cont2' : ''">
+                    <div
+                      @click="goToDetailPage(item)"
+                      class="jp_job_post_main_wrapper_cont"
+                      :class="index > 0 ? 'jp_job_post_main_wrapper_cont2' : ''"
+                    >
                       <div class="jp_job_post_main_wrapper">
                         <div class="row">
                           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="jp_job_post_side_img">
-                              <nuxt-img :src="item.imageUrl || 'null'" sizes="sm:100vw md:50vw lg:400px" alt="rent-job"
-                                width="200" heigh="135"
-                                :key="item.imageUrl" format="webp" loading="lazy" v-if="item.imageUrl" />
+                              <nuxt-img
+                                :src="item.imageUrl || 'null'"
+                                sizes="sm:100vw md:50vw lg:400px"
+                                alt="rent-job"
+                                width="200"
+                                heigh="135"
+                                :key="item.imageUrl"
+                                format="webp"
+                                loading="lazy"
+                                v-if="item.imageUrl"
+                              />
 
-                              <img v-else src="~/assets/css/images/content/default-img.svg" alt="tittle_img" />
+                              <img
+                                v-else
+                                src="~/assets/css/images/content/default-img.svg"
+                                alt="tittle_img"
+                              />
                             </div>
-                            <div class="jp_job_post_right_cont lg:pl-0 sm:pl-4 md:pl-4">
+                            <div
+                              class="jp_job_post_right_cont lg:pl-0 sm:pl-4 md:pl-4"
+                            >
                               <h4 :title="item.title">
                                 {{ item.title || "N/A" }}
                               </h4>
@@ -56,7 +90,7 @@
                               </p>
                               <p>
                                 <i class="fa fa-money"></i>&nbsp;
-                                {{ item.salary || "0" }} VND
+                                {{ formatPrice(item.salary) || 0 }} VNĐ
                               </p>
                             </div>
                           </div>
@@ -86,26 +120,39 @@
             <h4>{{ $t("message.noItemFound") }}</h4>
           </div>
         </div>
-        <div class="video_nav_img_wrapper flex justify-between items-center"
-          v-if="paging.items.length && paging.totalPages > 1">
-          <p class="btn btn-default button-paging" @click="paging.hasPreviousPage && actionPaging('prev')">
+        <div
+          class="video_nav_img_wrapper flex justify-between items-center"
+          v-if="paging.items.length && paging.totalPages > 1"
+        >
+          <p
+            class="btn btn-default button-paging"
+            @click="paging.hasPreviousPage && actionPaging('prev')"
+          >
             {{ $t("button.prev") }}
           </p>
 
           <div class="video_nav_img">
             <ul>
               <li v-for="(pageNum, index) in paging.totalPages" :key="pageNum">
-                <p aria-label="paging" :class="
-                  paging.pageIndex === index + 1 ? 'btn-info' : 'btn-default'
-                " class="btn" @click="getCurrentPage(index + 1)">
+                <p
+                  aria-label="paging"
+                  :class="
+                    paging.pageIndex === index + 1 ? 'btn-info' : 'btn-default'
+                  "
+                  class="btn"
+                  @click="getCurrentPage(index + 1)"
+                >
                   {{ index + 1 }}
                 </p>
               </li>
             </ul>
           </div>
 
-          <p aria-label="next" class="btn btn-default button-paging"
-            @click="paging.hasNextPage && actionPaging('next')">
+          <p
+            aria-label="next"
+            class="btn btn-default button-paging"
+            @click="paging.hasNextPage && actionPaging('next')"
+          >
             {{ $t("button.next") }}
           </p>
         </div>
@@ -118,11 +165,12 @@
 import CampaignService from "@/services/campaignService";
 import { PagingModel } from "@/model/paging-model";
 import toast from "@/mixins/toast";
+import convertType from "@/mixins/convertType";
 import { mapState } from "vuex";
 import ButtonName from "@/constant/button-name";
 
 export default {
-  setup() { },
+  setup() {},
   props: {
     pagingModel: {
       type: Object,
@@ -156,34 +204,34 @@ export default {
         {
           id: 1,
           name: "all",
-          type: ""
+          type: "",
         },
         {
           id: 2,
           name: "featured",
-          type: "feature"
+          type: "feature",
         },
         {
           id: 3,
           name: "remotely",
-          type: "remote"
+          type: "remote",
         },
         {
           id: 4,
           name: "parttime",
-          type: "part"
+          type: "part",
         },
         {
           id: 5,
           name: "fulltime",
-          type: "full"
+          type: "full",
         },
       ],
       tabActive: 1,
-      isFilter: false
+      isFilter: false,
     };
   },
-  mixins: [toast],
+  mixins: [toast, convertType],
   methods: {
     async getListCampaign() {
       try {
@@ -231,6 +279,10 @@ export default {
 
       this.getListCampaign();
     },
+
+    formatPrice(value) {
+      return this.covertCurrency(value);
+    },
   },
   computed: {
     ...mapState(["filter"]),
@@ -244,7 +296,10 @@ export default {
         (value) => value.id == this.filter.filterItem.budget
       );
 
-      this.isFilter = this.filter.filterItem.budget || this.filter.filterItem.keyword || this.filter.filterItem.location;
+      this.isFilter =
+        this.filter.filterItem.budget ||
+        this.filter.filterItem.keyword ||
+        this.filter.filterItem.location;
 
       this.tabActive = 1;
 

@@ -32,7 +32,7 @@
                       :key="item.id"
                       :value="item.id"
                     >
-                      {{ item.from }} - {{ item.to }}
+                      {{ formatPrice(item.from) }} - {{ formatPrice(item.to) }}
                     </option></select
                   ><i class="fa fa-angle-down second_icon"></i>
                 </div>
@@ -135,6 +135,7 @@ import { mapActions, mapState } from "vuex";
 import { CampaignGroupCategory } from "@/model/campaign-model";
 import { FilterModel } from "@/model/filter-model";
 import toast from "@/mixins/toast";
+import convertType from "@/mixins/convertType";
 import ButtonName from "@/constant/button-name";
 import CampaignService from "@/services/campaignService";
 
@@ -156,7 +157,7 @@ export default {
       },
     },
   },
-  mixins: [toast],
+  mixins: [toast, convertType],
   data() {
     return {
       itemFilter: this.filterModel,
@@ -217,6 +218,10 @@ export default {
       filterWork: "filter/filterWork",
       resetFilter: "filter/resetFilter",
     }),
+
+    formatPrice(value) {
+      return this.covertCurrency(value);
+    },
   },
   computed: {
     ...mapState(["filter"]),

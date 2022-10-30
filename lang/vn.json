@@ -44,7 +44,8 @@
         "publisher": "Publisher",
         "advertiser": "Advertiser",
         "sharedCorner": "Góc chia sẻ",
-        "companyIntroduction": "Giới thiệu công ty"
+        "companyIntroduction": "Giới thiệu công ty",
+        "subDetailHeader": "Thông tin chi tiết"
     },
     "trendingKeyWords": "Từ khóa thịnh hành",
     "trandingJobs": {

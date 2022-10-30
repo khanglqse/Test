@@ -72,7 +72,7 @@
               </div>
               <div class="jp_job_res jp_job_qua">
                 <h2>{{ $t("campaign.comissionPolicy") }}</h2>
-                <p>{{ campaign.commission || 'N/a' }}%</p>
+                <p>{{ formatPrice(campaign.commission) || 'N/a' }} VNĐ</p>
               </div>
               <div class="jp_job_apply">
                 <h2>{{ $t("campaign.comissionPCookie") }}</h2>
@@ -250,7 +250,7 @@
                       <div class="jp_listing_list_icon_cont_wrapper">
                         <ul>
                           <li>{{ $t("campaign.salary") }}:</li>
-                          <li>{{ campaign.salary || 0 }}</li>
+                          <li>{{ formatPrice(campaign.salary) || 0 }} VNĐ</li>
                         </ul>
                       </div>
                     </div>
@@ -286,8 +286,8 @@ import CampaignService from "@/services/campaignService";
 import CandidateService from "@/services/candidateService";
 import toast from "@/mixins/toast";
 import validForm from "@/mixins/validForm";
+import convertType from "@/mixins/convertType";
 import ButtonName from "@/constant/button-name";
-import { mapState, mapActions, mapMutations } from "vuex";
 import SubHeader from "~/components/SubHeader.vue";
 
 const TitleToast = {
@@ -323,7 +323,7 @@ export default {
       dialog: this.dialogModel,
     };
   },
-  mixins: [toast, validForm],
+  mixins: [toast, validForm, convertType],
   methods: {
     async getDetailCampaign() {
       const queryParam = this.$route.query;
@@ -399,6 +399,10 @@ export default {
       } catch (error) {
         this.showToastMessage(ButtonName.TOAST_ERROR, error?.message);
       }
+    },
+
+    formatPrice(value) {
+      return this.covertCurrency(value);
     },
   },
   created() {
