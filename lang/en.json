@@ -44,7 +44,8 @@
         "advertiser": "Advertiser",
         "sharedCorner": "Shared Corner",
         "companyIntroduction": "Company Introduction",
-        "customerCare": "Cusomter Care"
+        "customerCare": "Cusomter Care",
+        "subDetailHeader": "Details"
     },
     "trendingKeyWords": "Trending Keywords",
     "trandingJobs": {
