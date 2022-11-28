@@ -149,9 +149,11 @@ export default {
         }
       }
     },
+
     validationForm() {
       return !this.candidate.name || !this.candidate.phone;
     },
+    
     validEmail() {
       return !this.validationEmail(this.candidate.email);
     },
