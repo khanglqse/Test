@@ -350,6 +350,9 @@ export default {
     },
 
     actionDialog(event) {
+      event.PublisherId = this.$route.query.referralId || '';
+      event.CampaignId = this.id;
+
       if (event.isSubmit) {
         event.isForm == 1 ? this.submitByForm(event) : this.uploadCV(event);
       } else {
